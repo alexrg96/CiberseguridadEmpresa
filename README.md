@@ -27,3 +27,15 @@
 - **Usuario**: Un usuario es un alias/pseudonimo que se utiliza para identificarse en un sistema y debe ir acompañado de una contraseña. Esta unión de usuario+contraseña son las credenciales de acceso y aportan seguridad. Las funciones de un usuario son la autenticación e identificación, la acreditación virtual de acceso, entre otras. En el video se nos aconseja proteger nuestros usuarios como las llaves de nuestra casa.
 - **Uso de usuarios y contraseñas**: A parte de ser una forma de identificación, son importantes porque sin ello no habría seguridad ni control de accesos. En este video se mostró un pequeño ejemplo del acceso con usuario y contraseña al sistema.
 - **Gestores de contraseñas**: Nos permite guardar las contraseñas de manera segura. En el video se muestran los errores comunes a la hora de guardar las contraseñas como puede ser anotarlas en un post-it o en un cuaderno o apuntarlas en un word. Para ello es mejor usar un gestor de contraseñas, el cual permite almacenar de forma segura,ordenada y centralizada multiples usuarios/contraseñas. Se muestra como ejemplo el software Keepass (su intalación y como usarlo).
+
+## 25 de Marzo, 2024
+
+### Políticas de Contraseñas
+- **Cambio de contraseña**: Las empresas obligan a cambiar la contraseña por seguridad. Es importante no repetir la misma contraseña por lo menos hasta tener un histórico de 5 contraseñas y cambiarla cada 1-3 meses. También se recomienda no utilizar las mismas contraseñas en distintas cuentas.
+- **Beneficios de las políticas de contraseñas**: Entre los beneficios de las politicas de contraseñas se encuentran la mejora de seguridad, la ayuda en el control de credenciales, la rápida identificación en caso de problemas y el bloque de usuario. Tenemos que adaptarnos si o si al uso seguro de nuestras claves.
+
+### Copias de seguridad
+- **Backup**: Las copias de seguridad o backup consiten en realizar copias de nuestros ficheros como prevención. Se utilizan para poder recuperar documentos en caso de borrado por error o si sufrimos un ataque informático. Es recomendable realizarlas habitualmente y nunca en el mismo dispositivo, siempre en uno distinto como un pendrive, disco duro o en la nube.
+
+### Carpetas compartidas
+- **Carpetas compartidas**: Es una carpeta a la que se puede acceder desde distintos perfiles de usuario. Permite compartir archivos con otras personas y trabajar sobre una misma carpeta. Además, las actualizaciones de los ficheros se producen en tiempo real. Lo malo de esto es que conlleva una serie de peligros, ya que al acceder varias personas a la información esta puede extraerse, robarse o corromperse. Para evitarlo, es recomendable proteger las carpetas mediante permisos de acceso, crear copias de seguridad y compartir únicamente cuando sea estrictamente necesario.
