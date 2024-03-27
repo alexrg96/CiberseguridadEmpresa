@@ -39,3 +39,11 @@
 
 ### Carpetas compartidas
 - **Carpetas compartidas**: Es una carpeta a la que se puede acceder desde distintos perfiles de usuario. Permite compartir archivos con otras personas y trabajar sobre una misma carpeta. Además, las actualizaciones de los ficheros se producen en tiempo real. Lo malo de esto es que conlleva una serie de peligros, ya que al acceder varias personas a la información esta puede extraerse, robarse o corromperse. Para evitarlo, es recomendable proteger las carpetas mediante permisos de acceso, crear copias de seguridad y compartir únicamente cuando sea estrictamente necesario.
+
+## 27 de Marzo, 2024
+
+### Navegación segura
+- **Navegador**: Es una aplicación que nos permite movernos por internet. En el video se la comparativa entre los navegadores Chrome, Edge y Firefox y como usarlos. Un navegador puede mostrar recursos locales y remotos.
+- **Navegadores seguros**: Es un navegador web con medidas de seguridad extra que nos ayuda a prevenir actividad no autorizada. Utilizan métodos de forma proactiva, lo que nos permite actuar de manera preventiva y no reactiva. A pesar de tener un navegador seguro, no debemos confiarnos y es necesario concienciarse y aprender a navegar de forma segura. También es importante incluir protección con herramientas de seguridad. Los navegadores mecionados en el punto anterior son ejemplos de navegadores seguros.
+- **Actualizaciones de navegadores**: Los navegadores necesitan ser actualizados y es importante prestar atención a estas actualizaciones ya que es la aplicación con la que navegamos por internet y nuestra frontera con el exterior. En el video se enseña como actualizar los navegadores Chrome y Firefox.
+- **Extensiones en navegadores**: Son pequeños programas instalados en el navegador que pueden tener distintos usos y funcionamientos. Hay que tener precaución con cual se instalan ya que algunas pueden tener un funcionamiento malicioso. No es recomendable tener un gran número de extensiones ya que pueden perjudicar el funcionamiento del navegador. Si es necesario instalar una es importante verificar que no es maliciosa.
