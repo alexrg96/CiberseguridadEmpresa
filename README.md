@@ -1,5 +1,7 @@
 # CiberseguridadEmpresa
 
+## Onboarding en Ciberseguridad
+
 ## 19 de Marzo, 2024
 
 ### Introducción
@@ -89,3 +91,13 @@
 
 ### Conclusiones
 A lo largo del temario en los videos de OpenWebinars he visto conceptos esenciales en Ciberseguridad y los peligros del uso y la navegación sin seguridad. La mayoria del contenido son cosas que ya sabía de antes o me sonaban por lo que no ha sido especialmente dificil seguir las explicaciones y me servido para refrescar muchos conceptos y buenas prácticas que se deben realizar tanto en una empresa como en nuestro día a día. Ángel Camaño, el protagonista de todos los videos del temario, ha explicado bastante bien los conceptos y situaciones a través de ejemplos y analogías por lo que ha sido bastante llevadero. Además, me gusta la organización en pequeños videos para que la materia no se haga muy pesada y puedas dividir mejor los tiempos de "estudio". En definitiva, valoro positivamente este primer apartado de la carrera de Onboarding en Ciberseguridad como introdución y repaso a lo que vere proximamente.
+
+## Curso de análisis y gestión del riesgo
+
+## 2 de Abril, 2024
+
+### Introducción
+- **Presentación**: En este video se presentó al profesor, David Reinares, y se comentaron los objetivos del curso. También se explicó el contenido que se va a ver por medio de un índice.
+- **Introducción a los riesgos de seguridad de la información**: El análisis de riesgos informáticos es el proceso que comprende la identificación de activos informáticos y de información, sus vulnerabilidades y las amenazas a los que se encuentran expuestos, así como su probabilidad de ocurrencia y el impacto de las mismas. Por otro lado, los riesgos de seguridad de información deben ser considerados en el contexto del negocio, y las interrelaciones con otras funciones de negocios y los clientes deben ser identificados para lograr una imagen global y completa de estos riesgos. Una amenaza explota una vulnerabilidad para afectar un activo, lo que provoca un impacto. El impacto x la probabilidad nos da el riesgo que tenemos.
+La diferencia entre la gestión del riesgo TI y la gestión del riesgo para proyectos TI radica en el tiempo. La gestión del riesgo TI es un proceso continuo y cíclico (visión estática) mientras que la gestión del riesgo en un proyecto TI es a corto plazo debido a la duración de estos (unos meses, un año o dos).
+  
