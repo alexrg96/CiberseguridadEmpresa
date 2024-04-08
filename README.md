@@ -128,11 +128,11 @@ Es necesario tener una cultura del riesgo que permita reportar, escalar e interv
 ## 8 de Abril, 2024
 
 - **Roles y responsabilidades**: Dependiendo de la organización, los roles y responsabilidades expresados a continuación podrían variar, aunando algunas personas varios roles o bien estando las responsabilidades de algunos roles diluidas en otros.
-1. Comité de dirección
-2. Comité de riesgos
-3. Gerencia general
-4. Áreas funcionales y de apoyo
-5. Área especializada en gestión de riesgos
-6. Auditoría interna
+  1. Comité de dirección
+  2. Comité de riesgos
+  3. Gerencia general
+  4. Áreas funcionales y de apoyo
+  5. Área especializada en gestión de riesgos
+  6. Auditoría interna
 
 - **Resgistro del riesgo**: Es un documento o herramienta donde se registran todos los nuevos riesgos que afectan a la organización. Deberá ser actualizado de forma regular, tras cada evaluación del riesgo, con cada reunión del comité de riesgos, con los resultados del monitoreo del riesgo y su tratamiento, etc.
