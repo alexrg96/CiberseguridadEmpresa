@@ -124,3 +124,15 @@ En muchas organizaciones pequeñas/medianas y/o con poco nivel de madurez respec
 - **Alineación con el negocio**: La gestión de riesgos ayuda a mitigar el aumento de las amenazas para las organizaciones. El cambio hacia un enfoque de gestión de riesgos de seguridad se ha estado desarollando por algún tiempo. Los requisitos claves de los programas de gestión de riesgo son que el cumplimiento es solo un factor, la tolerancia al riesgo evoluciona con el tiempo y hay que hacer funcionar la gestión de riesgos.
 Asimismo para asegurar la madurez del proceso debe quedar alineado con el negocio. En el proceso de identificación del riesgo es necesario que se consulte a los principales líderes de la organización con el objeto de saber qué activos son especialmente importantes para ellos, qué procesos de transformación sufrirá en el corto y medio plazo la organización, cuáles son los escenarios de amenaza/riesgo que les preocupa de verdad, etc. Este trabajo debe ser bidirecional, de forma de forma que se facilite a la gerencia, y especialmente al consejo de dirección, el entendimiento de los riesgos y cómo pueden afectar a los objetivos del negocio.
 Es necesario tener una cultura del riesgo que permita reportar, escalar e intervenir los posibles daños o aprovechar las oportunidades. La cultura del riesgo abarca los valores, las creencias, las actitudes y el conocimiento sobre el riesgo que se tiene en el interior de una organización. Es importante que sea embebida dentro de la cultura de riesgo general de la organización, dado que es parte de este riesgo global. Una cultura de riesgo también involucra a los cibernéticos.
+
+## 8 de Abril, 2024
+
+- **Roles y responsabilidades**: Dependiendo de la organización, los roles y responsabilidades expresados a continuación podrían variar, aunando algunas personas varios roles o bien estando las responsabilidades de algunos roles diluidas en otros.
+1. Comité de dirección
+2. Comité de riesgos
+3. Gerencia general
+4. Áreas funcionales y de apoyo
+5. Área especializada en gestión de riesgos
+6. Auditoría interna
+
+- **Resgistro del riesgo**: Es un documento o herramienta donde se registran todos los nuevos riesgos que afectan a la organización. Deberá ser actualizado de forma regular, tras cada evaluación del riesgo, con cada reunión del comité de riesgos, con los resultados del monitoreo del riesgo y su tratamiento, etc.
