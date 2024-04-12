@@ -128,12 +128,12 @@ Es necesario tener una cultura del riesgo que permita reportar, escalar e interv
 ## 8 de Abril, 2024
 
 - **Roles y responsabilidades**: Dependiendo de la organización, los roles y responsabilidades expresados a continuación podrían variar, aunando algunas personas varios roles o bien estando las responsabilidades de algunos roles diluidas en otros.
-  1. Comité de dirección
-  2. Comité de riesgos
-  3. Gerencia general
-  4. Áreas funcionales y de apoyo
-  5. Área especializada en gestión de riesgos
-  6. Auditoría interna
+  1\. Comité de dirección
+  2\. Comité de riesgos
+  3\. Gerencia general
+  4\. Áreas funcionales y de apoyo
+  5\. Área especializada en gestión de riesgos
+  6\. Auditoría interna
 
 - **Resgistro del riesgo**: Es un documento o herramienta donde se registran todos los nuevos riesgos que afectan a la organización. Deberá ser actualizado de forma regular, tras cada evaluación del riesgo, con cada reunión del comité de riesgos, con los resultados del monitoreo del riesgo y su tratamiento, etc.
 
@@ -177,11 +177,11 @@ Para ello se pueden tomar 2 aproximaciones, de arriba a abajo y de abajo a arrib
   - Incluir un “evento no especificado” en los escenarios para tratar los incidentes que no han sido cubiertos por los escenarios especificados.
 El modelado de amenazas es un conjunto de técnicas que permiten analizar las potenciales amenazas que un desarrollo de software podría tener con el fin de asegurar que las mismas son tratadas mediante controles. 
 Los pasos para crear un modelo de amenazas son: 
-  1. Crear una descripción de la arquitectura
-  2. Descomponer la aplicación 
-  3. Identificar las amenazas 
-  4. Documentar las amenazas 
-  5. Asignar prioridades a las amenazas 
+  1\. Crear una descripción de la arquitectura
+  2\. Descomponer la aplicación 
+  3\. Identificar las amenazas 
+  4\. Documentar las amenazas 
+  5\. Asignar prioridades a las amenazas 
 Existen también diferentes metodologías de análisis de riesgos como por ejemplo MAGERIT, OCTAVE, ISO 27005, MEHARI, CRAMM o NIST 800-30.
 
 - **Informe de evaluación del riesgo**: Este informe es el resultado del trabajo realizado durante la evaluación del riesgo. Recoge todas las evidencias recopiladas y las conclusiones obtenidas sobre el entorno del riesgo (como los activos), las amenazas encontradas, su valoración en impacto y probabilidad y el mapa de riesgo de la organización. A la vez este informe puede ser continuado en la siguiente fase incluyendo las salvaguardas existentes y a implementar junto con el riesgo residual tras la implementación de las mismas.
