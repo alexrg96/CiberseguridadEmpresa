@@ -164,3 +164,35 @@ Se denomina riesgo a la medida del daño probable sobre un sistema. Conociendo e
 Los modelos cuantitativos se basan en asignar valores numéricos exactos (o en rangos determinados). Estos modelos, si bien a priori parecen los más adecuados, requieren de un gran nivel de las organizaciones, y aún así es complicado en varios casos.
 Los modelos cualitativos se basan en asignar valores de entre un rango definido previamente como puede ser "alto / medio / bajo" o "muy alto / alto / medio / bajo / muy bajo". Para ello las mediciones deben ser relacionadas teniendo en cuenta la comparación de los activos y las amenazas entre sí, dado que en muchos casos el valor será relativo.
 Los modelos semi-cuantitativos se encuentran entre el cualitativo y cuantitativo dando como resultado valoraciones aproximadas en lugar de exactas o absolutas. Estos métodos son útiles cuando no se puede realizar mediciones o valoraciones directas y se acepta la posibilidad de realizar inferencias.
+
+## 12 de Abril, 2024
+
+- **Escenarios de riesgo, modelado de amenazas y metodologías de análisis del riesgo**: La estimación, prevención y reducción de riesgos es la clave para evitar pérdidas y desastres en cualquier organización. Uno de los pasos para lograr estos objetivos es la construcción de una serie de escenarios de riesgos, amenazas y vulnerabilidades. Su objetivo principal es tener una visión global de los riesgos, roles e interacciones para identificar prioridades en el tratamiento del riesgo. 
+Para ello se pueden tomar 2 aproximaciones, de arriba a abajo y de abajo a arriba. Los escenarios deben desarrollarse de la siguiente manera:
+  - Comenzar con una lista genérica de riesgos para definir un conjunto inicial de escenarios para la organización.
+  - Validar dichos escenarios contra los objetivos del negocio.
+  - Refinar el conjunto de escenarios seleccionado basada en la validación anterior. Categorizarlos de forma que se alineen con la criticidad de la organización.
+  - Reducir el número de escenarios a un conjunto manejable.
+  - Mantener todos los riesgos en una lista de forma que puedan ser reevaluados en la siguiente iteración e incluidos para su análisis en detalle si se vuelven relevantes en ese momento.
+  - Incluir un “evento no especificado” en los escenarios para tratar los incidentes que no han sido cubiertos por los escenarios especificados.
+El modelado de amenazas es un conjunto de técnicas que permiten analizar las potenciales amenazas que un desarrollo de software podría tener con el fin de asegurar que las mismas son tratadas mediante controles. 
+Los pasos para crear un modelo de amenazas son: 
+  1. Crear una descripción de la arquitectura
+  2. Descomponer la aplicación 
+  3. Identificar las amenazas 
+  4. Documentar las amenazas 
+  5. Asignar prioridades a las amenazas 
+Existen también diferentes metodologías de análisis de riesgos como por ejemplo MAGERIT, OCTAVE, ISO 27005, MEHARI, CRAMM o NIST 800-30.
+
+- **Informe de evaluación del riesgo**: Este informe es el resultado del trabajo realizado durante la evaluación del riesgo. Recoge todas las evidencias recopiladas y las conclusiones obtenidas sobre el entorno del riesgo (como los activos), las amenazas encontradas, su valoración en impacto y probabilidad y el mapa de riesgo de la organización. A la vez este informe puede ser continuado en la siguiente fase incluyendo las salvaguardas existentes y a implementar junto con el riesgo residual tras la implementación de las mismas.
+El contenido básico del informe de evaluación del riesgo debería ser el siguiente:
+  - Descripción de los activos: Descripción de los procesos de negocio o áreas, y por cada uno su árbol de activos y dependencias.
+  - Por cada área de la organización, se mostrará la misma con sus servicios y la información asociada a los mismos.
+  - Por cada elemento de soporte de los servicios, se mostrará su detalle.
+  - Resumen del valor de los activos. 
+  - Descripción del riesgo.
+  - Descripción de los valores seleccionados para la probabilidad y degradación en las amenazas 
+  - Mapas de riesgo: Riesgo potencial y Riesgo presente
+  - Debilidades (o vulnerabilidades).
+  - Anexo resumen áreas, servicios, valoraciones, red/es donde se encuentra la información, aplicaciones, herramientas y repositorios, información gestionada en general, dónde se encuentra localizada la información en papel, dónde se encuentra localizada la información     digital y responsable del área. 
+En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de ellos mediante capturas.
