@@ -196,3 +196,56 @@ El contenido básico del informe de evaluación del riesgo debería ser el sigui
   - Debilidades (o vulnerabilidades).
   - Anexo resumen áreas, servicios, valoraciones, red/es donde se encuentra la información, aplicaciones, herramientas y repositorios, información gestionada en general, dónde se encuentra localizada la información en papel, dónde se encuentra localizada la información     digital y responsable del área. 
 En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de ellos mediante capturas.
+
+## 15 de Abril
+
+### Mitigación del riesgo
+- **Introducción a la mitigación del riesgo**: A la vista de los impactos y riesgos a que están expuestos las áreas/servicios/procesos y los sistemas/aplicaciones (junto con todo el resto de infraestructura de soporte, localizaciones y personal), hay que tomar una serie dedecisiones condicionadas por diversos factores:
+  - La gravedad del impacto y/o del riesgo. 
+  - Las obligaciones a las que por ley esté sometida la organización. 
+  - Las obligaciones a las que por reglamentos sectoriales esté sometida la organización. 
+  - Las obligaciones a las que por contrato esté sometida la organización. 
+Consideraciones adicionales: 
+  - Imagen pública de cara a la sociedad). 
+  - Política interna. 
+  - Relaciones con los proveedores. 
+  - Relaciones con los clientes o usuarios. 
+  - Relaciones con otras organizaciones. 
+  - Nuevas oportunidades de negocio. 
+  - Acceso a sellos o calificaciones reconocidas de seguridad. 
+Todas las consideraciones anteriores desembocan en una calificación de cada riesgo significativo, determinándose si:
+  1. Es crítico en el sentido de que requiere atención urgente.
+  2. Es grave en el sentido de que requiere atención.
+  3. Es apreciable en el sentido de que pueda ser objeto de estudio para su tratamiento.
+  4. Es asumible en el sentido de que no se van a tomar acciones para atajarlo.
+     - Cuando el impacto residual es asumible. 
+     - Cuando el riesgo residual es asumible. 
+     - Cuando el coste de las salvaguardas oportunas es desproporcionado en comparación al impacto y riesgo residuales.
+En el video correspondiente de OpenWebinars se muestra un esquema de la toma de decisiones para el tratamiento del riesgo.
+
+- **Evaluación y tratamiento del riesgo y opciones de tratamiento**: Impacto y riesgo residual son una medida del estado presente, entre la inseguridad potencial (sin salvaguarda alguna) y las medidas adecuadas que reducen impacto y riesgo a valores aceptables. Si el valor (impacto y riesgo) residual es igual al valor potencial, las salvaguardas existentes no valen para nada, típicamente no porque no haya nada hecho, sino porque hay elementos fundamentales sin hacer. Es importante entender que un valor residual es sólo un número. Para su correcta interpretación debe venir acompañado de la relación de lo que se debería hacer y no se ha hecho.
+El comité de dirección debe determinar el nivel de impacto y riesgo aceptable y aceptar la responsabilidad de las insuficiencias. Estos niveles de aceptación se pueden establecer por activo o por agregación de activos. Cualquier nivel de impacto y/o riesgo es aceptable si lo conoce y acepta formalmente la dirección. Estos riesgos aceptados deberán ser monitorizados de forma continua y especial para asegurar que no cambien su valor.
+La dirección puede decidir aplicar algún tratamiento al sistema de seguridad desplegado para proteger el sistema de información. Hay dos grandes opciones:
+  - Reducir el riesgo residual (aceptar un menor riesgo).
+  - Ampliar el riesgo residual (aceptar un mayor riesgo).
+En términos de zonas de riesgos (mapa de riesgos presentado anteriormente, también llamado mapa de calor), se pueden tomar las siguientes decisiones (mejores prácticas de la industria):
+  - Zona 1 – riesgos muy probables y de muy alto impacto.
+  - Zona 2 – riesgos de probabilidad relativa e impacto medio.
+  - Zona 3 – riesgos improbables y de bajo impacto.
+  - Zona 4 – riesgos improbables pero de muy alto impacto.
+
+Es de sentido común que no se puede invertir en salvaguardas más allá del valor que queremos proteger.
+Es intencionado el hecho de que el riesgo caiga fuertemente con pequeñas inversiones y que el coste de las inversiones se dispare para alcanzar niveles de seguridad cercanos al 100%. Para analizar la mejor estrategia de coste-beneficio tenemos:
+  - Análisis cuantitativo 
+  - Análisis cualitativo 
+  - Análisis mixto
+Las opciones para el tratamiento del riesgo son:
+  - Eliminación: La eliminación de la fuente de riesgo es una opción frente a un riesgo que no es aceptable. En un sistema podemos eliminar varias cosas, siempre que no afecten a la esencia de la organización.
+  - Mitigación: La mitigación del riesgo se refiere a una de dos opciones:
+      - Reducir la degradación causada por una amenaza (a veces se usa la expresión acotar el impacto).
+      - Reducir la probabilidad de que una amenaza de materializa.
+  - Compartición o transferencia: Tradicionalmente se ha hablado de ‘transferir el riesgo’. Como la transferencia puede ser parcial o total, es más general hablar de ‘compartir el riesgo’. Hay dos formas básicas de compartir riesgo:
+      -  Riesgo cualitativo
+      -  Riesgo cuantitativo 
+  - Financiación (Aprovisionamiento): Cuando se acepta un riesgo, la organización hará bien en reservar fondos para el caso de que el riesgo se concrete y haya que responder de sus consecuencias.
+Una vez finalizado la evaluación del tratamiento y los controles a implementar  se deben generar los nuevos mapas de riesgo que muestren la situación de la organización tras su implementación.
