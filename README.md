@@ -197,7 +197,7 @@ El contenido básico del informe de evaluación del riesgo debería ser el sigui
   - Anexo resumen áreas, servicios, valoraciones, red/es donde se encuentra la información, aplicaciones, herramientas y repositorios, información gestionada en general, dónde se encuentra localizada la información en papel, dónde se encuentra localizada la información     digital y responsable del área. 
 En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de ellos mediante capturas.
 
-## 15 de Abril
+## 15 de Abril, 2024
 
 ### Mitigación del riesgo
 - **Introducción a la mitigación del riesgo**: A la vista de los impactos y riesgos a que están expuestos las áreas/servicios/procesos y los sistemas/aplicaciones (junto con todo el resto de infraestructura de soporte, localizaciones y personal), hay que tomar una serie dedecisiones condicionadas por diversos factores:
@@ -249,3 +249,56 @@ Las opciones para el tratamiento del riesgo son:
       -  Riesgo cuantitativo 
   - Financiación (Aprovisionamiento): Cuando se acepta un riesgo, la organización hará bien en reservar fondos para el caso de que el riesgo se concrete y haya que responder de sus consecuencias.
 Una vez finalizado la evaluación del tratamiento y los controles a implementar  se deben generar los nuevos mapas de riesgo que muestren la situación de la organización tras su implementación.
+
+## 16 de Abril, 2024
+
+- **Requisitos de un programa de ciberseguridad**: Un programa de ciberseguridad busca la implementación de los proyectos de seguridad, entendiendo por tales proyectos los que permitirán materializar las decisiones adoptadas para el tratamiento de los riesgos. Para ello, se deben realizar los siguientes pasos para su implementación: 
+  - Identificación proyectos seguridad 
+  - Plan de ejecución
+  - Plan de adecuación
+Cada programa de seguridad debe detallar:
+  - Su objetivo genérico.
+  - Las salvaguardas concretas a implantar o mejorar, detallando sus objetivos de calidad, eficacia y eficiencia
+  - La relación de escenarios de impacto y/o riesgo que afronta
+  - La unidad responsable de su ejecución.
+  - Una estimación de costes, tanto económicos como de esfuerzo de realización, teniendo en cuenta:
+  - Una relación de subtareas a afrontar, teniendo en cuenta:
+  - Una estimación del tiempo de ejecución desde su arranque hasta su puesta en operación.
+  - Una estimación del estado de riesgo (impacto, probabilidad y riesgo residual) a su finalización.
+  - Un sistema de indicadores (métricas) de eficacia y eficiencia que permitan conocer en cada momento la calidad del desempeño de la función de seguridad que se desea y su evolución temporal.
+
+- **Informe de tratamiento de riesgo**: El informe de tratamiento del riesgo incorpora las diferentes opciones de tratamiento del riesgo (riesgos aceptados, transferidos, eliminados y las salvaguardas a desplegar) junto con el mapa del riesgo tras su implementación. Este informe puede ser independiente o bien incluirse como continuación del informe de evaluación de riesgos. Como mínimo debería contener la siguiente información:
+  - Introducción.
+  - Enfoque metodológico.
+  - Situación actual:
+    - Debilidades.
+    - Mapas de riesgo.
+    - Resumen de los planes de acción.
+  - Descripción en detalle de los planes de acción. Por cada uno de los planes se detallará:
+    - Descripción de la medida.
+    - Objetivos concretos buscados.
+    - Actividades a realizar.
+    - Nivel de madurez buscado.
+    - Entorno tecnológico involucrado (si alguno).
+    - Recursos necesarios (dinero, tiempo y personal).
+    - Métricas propuestas. 
+  - Acciones de monitorización necesarias. 
+  - Apéndices: 
+    - Resumen de los planes de acción. 
+    - Plan de proyecto con todos los proyectos necesarios, con fecha de inicio y fin
+   
+- **Frameworks de seguridad**: Existen diferentes frameworks de seguridad de la información y ciberseguridad que nos permitirán contar con un conjunto de salvaguardas base entre las que poder escoger para los planes de mitigación del riesgo, así como establecer un marco general de gestión de la seguridad. La norma ISO/IEC 27001 es un estándar para la seguridad de la información. Se encuentra dividida en dos partes. La primera se compone de 10 puntos entre los cuales se encuentran: 
+  - Objeto y campo de aplicación.
+  - Referencias normativas.
+  - Términos y definiciones.
+  - Contexto de la organización.
+  - Liderazgo.
+  - Planificación.
+  - Soporte.
+  - Operación.
+  - Evaluación de desempeño.
+  - Mejora.
+La segunda parte, está conformada por el anexo A, que establece los objetivos de control y los controles de referencia (definidos en detalle en el estándar ISO 27002). 
+El marco NIST CSF no provee nuevas funciones o categorías de ciberseguridad, sino recopila las mejores prácticas (ISO, ITU, CIS, NIST, entre otros) y las agrupa según afinidad. Se centra en el uso de impulsores de negocio para guiar las actividades de ciberseguridad y 
+considerar los riesgos de ciberseguridad como parte de los procesos de gestión de riesgos de la organización. El framework consta de tres partes: el marco básico, el perfil del marco y los niveles de implementación.
+En los níveles de implementación los tiers proporcionan un contexto sobre cómo una organización ve el riesgo de la ciberseguridad y los procesos implementados para manejarlo. Las escalas describen el grado en que las prácticas de gestión de riesgos de ciberseguridad de una empresa exhiben las características definidas en el marco. Por ello mismo, actúan como niveles de madurez en los procesos de ciberseguridad. Los niveles de implementación caracterizan las prácticas de una compañía en un rango (4 niveles: parcial / riesgo informado / repetible / adaptativo). Estos niveles reflejan una progresión desde respuestas informales y reactivas hasta enfoques que son ágiles y están informados sobre el riesgo. Durante el proceso de selección de un tier, la empresa debe considerar sus actuales prácticas de gestión de riesgos, entorno de amenazas, requisitos legales y regulatorios, objetivos de negocio/misión y restricciones de organización.
