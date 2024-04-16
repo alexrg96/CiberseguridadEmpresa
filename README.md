@@ -298,6 +298,7 @@ Cada programa de seguridad debe detallar:
   - Operación.
   - Evaluación de desempeño.
   - Mejora.
+
 La segunda parte, está conformada por el anexo A, que establece los objetivos de control y los controles de referencia (definidos en detalle en el estándar ISO 27002). 
 El marco NIST CSF no provee nuevas funciones o categorías de ciberseguridad, sino recopila las mejores prácticas (ISO, ITU, CIS, NIST, entre otros) y las agrupa según afinidad. Se centra en el uso de impulsores de negocio para guiar las actividades de ciberseguridad y 
 considerar los riesgos de ciberseguridad como parte de los procesos de gestión de riesgos de la organización. El framework consta de tres partes: el marco básico, el perfil del marco y los niveles de implementación.
