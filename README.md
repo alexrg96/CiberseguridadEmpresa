@@ -303,3 +303,57 @@ La segunda parte, está conformada por el anexo A, que establece los objetivos d
 El marco NIST CSF no provee nuevas funciones o categorías de ciberseguridad, sino recopila las mejores prácticas (ISO, ITU, CIS, NIST, entre otros) y las agrupa según afinidad. Se centra en el uso de impulsores de negocio para guiar las actividades de ciberseguridad y 
 considerar los riesgos de ciberseguridad como parte de los procesos de gestión de riesgos de la organización. El framework consta de tres partes: el marco básico, el perfil del marco y los niveles de implementación.
 En los níveles de implementación los tiers proporcionan un contexto sobre cómo una organización ve el riesgo de la ciberseguridad y los procesos implementados para manejarlo. Las escalas describen el grado en que las prácticas de gestión de riesgos de ciberseguridad de una empresa exhiben las características definidas en el marco. Por ello mismo, actúan como niveles de madurez en los procesos de ciberseguridad. Los niveles de implementación caracterizan las prácticas de una compañía en un rango (4 niveles: parcial / riesgo informado / repetible / adaptativo). Estos niveles reflejan una progresión desde respuestas informales y reactivas hasta enfoques que son ágiles y están informados sobre el riesgo. Durante el proceso de selección de un tier, la empresa debe considerar sus actuales prácticas de gestión de riesgos, entorno de amenazas, requisitos legales y regulatorios, objetivos de negocio/misión y restricciones de organización.
+
+## 17 de Abril, 2024
+
+## Controles de mitigación: Seguridad administrativa y física
+- **Gobierno de la ciberseguridad**: De acuerdo al modelo establecido por el IT Governance Institute (ISACA), la seguridad requiere la participación activa de los altos directivos de las empresas. El término que describe el compromiso de la alta dirección es el gobierno corporativo, que es el conjunto de responsabilidades y prácticas ejercidas por los responsables de una empresa (por ejemplo, el consejo y la alta dirección) con el objetivo de proporcionar dirección estratégica, asegurar que los objetivos sean alcanzados, garantizar que los riesgos sean gestionados adecuadamente, y verificar que los recursos de la empresa sean utilizados de manera responsable. Por lo tanto, la ciberseguridad debe ser parte integral del gobierno corporativo para lograr sus objetivos, no sólo para cubrir las necesidades actuales sino también las futuras.
+
+El objetivo de la seguridad de la información es desarrollar, implementar y administrar un programa de seguridad que alcance los siguientes cinco resultados básicos de un gobierno eficaz de seguridad: 
+  - Alineación estratégica: Alinear la seguridad de la información con la estrategia de negocio.
+  - Administrar los riesgos: Ejecutar medidas apropiadas para mitigar los riesgos y reducir el posible impacto que tendrían en los activos de información.
+  - Entrega de valor: Optimizar las inversiones en la seguridad.
+  - Administración de recursos: Utilizar el conocimiento y la infraestructura de la seguridad de la información con eficiencia y eficacia.
+  - Medición del desempeño: Monitorizar y reportar métricas de seguridad de la información para garantizar que se alcancen los objetivos.
+Para lograr un gobierno eficaz, la alta dirección debe establecer un marco que guíe el desarrollo y mantenimiento de un programa integral de seguridad.
+
+- **Políticas, procedimientos y guías**
+
+El cuerpo documental de la seguridad se compone de 3 patas:
+  - Guías
+  - Procedimientos
+  - Políticas
+
+Con el objeto de desarrollar políticas de seguridad de calidad, debemos tener en cuenta varios aspectos:
+  - Adaptabilidad
+  - Definición de los objetivos
+  - Compromiso
+  - Comunicación
+  - Revisiones
+  - Alineamiento legal, regulatorio y normativo 
+
+De acuerdo a las buenas prácticas dela industria, una política de seguridad debería incluir los siguientes puntos:
+  - Introducción
+  - Ámbito de aplicación
+  - Objetivos
+  - Principios
+  - Responsabilidades
+  - Resultados clave
+  - Políticas relacionadas
+
+Finalmente, las políticas de seguridad más típicas en una organización serían las siguientes:
+  - Gestión de activos
+  - Clasificación de la información
+  - Uso aceptable
+  - Control de Acceso
+  - Seguridad para proveedores
+  - Continuidad de negocio
+  - Gestión de incidentes
+  - BYOD
+  - Dispositivos móviles y teletrabajo
+  - Gestión de claves y certificados
+  - Eliminación y destrucción de la información
+  - Escritorios y pantallas limpios
+  - Gestión del cambio
+  - Copias de seguridad
+  - Transferencia de información
