@@ -168,24 +168,24 @@ Los modelos semi-cuantitativos se encuentran entre el cualitativo y cuantitativo
 ## 12 de Abril, 2024
 
 - **Escenarios de riesgo, modelado de amenazas y metodologías de análisis del riesgo**: La estimación, prevención y reducción de riesgos es la clave para evitar pérdidas y desastres en cualquier organización. Uno de los pasos para lograr estos objetivos es la construcción de una serie de escenarios de riesgos, amenazas y vulnerabilidades. Su objetivo principal es tener una visión global de los riesgos, roles e interacciones para identificar prioridades en el tratamiento del riesgo. 
-Para ello se pueden tomar 2 aproximaciones, de arriba a abajo y de abajo a arriba. Los escenarios deben desarrollarse de la siguiente manera:
+  Para ello se pueden tomar 2 aproximaciones, de arriba a abajo y de abajo a arriba. Los escenarios deben desarrollarse de la siguiente manera:
   - Comenzar con una lista genérica de riesgos para definir un conjunto inicial de escenarios para la organización.
   - Validar dichos escenarios contra los objetivos del negocio.
   - Refinar el conjunto de escenarios seleccionado basada en la validación anterior. Categorizarlos de forma que se alineen con la criticidad de la organización.
   - Reducir el número de escenarios a un conjunto manejable.
   - Mantener todos los riesgos en una lista de forma que puedan ser reevaluados en la siguiente iteración e incluidos para su análisis en detalle si se vuelven relevantes en ese momento.
   - Incluir un “evento no especificado” en los escenarios para tratar los incidentes que no han sido cubiertos por los escenarios especificados.
-El modelado de amenazas es un conjunto de técnicas que permiten analizar las potenciales amenazas que un desarrollo de software podría tener con el fin de asegurar que las mismas son tratadas mediante controles. 
-Los pasos para crear un modelo de amenazas son: 
-  1. Crear una descripción de la arquitectura
-  2. Descomponer la aplicación 
-  3. Identificar las amenazas 
-  4. Documentar las amenazas 
-  5. Asignar prioridades a las amenazas 
-Existen también diferentes metodologías de análisis de riesgos como por ejemplo MAGERIT, OCTAVE, ISO 27005, MEHARI, CRAMM o NIST 800-30.
+  El modelado de amenazas es un conjunto de técnicas que permiten analizar las potenciales amenazas que un desarrollo de software podría tener con el fin de asegurar que las mismas son tratadas mediante controles. 
+  Los pasos para crear un modelo de amenazas son: 
+    1. Crear una descripción de la arquitectura
+    2. Descomponer la aplicación 
+    3. Identificar las amenazas 
+    4. Documentar las amenazas 
+    5. Asignar prioridades a las amenazas 
+  Existen también diferentes metodologías de análisis de riesgos como por ejemplo MAGERIT, OCTAVE, ISO 27005, MEHARI, CRAMM o NIST 800-30.
 
 - **Informe de evaluación del riesgo**: Este informe es el resultado del trabajo realizado durante la evaluación del riesgo. Recoge todas las evidencias recopiladas y las conclusiones obtenidas sobre el entorno del riesgo (como los activos), las amenazas encontradas, su valoración en impacto y probabilidad y el mapa de riesgo de la organización. A la vez este informe puede ser continuado en la siguiente fase incluyendo las salvaguardas existentes y a implementar junto con el riesgo residual tras la implementación de las mismas.
-El contenido básico del informe de evaluación del riesgo debería ser el siguiente:
+  El contenido básico del informe de evaluación del riesgo debería ser el siguiente:
   - Descripción de los activos: Descripción de los procesos de negocio o áreas, y por cada uno su árbol de activos y dependencias.
   - Por cada área de la organización, se mostrará la misma con sus servicios y la información asociada a los mismos.
   - Por cada elemento de soporte de los servicios, se mostrará su detalle.
@@ -195,7 +195,7 @@ El contenido básico del informe de evaluación del riesgo debería ser el sigui
   - Mapas de riesgo: Riesgo potencial y Riesgo presente
   - Debilidades (o vulnerabilidades).
   - Anexo resumen áreas, servicios, valoraciones, red/es donde se encuentra la información, aplicaciones, herramientas y repositorios, información gestionada en general, dónde se encuentra localizada la información en papel, dónde se encuentra localizada la información     digital y responsable del área. 
-En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de ellos mediante capturas.
+  En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de ellos mediante capturas.
 
 ## 15 de Abril, 2024
 
@@ -205,7 +205,7 @@ En el video correspondiente de OpenWebinars se muestra un ejemplo de cada uno de
   - Las obligaciones a las que por ley esté sometida la organización. 
   - Las obligaciones a las que por reglamentos sectoriales esté sometida la organización. 
   - Las obligaciones a las que por contrato esté sometida la organización. 
-Consideraciones adicionales: 
+  Consideraciones adicionales: 
   - Imagen pública de cara a la sociedad). 
   - Política interna. 
   - Relaciones con los proveedores. 
@@ -213,33 +213,33 @@ Consideraciones adicionales:
   - Relaciones con otras organizaciones. 
   - Nuevas oportunidades de negocio. 
   - Acceso a sellos o calificaciones reconocidas de seguridad. 
-Todas las consideraciones anteriores desembocan en una calificación de cada riesgo significativo, determinándose si:
-  1. Es crítico en el sentido de que requiere atención urgente.
-  2. Es grave en el sentido de que requiere atención.
-  3. Es apreciable en el sentido de que pueda ser objeto de estudio para su tratamiento.
-  4. Es asumible en el sentido de que no se van a tomar acciones para atajarlo.
+  Todas las consideraciones anteriores desembocan en una calificación de cada riesgo significativo, determinándose si:
+    1. Es crítico en el sentido de que requiere atención urgente.
+    2. Es grave en el sentido de que requiere atención.
+    3. Es apreciable en el sentido de que pueda ser objeto de estudio para su tratamiento.
+    4. Es asumible en el sentido de que no se van a tomar acciones para atajarlo.
      - Cuando el impacto residual es asumible. 
      - Cuando el riesgo residual es asumible. 
      - Cuando el coste de las salvaguardas oportunas es desproporcionado en comparación al impacto y riesgo residuales.
-En el video correspondiente de OpenWebinars se muestra un esquema de la toma de decisiones para el tratamiento del riesgo.
+  En el video correspondiente de OpenWebinars se muestra un esquema de la toma de decisiones para el tratamiento del riesgo.
 
 - **Evaluación y tratamiento del riesgo y opciones de tratamiento**: Impacto y riesgo residual son una medida del estado presente, entre la inseguridad potencial (sin salvaguarda alguna) y las medidas adecuadas que reducen impacto y riesgo a valores aceptables. Si el valor (impacto y riesgo) residual es igual al valor potencial, las salvaguardas existentes no valen para nada, típicamente no porque no haya nada hecho, sino porque hay elementos fundamentales sin hacer. Es importante entender que un valor residual es sólo un número. Para su correcta interpretación debe venir acompañado de la relación de lo que se debería hacer y no se ha hecho.
-El comité de dirección debe determinar el nivel de impacto y riesgo aceptable y aceptar la responsabilidad de las insuficiencias. Estos niveles de aceptación se pueden establecer por activo o por agregación de activos. Cualquier nivel de impacto y/o riesgo es aceptable si lo conoce y acepta formalmente la dirección. Estos riesgos aceptados deberán ser monitorizados de forma continua y especial para asegurar que no cambien su valor.
-La dirección puede decidir aplicar algún tratamiento al sistema de seguridad desplegado para proteger el sistema de información. Hay dos grandes opciones:
+  El comité de dirección debe determinar el nivel de impacto y riesgo aceptable y aceptar la responsabilidad de las insuficiencias. Estos niveles de aceptación se pueden establecer por activo o por agregación de activos. Cualquier nivel de impacto y/o riesgo es aceptable si lo conoce y acepta formalmente la dirección. Estos riesgos aceptados deberán ser monitorizados de forma continua y especial para asegurar que no cambien su valor.
+  La dirección puede decidir aplicar algún tratamiento al sistema de seguridad desplegado para proteger el sistema de información. Hay dos grandes opciones:
   - Reducir el riesgo residual (aceptar un menor riesgo).
   - Ampliar el riesgo residual (aceptar un mayor riesgo).
-En términos de zonas de riesgos (mapa de riesgos presentado anteriormente, también llamado mapa de calor), se pueden tomar las siguientes decisiones (mejores prácticas de la industria):
+  En términos de zonas de riesgos (mapa de riesgos presentado anteriormente, también llamado mapa de calor), se pueden tomar las siguientes decisiones (mejores prácticas de la industria):
   - Zona 1 – riesgos muy probables y de muy alto impacto.
   - Zona 2 – riesgos de probabilidad relativa e impacto medio.
   - Zona 3 – riesgos improbables y de bajo impacto.
   - Zona 4 – riesgos improbables pero de muy alto impacto.
 
-Es de sentido común que no se puede invertir en salvaguardas más allá del valor que queremos proteger.
-Es intencionado el hecho de que el riesgo caiga fuertemente con pequeñas inversiones y que el coste de las inversiones se dispare para alcanzar niveles de seguridad cercanos al 100%. Para analizar la mejor estrategia de coste-beneficio tenemos:
+  Es de sentido común que no se puede invertir en salvaguardas más allá del valor que queremos proteger.
+  Es intencionado el hecho de que el riesgo caiga fuertemente con pequeñas inversiones y que el coste de las inversiones se dispare para alcanzar niveles de seguridad cercanos al 100%. Para analizar la mejor estrategia de coste-beneficio tenemos:
   - Análisis cuantitativo 
   - Análisis cualitativo 
   - Análisis mixto
-Las opciones para el tratamiento del riesgo son:
+  Las opciones para el tratamiento del riesgo son:
   - Eliminación: La eliminación de la fuente de riesgo es una opción frente a un riesgo que no es aceptable. En un sistema podemos eliminar varias cosas, siempre que no afecten a la esencia de la organización.
   - Mitigación: La mitigación del riesgo se refiere a una de dos opciones:
       - Reducir la degradación causada por una amenaza (a veces se usa la expresión acotar el impacto).
@@ -248,7 +248,7 @@ Las opciones para el tratamiento del riesgo son:
       -  Riesgo cualitativo
       -  Riesgo cuantitativo 
   - Financiación (Aprovisionamiento): Cuando se acepta un riesgo, la organización hará bien en reservar fondos para el caso de que el riesgo se concrete y haya que responder de sus consecuencias.
-Una vez finalizado la evaluación del tratamiento y los controles a implementar  se deben generar los nuevos mapas de riesgo que muestren la situación de la organización tras su implementación.
+  Una vez finalizado la evaluación del tratamiento y los controles a implementar  se deben generar los nuevos mapas de riesgo que muestren la situación de la organización tras su implementación.
 
 ## 16 de Abril, 2024
 
@@ -256,7 +256,7 @@ Una vez finalizado la evaluación del tratamiento y los controles a implementar 
   - Identificación proyectos seguridad 
   - Plan de ejecución
   - Plan de adecuación
-Cada programa de seguridad debe detallar:
+  Cada programa de seguridad debe detallar:
   - Su objetivo genérico.
   - Las salvaguardas concretas a implantar o mejorar, detallando sus objetivos de calidad, eficacia y eficiencia
   - La relación de escenarios de impacto y/o riesgo que afronta
@@ -267,7 +267,7 @@ Cada programa de seguridad debe detallar:
   - Una estimación del estado de riesgo (impacto, probabilidad y riesgo residual) a su finalización.
   - Un sistema de indicadores (métricas) de eficacia y eficiencia que permitan conocer en cada momento la calidad del desempeño de la función de seguridad que se desea y su evolución temporal.
 
-- **Informe de tratamiento de riesgo**: El informe de tratamiento del riesgo incorpora las diferentes opciones de tratamiento del riesgo (riesgos aceptados, transferidos, eliminados y las salvaguardas a desplegar) junto con el mapa del riesgo tras su implementación. Este informe puede ser independiente o bien incluirse como continuación del informe de evaluación de riesgos. Como mínimo debería contener la siguiente información:
+- **Informe de tratamiento de riesgo**: El informe de tratamiento del riesgo incorpora las diferentes opciones de tratamiento del riesgo (riesgos aceptados, transferidos, eliminados y las salvaguardas a desplegar) junto con el mapa del riesgo tras su implementación.      Este informe puede ser independiente o bien incluirse como continuación del informe de evaluación de riesgos. Como mínimo debería contener la siguiente información:
   - Introducción.
   - Enfoque metodológico.
   - Situación actual:
@@ -299,32 +299,32 @@ Cada programa de seguridad debe detallar:
   - Evaluación de desempeño.
   - Mejora.
 
-La segunda parte, está conformada por el anexo A, que establece los objetivos de control y los controles de referencia (definidos en detalle en el estándar ISO 27002). 
+  La segunda parte, está conformada por el anexo A, que establece los objetivos de control y los controles de referencia (definidos en detalle en el estándar ISO 27002). 
 El marco NIST CSF no provee nuevas funciones o categorías de ciberseguridad, sino recopila las mejores prácticas (ISO, ITU, CIS, NIST, entre otros) y las agrupa según afinidad. Se centra en el uso de impulsores de negocio para guiar las actividades de ciberseguridad y 
 considerar los riesgos de ciberseguridad como parte de los procesos de gestión de riesgos de la organización. El framework consta de tres partes: el marco básico, el perfil del marco y los niveles de implementación.
 En los níveles de implementación los tiers proporcionan un contexto sobre cómo una organización ve el riesgo de la ciberseguridad y los procesos implementados para manejarlo. Las escalas describen el grado en que las prácticas de gestión de riesgos de ciberseguridad de una empresa exhiben las características definidas en el marco. Por ello mismo, actúan como niveles de madurez en los procesos de ciberseguridad. Los niveles de implementación caracterizan las prácticas de una compañía en un rango (4 niveles: parcial / riesgo informado / repetible / adaptativo). Estos niveles reflejan una progresión desde respuestas informales y reactivas hasta enfoques que son ágiles y están informados sobre el riesgo. Durante el proceso de selección de un tier, la empresa debe considerar sus actuales prácticas de gestión de riesgos, entorno de amenazas, requisitos legales y regulatorios, objetivos de negocio/misión y restricciones de organización.
 
 ## 17 de Abril, 2024
 
-## Controles de mitigación: Seguridad administrativa y física
+### Controles de mitigación: Seguridad administrativa y física
 - **Gobierno de la ciberseguridad**: De acuerdo al modelo establecido por el IT Governance Institute (ISACA), la seguridad requiere la participación activa de los altos directivos de las empresas. El término que describe el compromiso de la alta dirección es el gobierno corporativo, que es el conjunto de responsabilidades y prácticas ejercidas por los responsables de una empresa (por ejemplo, el consejo y la alta dirección) con el objetivo de proporcionar dirección estratégica, asegurar que los objetivos sean alcanzados, garantizar que los riesgos sean gestionados adecuadamente, y verificar que los recursos de la empresa sean utilizados de manera responsable. Por lo tanto, la ciberseguridad debe ser parte integral del gobierno corporativo para lograr sus objetivos, no sólo para cubrir las necesidades actuales sino también las futuras.
 
-El objetivo de la seguridad de la información es desarrollar, implementar y administrar un programa de seguridad que alcance los siguientes cinco resultados básicos de un gobierno eficaz de seguridad: 
+  El objetivo de la seguridad de la información es desarrollar, implementar y administrar un programa de seguridad que alcance los siguientes cinco resultados básicos de un gobierno eficaz de seguridad: 
   - Alineación estratégica: Alinear la seguridad de la información con la estrategia de negocio.
   - Administrar los riesgos: Ejecutar medidas apropiadas para mitigar los riesgos y reducir el posible impacto que tendrían en los activos de información.
   - Entrega de valor: Optimizar las inversiones en la seguridad.
   - Administración de recursos: Utilizar el conocimiento y la infraestructura de la seguridad de la información con eficiencia y eficacia.
   - Medición del desempeño: Monitorizar y reportar métricas de seguridad de la información para garantizar que se alcancen los objetivos.
-Para lograr un gobierno eficaz, la alta dirección debe establecer un marco que guíe el desarrollo y mantenimiento de un programa integral de seguridad.
+  Para lograr un gobierno eficaz, la alta dirección debe establecer un marco que guíe el desarrollo y mantenimiento de un programa integral de seguridad.
 
 - **Políticas, procedimientos y guías**
 
-El cuerpo documental de la seguridad se compone de 3 patas:
+  El cuerpo documental de la seguridad se compone de 3 patas:
   - Guías
   - Procedimientos
   - Políticas
 
-Con el objeto de desarrollar políticas de seguridad de calidad, debemos tener en cuenta varios aspectos:
+  Con el objeto de desarrollar políticas de seguridad de calidad, debemos tener en cuenta varios aspectos:
   - Adaptabilidad
   - Definición de los objetivos
   - Compromiso
@@ -332,7 +332,7 @@ Con el objeto de desarrollar políticas de seguridad de calidad, debemos tener e
   - Revisiones
   - Alineamiento legal, regulatorio y normativo 
 
-De acuerdo a las buenas prácticas dela industria, una política de seguridad debería incluir los siguientes puntos:
+  De acuerdo a las buenas prácticas dela industria, una política de seguridad debería incluir los siguientes puntos:
   - Introducción
   - Ámbito de aplicación
   - Objetivos
@@ -341,7 +341,7 @@ De acuerdo a las buenas prácticas dela industria, una política de seguridad de
   - Resultados clave
   - Políticas relacionadas
 
-Finalmente, las políticas de seguridad más típicas en una organización serían las siguientes:
+  Finalmente, las políticas de seguridad más típicas en una organización serían las siguientes:
   - Gestión de activos
   - Clasificación de la información
   - Uso aceptable
@@ -357,3 +357,28 @@ Finalmente, las políticas de seguridad más típicas en una organización serí
   - Gestión del cambio
   - Copias de seguridad
   - Transferencia de información
+
+## 18 de Abril, 2024
+
+- **Organización de la seguridad de la información**: Para poder responder de forma eficaz y eficiente a los retos de la seguridad de la información en la organización, se deben organizar y estructurar las responsabilidades y las funciones relacionadas con la seguridad, así como asegurar que no existan lagunas. El objeto es describir y documentar la estructura de responsabilidades, competencias y relaciones relativas a la seguridad de la información en la organización.
+  - Funciones y responsabilidad de la seguridad de la información: Se trata de definir las responsabilidades de cada empleado o puesto de trabajo en relación a la Seguridad de la Información.
+  - Segregación de tareas: Se trata de evitar usos o accesos indebidos a la información o a las aplicaciones o sistemas que la gestionan (activos de información) mediante la separación de las funciones asignando distintos perfiles o áreas de responsabilidad-
+  - Contacto con autoridades: En caso de incidentes en la seguridad de la información, puede resultar necesario mantener informados a los organismos de control del estado o administración.
+  - Contacto con grupos de interés especial: Se trata de mantenernos actualizados en cuanto a las noticias sobre la seguridad de la información y permanecer alerta ante las nuevas amenazas para la seguridad de la información y si es necesario que adoptemos alguna recomendación de estos grupos especializados.
+  - Seguridad de la información en la gestión de proyectos: Este control pretende decirnos que la seguridad de la información debe involucrarse en todos los procesos de la organización ya sean procesos del negocio, procesos internos, servicios o productos, procesos TI etc.
+ 
+- **Dispositivos móviles y teletrabajo, gestión de activos y seguridad en RRHH**: 
+  - Dispostivos móviles: Se trata de disponer de políticas de Seguridad de la Información como medidas concretas que mitiguen los riesgos de la seguridad de la información en el uso de dispositivos móviles o remotos en una organización. La política de uso de dispositivos móviles en una organización debe considerar:
+    - El registro de nuevos dispositivos. La cancelación de registro de dispositivos móviles. Requisitos de seguridad física.
+    - Requisitos de seguridad técnica incluidas conexiones remotas.
+    - Control de software.
+    - Control de acceso y cifrado de la información contenida en reposo y en tránsito.
+  - Teletrabajo: En la actualidad, el teletrabajo es una actividad relativamente difundida en todo tipo de organizaciones, por lo que la seguridad de la Información es un aspecto clave para garantizar la protección de esta actividad. Se trata de:
+    - Evaluar qué activos de información están involucrados en el teletrabajo.
+    - Realizar una evaluación de riesgos aplicada a los activos de la información y a las actividades del teletrabajo.
+    - Aplicar los controles adecuados para mitigar los riesgos identificados.
+  - Seguridad en RRHH: El objetivo del presente dominio es la necesidad de educar e informar al personal desde su ingreso y en forma continua, cualquiera sea su situación de actividad, acerca de las medidas de seguridad que afectan al desarrollo de sus funciones y de las expectativas depositadas en ellos en materia de seguridad y asuntos de confidencialidad. Se requiere explicitar las responsabilidades en materia de seguridad en la etapa de reclutamiento de personal e incluirlas en los acuerdos a firmarse y verificar su cumplimiento durante el desempeño del individuo como empleado. 
+
+
+ 
+
