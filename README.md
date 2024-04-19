@@ -379,6 +379,34 @@ En los níveles de implementación los tiers proporcionan un contexto sobre cóm
     - Aplicar los controles adecuados para mitigar los riesgos identificados.
   - Seguridad en RRHH: El objetivo del presente dominio es la necesidad de educar e informar al personal desde su ingreso y en forma continua, cualquiera sea su situación de actividad, acerca de las medidas de seguridad que afectan al desarrollo de sus funciones y de las expectativas depositadas en ellos en materia de seguridad y asuntos de confidencialidad. Se requiere explicitar las responsabilidades en materia de seguridad en la etapa de reclutamiento de personal e incluirlas en los acuerdos a firmarse y verificar su cumplimiento durante el desempeño del individuo como empleado. 
 
+## 19 de Abril, 2024
 
- 
+- **Gestión de activos**: Los inventarios de activos son un elemento clave para la identificación del riesgo. Solo así podremos establecer las amenazas y vulnerabilidades reales a las que está expuesto el sistema. Otra razón de gran importancia, es que, gracias al registro del inventario de activos podemos identificar quién es el propietario del activo y asignar responsabilidades. De esta forma, logramos proteger la confidencialidad, la integridad y la disponibilidad (y otras dimensiones que puedan ser necesarias) de la información. El objetivo de estos controles es la preservación de los activos de información como soporte del negocio. Se focaliza en varias vertientes:
+  - Responsabilidad de los activos: El objetivo de este punto es la identificación de los activos de información y las responsabilidades sobre los mismos, con el objetivo de evaluar las medidas de protección adecuadas para cada activo en base a una evaluación de riesgos.
+  - Clasificación de la información: Asegurar que la información recibe el nivel de protección adecuado de acuerdo con su importancia en la organización.
+  - Manejo de los soportes de almacenamiento: Se trata de proteger la información en el nivel de soportes en los que se encuentra ya sea papel o soportes electrónicos. Prevenir la exposición, modificación, eliminación o destrucción de información almacenada en medios de forma no autorizada.
+
+- **Seguridad física**: La seguridad física es la disciplina que diseña, despliega y mantiene controles de seguridad aplicables al mundo físico con el objeto de proteger diferentes tipos de activos:
+  - Áreas y espacios
+  - Equipamiento
+  - Personas
+  
+  Si bien las personas son el bien más valioso. y el fin último de la seguridad en las organizaciones, generalmente las medidas para proteger a las mismas está incluidas en las otras dos (especialmente la protección de áreas y espacios). A continuación se listan los controles específicos para crear y mantener áreas seguras:
+  - Perímetro de seguridad física
+  - Controles de acceso físico
+  - Seguridad de oficinas, despachos e instalaciones
+  - Protección contra amenazas externas y medioambientales
+  - Trabajo en áreas seguras
+  - Áreas de entrega y carga
+
+  Así mismo, es primordial asegurar que se proteja el equipamiento:
+  - Ubicación y protección del equipamiento
+  - Elementos de soporte
+  - Seguridad en el cableado
+  - Mantenimiento del equipamiento
+  - Retirada de bienes
+  - Seguridad del equipamiento y de los activos fuera de las instalaciones
+  - Seguridad en la reutilización o eliminación de equipos
+  - Equipamiento desatendido por el usuario
+
 
