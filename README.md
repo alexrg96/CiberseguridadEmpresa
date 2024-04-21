@@ -453,3 +453,73 @@ En los níveles de implementación los tiers proporcionan un contexto sobre cóm
     - Sistemas de gestión de contraseñas
     - Uso de programas de utilidad privilegiados
     - Control de acceso al código fuente de programas
+
+- **Aplicaciones de gestión de identidades**: La gestión de la identidad y del acceso es un área de negocio que se dedica a las siguientes tareas:
+  - Aprovisionamiento de cuentas de usuario y contraseñas
+  - Implantación de sistemas de identificación y autenticación única corporativa
+  - Gestión centralizada de las atribuciones de los usuarios
+  - Modelo de autorizaciones
+
+  La necesidad de negocio que cubre la gestión de identidad es facilitar y controlar de forma eficiente los sistemas AAA, aportando los siguientes beneficios: 
+    - Seguridad
+    - Eficiencia
+    - Simplicidad
+    - Productividad
+    - Cumplimiento
+ 
+  Un proyecto típico de diseño de una solución IAM sigue los siguientes pasos:
+    - Crear una visión de arquitectura
+    - Crear una hoja de ruta en fases
+    - Definir una arquitectura
+ 
+  Los factores críticos de éxito de un proyecto tan complejo como estos son:
+    - Apoyo total continuado de la dirección
+    - Abrazar las características de la tecnología seleccionada
+    - No querer hacer mucho demasiado pronto
+    - No sucumbir a la tentación de automatizar procesos malos, tolerar datos incompletos o eliminar requisitos clave
+    - Asegurar que se sabe cómo se soportará el despliegue antes de comenzarlo
+
+  Respecto de los componentes típicos de una arquitectura IAM podemos encontrar los siguientes:
+    - Repositorio central
+    - Conectores con las aplicaciones
+    - Módulo de workflow
+    - Módulo de auto-servicio
+    - Módulo de autenticación
+    - Módulo de autorización
+    - Auditoría y cumplimiento
+ 
+- **Principios de criptografía**: La criptografía es un conjunto de técnicas, que originalmente tratan sobre la protección o el ocultamiento de la información frente a observadores no autorizados. A través de la criptografía la información puede ser protegida contra el acceso no autorizado, su interceptación, su modificación y la inserción de información extra.
+  - Funciones dentro de la seguridad: Con la criptografía se intenta garantizar las siguientes propiedades deseables en la comunicación de información de forma segura.
+  - Criptosistemas de clave pública y privada: Existen dos tipos fundamentales de criptosistemas o sistemas de cifrado:
+    - Criptosistemas simétricos o de clave privada
+    - Criptosistemas asimétricos o de clave pública
+  - Protección de la confidencialidad en información almacenada y en tránsito: En términos generales, hay dos circunstancias en las que se debe usar el usar el cifrado: cuando los datos están “en tránsito” o cuando están “en reposo”.
+  - Firmas digitales: autenticación, no repudio y protección de la integridad: La firma digital consta de dos “claves” o secuencias de caracteres separadas.
+ 
+- **Protección de la información**: La protección de la información es el proceso de salvaguardar la información importante para una organización contra corrupción, compromiso o pérdida. La importancia de esta disciplina es cada vez mayor, toda vez que cada vez se genera más información en las organizaciones, la tolerancia a la indisponibilidad de la misma. Para la protección de la misma se debe tener en cuenta su ciclo de vida y los posibles estados dentro de la misma en que los datos se pueden encontrar:
+  - Creación / Recolección
+  - Almacenamiento
+  - Uso
+  - Compartición
+  - Archivado
+  - Destrucción
+
+  Un aspecto crítico en la protección de datos es la gestión del nivel de acceso de los ficheros no estructurados (aquellos que no se encuentran en una base de datos) y su compartición dentro y fuera  de la organización. Para ello se disponen de 2 tipos de soluciones principalmente que pueden complementarse:
+  - Data Loss Prevention
+  - Information Rights Management
+
+  El correo electrónico es uno de los principales medios de compartición de información, tanto a nivel interno de la organización como externa, a la vez que uno de los principales vectores de entrada para amenazas (correos phishing). Por ello, se deben contar con sistemas que permitan obtener las siguientes funcionalidades:
+  - Detección de phishing
+  - Detonación de ficheros y enlaces
+  - Análisis de malware
+  - Control de información saliente (DLP)
+  - Detección de fraudes y buzones comprometidos
+  - Detección de exploits
+ 
+  Las bases de datos y los repositorios de ficheros son objetivos primordiales para los atacantes debido a la sensibilidad de la información contenida de manera general. Por ello, un método de proteger los datos es monitorizar la actividad realizada en los mismos a bajo nivel con el objeto de descubrir posibles comportamientos sospechosos o directamente delictivos. Una solución de este tipo debería ofrecer la siguiente funcionalidad:
+  - Automatizar el descubrimiento y la clasificación de datos sensibles
+  - Monitorización en tiempo real actividad de los usuarios
+  - Soporte al cumplimiento legal y normativo (plantillas predefinidas)
+  - Políticas predefinidas y adaptables
+  - Bloqueo de acciones y enmascaramiento de datos 
+
