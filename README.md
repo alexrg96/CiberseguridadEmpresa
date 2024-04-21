@@ -409,4 +409,47 @@ En los níveles de implementación los tiers proporcionan un contexto sobre cóm
   - Seguridad en la reutilización o eliminación de equipos
   - Equipamiento desatendido por el usuario
 
+## 21 de Abril, 2024
 
+## Controles de mitigación: Seguridad lógica
+
+- **Terminología y requisitos del negocio para el control de acceso**:
+  - Terminología de Gestión de Identidades y Control de Accesos:
+    - Gestión de accesos: El proceso de configurar el nivel de acceso para cada usuario y grupo dentro de un sistema.
+    - Necesidad de saber / Menor privilegio: Se trata de dos principios que regulan las buenas prácticas de la gestión de accesos y la provisión de permisos.
+    - Aprovisionamiento / Desaprovisionamiento: El primero es el proceso de establecer una identidad y su acceso asociado en un sistema. 
+    - Identificación, autenticación y autorización: Estos términos son la triada del control de acceso, mostrando el flujo en el que un usuario accede a un sistema.
+    - Factores de Autenticación / 2FA / MFA: Existen diferentes esquemas de autenticación de usuarios, basados en la propiedad del factor utilizado para verificar la identidad. 
+    - Acceso basado en roles (RBAC): Se trata de un paradigma de gestión del acceso y el privilegio en el cual se definen roles empresariales de acceso a los cuales se les conceden acceso a diferentes sistemas.
+    - Flujos de trabajo Altas, Bajas y Modificaciones: Cada vez que se quiere aprovisionar (alta), desaprovisionar (baja) o modificar los permisos o rol de un usuario, se debe contar con un flujo de trabajo en el que los roles involucrados y los pasos a dar estén claramente definidos.
+    - Inicio de Sesión Único (SSO): Se trata de un mecanismo de control de acceso que permite que un usuario se autentique una vez ante un sistema maestro y este gestione sus credenciales contra otros sistemas de forma que no sea necesario volverse a autenticar.
+    - Contraseña de un solo uso (OTP): Mecanismo de acceso basado en una contraseña es válida una sólo vez.
+   
+  - Requisitos del negocio para el control de accesos:
+    - Política de control de acceso: Una política de control de acceso debe ser establecida, documentada y revisada basada en los requisitos de seguridad del negocio y de la información. Los propietarios de los activos deberán determinar las reglas de control de acceso apropiadas, los derechos de acceso y restricciones para determinados roles de usuarios, con el nivel de detalle y de dureza de los controles que reflejen los riesgos de seguridad asociados. Los controles de acceso pueden tanto físicos como lógicos y se deberían considerar en conjunto. Tanto a los usuarios como a los proveedores de servicios se les debería dar una declaración clara de los requisitos de negocio que los controles deben alcanzar.
+    - Acceso a las redes y a los servicios de red: Se trata de un requisito para la gestionar la autorización de los usuarios que acceden a los recursos de red. Para ello se exige como requisito elaborar una política específica para el uso de los recursos de red. Aunque este está cubierto en gran parte por el anterior, la política de “gestión de acceso de usuarios de red” debe determinar a qué información se puede acceder, los procedimientos de autorización, los controles de gestión para la protección de las redes, las conexiones de red permitidas (p. Ej., No mediante wifi), los requisitos de autenticación y la supervisión del uso.
+
+- **Gestión del acceso de usuarios**:
+  - Registro de usuarios y cancelación del registro: Se trata de un control para el alta y baja de los usuarios.
+  - Gestión de acceso a los usuarios: Se debe establecer un proceso formal para asignar y revocar los accesos a sistemas y servicios.
+  - Gestión de derechos de acceso privilegiados: El control de los derechos de acceso privilegiados debe realizarse de forma independiente mediante un proceso específico.
+  - Gestión de la información de autenticación secreta de los usuarios: Control para garantizar que se mantiene la confidencialidad de la información secreta de acceso.
+  - Revisión de derechos de acceso de usuario: Control para establecer una revisión periódica de los permisos de accesos de los usuarios.
+  - Eliminación o ajuste de los derechos de acceso: Control para garantizar que se modifican los derechos de acceso al finalizar el empleo o cambiar de puesto de trabajo dentro de la organización.
+  Para realizar esto, además de políticas y procedimientos, se debería implantar por cada aplicación un concepto de autorización.
+  
+  - Responsabilidades del usuario:
+    - Asegurar que las contraseñas no se divulguen
+    - Evitar el uso de registros de contraseñas
+    - Política de cambio de contraseñas ante amenazas
+    - Políticas para la calidad de las contraseñas.
+    - Evitar el almacenamiento de contraseñas
+    - Forzar cambios de contraseñas iniciales
+    - Evitar compartir contraseñas para distintos usos
+
+  - Control de acceso a sistemas y aplicaciones:
+    - Restricción de acceso a la información
+    - Procedimientos de conexión (log-on) seguros
+    - Sistemas de gestión de contraseñas
+    - Uso de programas de utilidad privilegiados
+    - Control de acceso al código fuente de programas
