@@ -523,3 +523,84 @@ En los níveles de implementación los tiers proporcionan un contexto sobre cóm
   - Políticas predefinidas y adaptables
   - Bloqueo de acciones y enmascaramiento de datos 
 
+## 22 de Abril, 2024
+
+- **Seguridad operacional (Parte I)**: Las operaciones de los sistemas, su administración y explotación requieren de controles de seguridad específicos para asegurar que dicha operación no introduzca nuevas debilidades y permita controlar las existentes.
+
+  - **Configuración segura o hardening**: El hardening o configuración segura es el proceso de configuración sistemática de los sistemas y aplicaciones con el objeto de reducir la superficie de ataque potencial así como seleccionar opciones que aumenten la seguridad general del sistema y la información. Existen multitud de guías de fabricantes para realizar dicha tarea, así como guías de organizaciones internacionales como el Center for Internet Security. En general, este proceso se centra en aspectos como cerrar puertos innecesarios en los sistemas, asegurar las políticas de acceso de usuarios, la habilitación de cifrado, configuración de las capacidades de seguridad nativas de cada sistema/aplicación, permisos de seguridad en archivos y carpetas, acceso remoto, etc.
+
+  - **Gestión de vulnerabilidades**: La vulnerabilidad es una debilidad o fallo en un sistema de información que pone en riesgo la seguridad de la información pudiendo permitir que un atacante pueda comprometer la integridad, disponibilidad o confidencialidad de la misma, por lo que es necesario encontrarlas y eliminarlas lo antes posible. La gestión de vulnerabilidades es un proceso continuo de TI consistente en la identificación, evaluación y corrección de vulnerabilidades en los sistemas de información y las aplicaciones de una organización, categorizando los activos según su importancia/valor y clasificando las vulnerabilidades según el nivel de riesgo, de forma que se puedan priorizar las vulnerabilidades a corregir. El proceso de gestión de vulnerabilidades suele incluir las siguientes acciones: 
+    - Obtención de un inventario (y categorización por nivel de criticidad) de los activos de TI de una empresa, lo que incluye servidores, infraestructura de redes, estaciones de trabajo, impresoras y aplicaciones
+    - Detección de las vulnerabilidades existentes mediante escáneres de redes, escáneres de vulnerabilidades y software de pruebas de penetración y determinación de los niveles de riesgo. Los escaneos en red suelen dar más falsos positivos que los agentes.
+    - Reparación de sistemas y dispositivos vulnerables y presentación de informes sobre las medidas correctivas adoptadas. Debe alinearse con la gestión del cambio para evitar impactar en los sistemas y contar con procedimientos específicos como contar con un plan de vuelta atrás antes de aplicar cambios en prueba en entornos de pre-producción antes de su despliegue definitivo.
+
+  - **Gestión del cambio**: Los procesos de cambio pueden conllevar riesgos asociados para la seguridad de la información. Es por ello que se deben disponer de procesos y controles para que analicemos los procesos de cambio en sistemas y aplicaciones, junto con la infraestructura involucrada con los mismos. Se deben tener en cuenta los siguientes aspectos:
+    - Autorización formal
+    - Procedimiento de vuelta atrás
+    - Registro del cambio
+
+  - **Gestión de la capacidad**: Se trata de evitar pérdidas de disponibilidad o rendimiento de los sistemas por falta de capacidad. Gestionar la capacidad se refiere a tener un control del uso de los recursos. Esto se traduce en controles para:
+    - Medición y Seguimiento del uso de recursos
+    - Análisis de tendencias
+    - Planificar las ampliaciones de capacidad
+    - Optimizar el uso de recursos
+  Para poder monitorizar la capacidad existen sistemas de monitorización de salud TI que permiten automatizar estas tareas en SO, BBDD, dispositivos de red, aplicaciones comerciales y aplicaciones propias.
+
+  - **Control del software en explotación**: El objetivo es garantizar la integridad de los sistemas operacionales para la organización. Estos 
+procedimientos deben fijarse en la aplicabilidad de los siguientes controles:
+    - Probar las nuevas aplicaciones o software en entornos aislados.
+    - Comprobar las necesidades de instalación.
+    - Valorar la necesidad de actualización o instalación.
+    - Planificar la forma de volver a versiones anteriores en caso de ser necesario.
+    - Los entornos de desarrollo deben permanecer aislados de los entornos operativos.
+    - Las instalaciones de software debe ser realizada por usuarios autorizados.
+    - Establecer procedimientos o herramientas de monitoreo del software para detectar cambios no autorizados.
+    - Las pruebas posteriores a la implementación deben incluir una supervisión de la red para identificar cualquier tráfico inesperado.
+
+- **Seguridad operacional (Parte II)**: 
+  - **Protección contra malware y del punto final**: Los antivirus son programas cuyo objetivo es detectar y eliminar virus informáticos. Han evolucionado hacia programas más avanzados que además de buscar y detectar virus informáticos consiguen bloquearlos, desinfectar archivos y prevenir una infección de los mismos. Actualmente son capaces de reconocer otros tipos de malware como spyware, gusanos, troyanos, rootkits, RATs, etc. Históricamente se basaban en firmas, de manera que se necesitaba en los fabricantes hubiesen creado (o recibido de otros, dado que compartían) dicha firma. Esto ya no es válido, dado que es fácil modificar un virus para que su firma no genere una alarma, además de que muchas veces cuando se tiene una firma ya es tarde. Los nuevos sistemas se basan en aprendizaje máquina o aprendizaje profundo de forma que se entrena a los sistemas para que detecten características que comparten los malware, de forma que son capaces de detectarlos sin firmas, aunque sean nuevos (si bien ya comienzan a encontrarse ficheros con modificaciones suficientes para engañar a estos sistemas). Otros sistemas se basan en detectar las características de una explotación, de forma que prevengan que el malware pueda tomar control del sistema, cifrar el disco duro, elevar privilegios, etc. Las EDR se encargan de:
+      - Monitorizar los sistemas donde están desplegados los agentes.
+      -  Analizan los procesos que se crean, trazas de memoria, conexiones de red entrantes y salientes, etc, para detectar posibles ataques.
+      -  Abordan la necesidad de una supervisión en tiempo real, centrarse en los análisis de seguridad y en la respuesta al incidente.
+      -  Ofrecen visibilidad completa de extremo a extremo sobre la actividad de cada equipo, administrada desde una única consola.
+      -  Su objetivo principal es la detección proactiva de amenazas nuevas o desconocidas, infecciones previamente no identificadas que penetran en la organización directamente a través de endpoints y servidores.
+    Las soluciones EDR ofrecen las siguientes capacidades:
+      - Modelo preventivo (pre-infección) y detectivo (post-infección) basado en análisis sobre patrones de comportamiento
+      - Enfoque reactivo (post-incidente) apoyado en capacidades de contención y remediación rápida frente incidentes (segundo o minutos)
+      - Capacidades forenses, basadas en análisis sobre el registro de actividades del endpoint (tráfico de red, procesos, etc.)
+      - Inteligencia agregada, a través de un proceso continuo de investigación e innovación gracias a nuestro laboratorio y analistas expertos
+    Existen otro tipo de tecnologías para la protección de los puntos finales que deben ser tenidos en cuenta:
+      - FIM
+      - Protección de móviles
+      - Tecnología de señuelos
+      - Seguridad en la virtualización
+      - RASP
+
+  - **Copias de seguridad**: Una copia de seguridad es un proceso mediante el cual se duplica la información existente de un soporte a otro, con el fin de poder recuperarlos en caso de fallo del primer alojamiento de los datos (tanto a nivel completo en caso de desastre, como parcial en caso de corrupción o pérdida de unos ficheros).
+      - Determinación frecuencia
+      - Periodo de retención
+      - Tipos de copia de seguridad
+      - Restauración y pruebas
+      - Protección de las copias 
+
+  - **Monitorización de eventos y supervisión**: El objetivo es registrar los eventos relacionados con la seguridad de la información y generar evidencias. Para ello es necesario realizar las siguientes actividades:
+        - Registro y gestión de eventos de actividad.
+        - Protección de los registros de información.
+        - Registros de actividad del administrador y operador del sistema.
+        - Sincronización de relojes.
+    Entre los eventos a monitorizar podemos encontrar:
+      - Intentos de acceso exitosos y fallidos.
+      - Desconexiones del sistema.
+      - Acciones ejecutadas.
+      - Alertas por fallos en el sistema.
+      - Fecha y hora en que se producen los eventos.
+      - Tiempos de detención.
+    Las herramientas SIEM son un tipo de herramienta de seguridad que permite recolectar eventos de seguridad desde diferentes fuentes (SO, FWs, IDS, AV, etc) en un formato unificado con el objeto de poder correlacionarlos y analizar posibles problemas de seguridad. Su principal funcionalidad es la siguiente:
+      - Disponer de reglas de alerta y correlación para notificar posibles intrusiones y el cumplimiento normativo.
+      - Disponer de un sistema de análisis avanzado de los eventos para los gestores de incidentes.
+      - Capacidad de análisis de comportamiento de usuarios y entidades (UEBA) que permite establecer patrones estadísticos avanzados del comportamiento de usuarios y dispositivos con el objeto de alertar de anomalías que podrían ser indicadores de un ataque.
+      - Capacidad de análisis de comportamiento y análisis forense en red (NBA) para establecer patrones estadísticos avanzados del tráfico general de la red y poder detectar anomalías.
+      - Permitir la integración de un sistema de orquestación, automatización y respuesta de seguridad (SOAR) para definir pasos de respuesta ante incidentes, así como la automatización de determinados pasos. 
+  - **Consideraciones para la auditoría de SI**: Estos controles buscan minimizar el impacto de las actividades de auditoría en los sistemas operativos mediante la planificación de actividades de forma que causen la mínima interferencia en los sistemas operativos. No estamos hablando de auditorías generales sino de auditorias de los sistemas de información. En este aspecto, deberemos controlar que las auditorías para obtener esta información: 
+    - Cumplan con el alcance planificado 
+    - Evaluar y considerar el impacto
