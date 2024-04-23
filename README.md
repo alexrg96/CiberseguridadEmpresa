@@ -584,10 +584,11 @@ procedimientos deben fijarse en la aplicabilidad de los siguientes controles:
       - Protección de las copias 
 
   - **Monitorización de eventos y supervisión**: El objetivo es registrar los eventos relacionados con la seguridad de la información y generar evidencias. Para ello es necesario realizar las siguientes actividades:
-        - Registro y gestión de eventos de actividad.
-        - Protección de los registros de información.
-        - Registros de actividad del administrador y operador del sistema.
-        - Sincronización de relojes.
+      - Registro y gestión de eventos de actividad.
+      - Protección de los registros de información.
+      - Registros de actividad del administrador y operador del sistema.
+      - Sincronización de relojes.
+
     Entre los eventos a monitorizar podemos encontrar:
       - Intentos de acceso exitosos y fallidos.
       - Desconexiones del sistema.
@@ -595,6 +596,7 @@ procedimientos deben fijarse en la aplicabilidad de los siguientes controles:
       - Alertas por fallos en el sistema.
       - Fecha y hora en que se producen los eventos.
       - Tiempos de detención.
+
     Las herramientas SIEM son un tipo de herramienta de seguridad que permite recolectar eventos de seguridad desde diferentes fuentes (SO, FWs, IDS, AV, etc) en un formato unificado con el objeto de poder correlacionarlos y analizar posibles problemas de seguridad. Su principal funcionalidad es la siguiente:
       - Disponer de reglas de alerta y correlación para notificar posibles intrusiones y el cumplimiento normativo.
       - Disponer de un sistema de análisis avanzado de los eventos para los gestores de incidentes.
@@ -604,3 +606,45 @@ procedimientos deben fijarse en la aplicabilidad de los siguientes controles:
   - **Consideraciones para la auditoría de SI**: Estos controles buscan minimizar el impacto de las actividades de auditoría en los sistemas operativos mediante la planificación de actividades de forma que causen la mínima interferencia en los sistemas operativos. No estamos hablando de auditorías generales sino de auditorias de los sistemas de información. En este aspecto, deberemos controlar que las auditorías para obtener esta información: 
     - Cumplan con el alcance planificado 
     - Evaluar y considerar el impacto
+
+## 23 de Abril, 2024
+
+- **Seguridad de las comunicaciones**
+  - **Segmentación y microsegmentación de la red**: La segmentación de la red consiste en dividir una gran red en segmentos más pequeños, filtrando por cada uno de ellos las entradas y salidas de tráfico de red, de forma que se facilite minimizar la superficie de exposición de los sistemas en el interior. Para ello, se creó el término micro-segmentación. El objetivo es llegar a segmentar por servicios dentro de una misma aplicación, de forma que casi cada sistema cuenta con su propio segmento y reglas de filtrado. Para hacerlo 
+posible se introdujo un nuevo tipo de tecnología, Red Definida por Software (SDN). Este tipo de productos cuentan con sistemas de análisis que permiten poner la red en modo escucha para que ofrezcan un posible mapa de segmentos y reglas de filtrado que a continuación podrá ser refinado por la organización. 
+  - **IDS/IPS (Detección/Prevención de intrusiones en red)**: Un IDS es un programa de detección de accesos no autorizados a una red. Se basa en el análisis pormenorizado del tráfico de red. Al entrar al analizador es comparado con firmas de
+ataques conocidos, o comportamientos sospechosos, como puede ser el escaneo de puertos, paquetes 
+malformados, etc. No solo analiza qué tipo de tráfico es, también revisa el contenido y su comportamiento. Añade capacidad de bloqueo del tráfico de acuerdo a reglas predefinidas. En el caso de tráfico cifrado, se pueden utilizar técnicas de man in the middle o bien cargar los certificados de cifrado de todos los sistemas a analizar su tráfico. Ha surgido un nuevo modelo basado en aprendizaje máquina y aprendizaje profundo para poder detectar ataques en la red mediante análisis de anomalías y características similares de ataques.
+  - **Cortafuegos (FWs)**: Un cortafuegos (FW) es la parte de una red informática que está diseñada para bloquear el acceso no autorizado, permitiendo al mismo tiempo comunicaciones autorizadas, todo mediante reglas definidas. En base a este principio, se recomienda definir qué está permitido y bloquear el resto (whitelisting) que definir lo que no está permitido y permitir el resto. Los FW han evolucionado en los siguientes modelos:
+    - A nivel de paquetes
+    - Con estado
+    -  A nivel de aplicación
+    - Con inspección profunda de paquetes (DPI)
+    - Software Defined Firewall
+
+- **Seguridad en la adquisición, desarrollo y mantenimiento de SI**: El objetivo es: 
+  - Asegurar la inclusión de controles de seguridad y validación de datos.
+  - Definir y documentar las normas y procedimientos que se aplicarán durante el SDLC.
+  - Definir los métodos de protección de la información crítica o sensible.
+  - El diseño e implantación de los sistemas de información que sustentan los procesos de negocio son cruciales para la seguridad.
+  - Todos los entornos donde los sistemas deben estar desplegados han de cumplir los mismos requisitos que el de producción.
+  - Los requisitos de seguridad han de ser identificados y consensuados previamente al desarrollo y/o implantación de los sistemas de información.
+  - El modelo de protección en capas debe ser el seleccionado, asegurando que existen diferentes controles que permitan aportar diferentes barreras en caso de que uno se ellos sea sobrepasado.
+ 
+  Se debe garantizar la seguridad de la información en los entornos de diseño e implementación dentro del SDLC mediante los siguientes aspectos:
+    - Política de desarrollo seguro de software
+    - Procedimientos de control de cambios en los sistemas
+    - Revisión técnica de las aplicaciones tras efectuar cambios
+    - Restricciones a los cambios en los paquetes de SW
+    - Uso de principios de ingeniería en protección de sistemas
+    - Seguridad en entornos de desarrollo
+    - Externalización del desarrollo de software
+    - Pruebas de funcionalidad y de aceptación
+ 
+  Las herramientas de análisis de vulnerabilidades y test de intrusión pueden ser integradas de forma manual, o automatizarse su ejecución en un modelo de CI/CD (devops):
+    - Análisis de vulnerabilidades de SO y aplicaciones comerciales.
+    - Análisis de vulnerabilidades en aplicaciones web.
+    - Test de intrusión automatizados en aplicaciones.
+    - Auditoría de código fuente.
+    - Las aplicaciones Runtime Application Self-Protection (RASP) o de autoprotección en tiempo de ejecución se integran dentro de las aplicaciones web. Son capaces de conocer sus puntos vulnerables y de proteger las peticiones de entrada con datos de entrada maliciosos que se dirijan a estos puntos.
+    - Existen aplicaciones que permiten la gestión segura de librerías de terceros y open source con el objeto de detectar librerías deprecadas o con vulnerabilidades conocidas. 
