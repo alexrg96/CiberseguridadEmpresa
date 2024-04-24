@@ -648,3 +648,30 @@ malformados, etc. No solo analiza qué tipo de tráfico es, también revisa el c
     - Auditoría de código fuente.
     - Las aplicaciones Runtime Application Self-Protection (RASP) o de autoprotección en tiempo de ejecución se integran dentro de las aplicaciones web. Son capaces de conocer sus puntos vulnerables y de proteger las peticiones de entrada con datos de entrada maliciosos que se dirijan a estos puntos.
     - Existen aplicaciones que permiten la gestión segura de librerías de terceros y open source con el objeto de detectar librerías deprecadas o con vulnerabilidades conocidas. 
+
+## 24 de Abril, 2024
+
+- **Continuidad de negocio y recuperación ante desastres**: El objetivo es preservar la seguridad de la información durante las fases de activación, desarrollo de procesos, procedimientos y planes para la continuidad de negocio y de vuelta a la normalidad. Se deben integrar aquellos requisitos de gestión de la seguridad de la información: la legislación, las operaciones, el personal, los materiales, el transporte, los servicios y las instalaciones adicionales. Entre los controles necesarios destacan la continuidad de la seguridad de la información y el uso de redundancias. Hay diferentes estrategias para la recuperación ante desastres: espera pasiva, la espera semi-activa y la espera activa. Gracias a la nube, es mucho más sencillo disponer de una estrategia de recuperación ante desastres, ya sea con sistemas principales en la nube o en local con respaldo en la nube.
+
+  Los elementos esenciales para un plan sólido de recuperación ante desastres son estos: 
+    - Definición del plan
+    - Establecimiento de prioridades
+    - Selección de estrategias de recuperación
+    - Componentes esenciales
+    - Criterios y procedimientos de prueba del plan
+    - Aprobación final
+ 
+- **Gestión de incidentes**: Un incidente de seguridad es cualquier suceso que afecte a la confidencialidad, integridad o disponibilidad de los activos de información de la empresa, por ejemplo: acceso o intento de acceso a los sistemas, uso, divulgación, modificación o destrucción no autorizada de información. 
+  Tipologías (de acuerdo al Instituto Nacional de Ciberseguridad):
+    - Ataques: Dirigido // Defacement
+    - Código malicioso: Infección extendida // Única
+    - DoS/DDoS: Exitoso: No exitoso
+    - Acceso no autorizado, robo o pérdida de equipos y de datos
+    - Pruebas y reconocimientos: Pruebas no autorizadas // Alarmas sistemas monitorización
+    - Daños o cambios físicos no autorizados a los sistemas
+    - Abuso de privilegios y usos inadecuado: Abuso de privilegios o de políticas de seguridad // Infracciones de derechos de autor // Uso indebido de la marca
+ 
+  La gestión de incidentes de seguridad es el conjunto de procesos en una organización para la gestión de un incidente de seguridad a lo largo de todo su ciclo de vida, así como una serie de actividades relacionadas para asegurar la mejora continua de dichos procesos. Estos procesos deben plasmarse en un Plan de Gestión de Incidentes, documento que recoge la categorización de incidentes, pasos a dar de forma general, los pasos específicos por tipo de incidente, roles y responsabilidades, tiempos de respuesta de cada paso, procedimientos de notificación, escalado y declaración de un incidente, etc. Los pasos a tomar, de forma general, son los siguientes:
+    1. Preparación Detección y análisis
+    2. Contención, erradicación y recuperación
+    3. Actividades post-incidente
