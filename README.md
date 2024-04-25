@@ -675,3 +675,41 @@ malformados, etc. No solo analiza qué tipo de tráfico es, también revisa el c
     1. Preparación Detección y análisis
     2. Contención, erradicación y recuperación
     3. Actividades post-incidente
+
+## 25 de Abril, 2024
+
+- **Introducción y requisitos para la monitorización del riesgo**: La monitorización continua y el reporte del riesgo es un proceso dinámico que requiere una participación a nivel global. Para ser efectiva, la función de gestión del riesgo debe tratar las tendencia clave antes de que se conviertan en problemas y ser reportadas de forma periódica. El reporte del riesgo es el proceso de comunicación los riesgos en tiempo real y el rendimiento a los diferentes stakeholders. La monitorización del riesgo es una actividad continua que permite la concienciación de qué está sucediendo actualmente en diferentes partes de la organización. Esto se puede lograr mediante diferentes técnicas:
+  - Los mapas de riesgo y el perfil de riesgo.
+  - Los resultados de pruebas y los valores de aseguramiento se pueden obtener mediante agregación desde el registro del riesgo hasta la evaluación del riesgo estratégico para el reporte estratégico.
+  - Las métricas pueden ser enlazadas a los riesgos para seguir y monitorizar el riesgo.
+  - Los informes de seguimiento y desviaciones, así como todas las evaluaciones del riesgo (totales o parciales) se pueden enlazar con los diferentes indicadores y métricas
+ 
+  A nivel más operativo, la monitorización del riesgo provee a las organizaciones de formas de:
+    - Validar el cumplimiento legal, regulatorio y contractual.
+    - Determinar la efectividad continua de las medidas de respuesta al riesgo.
+    - Identificar los cambios que impactarían al riesgo sobre SI y entornos de operación. 
+  Las organizaciones pueden establecer la monitorización en cualquiera de las capas de gestión:
+    - Las actividades de monitorización en capa 1 pueden incluir evaluaciones del riesgo continuas y cómo los cambios en el espacio del riesgo pueden afectar a las actividades de la capa 2 y 3.
+    - Las actividades a nivel de capa 2 podrían incluir el análisis de tecnologías nuevas o existentes para identificar debilidades explotables y/o deficiencias que podrían afectar al éxito del negocio.
+    - En la capa 3, las actividades se centran en los SI.
+
+  Las organizaciones también deben decidir sobre cómo se realizará la monitorización y la frecuencia de dichas mediciones.
+
+  - **Requisitos para la monitorización del riesgo**: Las entradas para este proceso incluyen las estrategias de implementación de las respuestas al riesgo y la implementación actual de los cursos de acción seleccionados. En algunos casos, las salidas de la evaluación del riesgo pueden ser entradas útiles para este proceso. Por ejemplo, las condiciones umbral de evaluación del riesgo. A su vez, las organizaciones podrían monitorizar si estas condiciones umbral han sido alcanzadas.
+ 
+- **Actividades para la monitorización y reporte del riesgo y comunicación del riesgo**: Las organizaciones implementan programas de monitorización del riesgo para:
+  - Monitorización del cumplimiento
+  - Monitorización de efectividad
+  - Monitorización del cambio.
+
+  Determinar el propósito de los programas de monitorización del riesgo impacta de forma directa en los medios utilizados por la organización para realizar dichas actividades.Las organizaciones también determinan el tipo de monitorización a utilizar, incluyendo aproximaciones que dependen en la automatización o en actividades manuales/procedimentales con intervención humana. Las estrategias de monitorización desarrolladas en la capa 1 influencian y proveen de dirección a las estrategias similares desarrolladas en las capas 2 y 3, incluyendo las actividades de monitorización asociadas con el marco de gestión del riesgo al nivel de SI.
+
+  Los aspectos particulares ejecutados son dictados por las asunciones, restricciones, tolerancia al riesgo y prioridades establecidas por las organizaciones. No todas las actividades son realizadas en las mismas capas, para los mismos propósitos o utilizando las mismas técnicas. Sin embargo, es importante que la organización intente coordinar las diferentes actividades de monitorización. Esta coordinación facilita la compartición de información relacionada con el riesgo. Los resultados de la monitorización se aplican en la realización de evaluaciones del riesgo incrementales para:
+    - Mantener el conocimiento del riesgo incurrido.
+    - Destacar los cambios en el riesgo y para indicar la necesidad de revisitar otros pasos del proceso de gestión del riesgo cuando sea necesario.
+
+  El proceso de comunicación se debe diseñar para ser iterativo y para informar de las decisiones de
+evaluación y gestión. El objetivo es que todos los stakeholders tengan una comprensión común de los procesos y asunciones realizados. El nivel y tipo de comunicación varía dependiendo de la complejidad de la organización y el nivel de riesgo potencial y la percepción del mismo por las partes. Aspectos críticos para la comunicación:
+    - Solicitar información a los stakeholders
+    - Reconocer los retos en la percepción e interpretación del riesgo
+    - Tomar los pasos necesarios para la comunicación y compartición de los resultados de la evaluación del riesgo
