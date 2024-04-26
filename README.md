@@ -713,3 +713,66 @@ evaluación y gestión. El objetivo es que todos los stakeholders tengan una com
     - Solicitar información a los stakeholders
     - Reconocer los retos en la percepción e interpretación del riesgo
     - Tomar los pasos necesarios para la comunicación y compartición de los resultados de la evaluación del riesgo
+
+## 26 de Abril, 2024
+
+- **Indicadores Clave del Riesgo (KRI)**: Los indicadores de riesgo son métricas que miden la probabilidad de que ocurra un riesgo, elementos cuyos valores se calculan con base en datos históricos. Estos indicadores :
+  - Sirven como herramienta de monitorización y mitigación de los riesgos
+  - Avisan cuando algo no funciona como debería
+  - Ofrecen una alerta temprana a los gerentes para que tomen las acciones oportunas
+  - Identifican la exposición actual al riesgo y las tendencias de riesgo emergentes
+  - Subrayan las debilidades de los controles
+  - Ayudan a fortalecer los controles deficientes
+  - Facilitan el proceso de informe y escalado de riesgos 
+
+  Para que estos indicadores sean efectivos, deben cumplir los siguientes requisitos:
+    - Medibles
+    - Predictivos
+    - Comparables
+    - Informativos
+  Estos KRIs pueden ser divididos en diferentes tipologías:
+    - Causales
+    - Efectividad de los controles
+    - Volumen
+ 
+  En el diseño de los indicadores se deben tomar en cuenta varios aspectos:
+    - Fuentes de las que se medirán: Si son automáticas (como herramientas) o manuales (como informes). También el cómo se recopila la información de dichas fuentes (introducción manual, uso de APIs para alimentar una herramienta, etc).
+    - Establecimiento de umbrales de alerta y alarma, lo que permitirá actuar antes de que un indicador llegue a un valor crítico que impacte a la organización.
+    - Proceso de mejora y madurez: Según la organización madura en su proceso de seguridad, se deberán crear nuevas métricas o actualizar las existentes, todo ello con el objetivo de reflejar las necesidades en cada momento. 
+  Conviene ser muy prudente y no intentar medir todo al mismo tiempo. Puede ser necesario comenzar con unos pocos indicadores básicos y de alto nivel, y desde ahí comenzar a madurar dichos indicadores según maduran los procesos de seguridad de la información.
+
+  Ejemplos de indicadores de riesgo:
+    - Métricas de amenazas
+    - Métricas de nivel de riesgo
+    - Nivel de cumplimiento
+    - Nivel de incidentes de seguridad
+    - Ejecución de proyectos de ciberseguridad
+    - Formación y concienciación
+ 
+- **Herramientas para monitorización del riesgo**: Existen una serie de técnicas que permiten hacer un seguimiento del riesgo y por tanto monitorizarlo:
+  - Reevaluaciones del riesgo
+  - Auditorías del riesgo
+  - Análisis de varianza
+
+  Así mismo, también existen varias herramientas muy útiles para este propósito:
+    - Registro del riesgo
+    - Soluciones GRC
+    - Herramientas SIEM
+    - Plantillas excel 
+
+  Estas herramientas generalmente se aplican a nivel corporativo para diferentes funciones, no sólo seguridad, siendo bastante complejas. Una herramienta de este tipo debería permitir:
+    - Modelado de activos y su valoración.
+    - Análisis y gestión de riesgos (cuantitativo y cualitativo, con plantillas de valoración).
+    - Análisis del cumplimiento legal y regulatorio.
+    - Gestión de la continuidad de negocio.
+    - Catálogo modificable en base a estándares y mejores prácticas de activos, amenazas, vulnerabilidades y salvaguardas.
+    - Plantillas documentales y repositorio documental para la gestión de seguridad y cumplimiento (SGSI, continuidad de negocio, GRPD, etc).
+    - Gestión de empresas complejas creando diferentes capas a la vez que unidades de negocio y/o la gestión multiempresa (para grupos empresariales).
+    - Métricas y capacidad de monitorización y reporte de seguridad y de la gestión del riesgo.
+ 
+  Por un lado, existen determinadas herramientas generalistas de TI que pueden aportar información para la monitorización del riesgo:
+    - CMDB.
+    - Herramientas de descubrimiento de activos.
+    - Herramientas de monitorización de salud.
+
+  Se deben integrar, en la medida de los posible, las diferentes herramientas de ciberseguridad (gestión devulnerabilidades, DLP, EDR, protección de BBDD, etc) con las herramientas de monitorización del riesgo, para disponer de una imagen actualizada y completa de la organización.
