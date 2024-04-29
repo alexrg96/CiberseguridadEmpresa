@@ -776,3 +776,8 @@ evaluación y gestión. El objetivo es que todos los stakeholders tengan una com
     - Herramientas de monitorización de salud.
 
   Se deben integrar, en la medida de los posible, las diferentes herramientas de ciberseguridad (gestión devulnerabilidades, DLP, EDR, protección de BBDD, etc) con las herramientas de monitorización del riesgo, para disponer de una imagen actualizada y completa de la organización.
+
+## 29 de Abril, 2024
+
+### Conclusiones
+En este curso de análisis y gestión del riesgo he aprendido muchísimos conceptos nuevos y ha sido un temario bastente interesante y lucrativo. Sin embargo, he de decir que comparado con el anterior curso, con este profesor me ha resultado más difícil atender y llevar el hilo de los videos ya que presentaba diapositivas muy extensas con mucha teoría y pocos casos prácticos o ejemplos. Además, en algunos test de repaso e incluso en el examen final ponían como incorrectas respuestas que creo que si conteste correctamente (por lo que pude ver en los comentarios más gente se quejaba de lo mismo) lo que fue un tanto frustrante. Con todo, dejando de lado los puntos negativos, creo que he aprendido bastante sobre el análisis y gestión del riesgo y creo que me puede ser bastante útil en un futuro ya que cada vez cobra más importancia y es clave tener estos conocimientos.
