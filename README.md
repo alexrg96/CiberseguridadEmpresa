@@ -781,3 +781,65 @@ evaluación y gestión. El objetivo es que todos los stakeholders tengan una com
 
 ### Conclusiones
 En este curso de análisis y gestión del riesgo he aprendido muchísimos conceptos nuevos y ha sido un temario bastente interesante y lucrativo. Sin embargo, he de decir que comparado con el anterior curso, con este profesor me ha resultado más difícil atender y llevar el hilo de los videos ya que presentaba diapositivas muy extensas con mucha teoría y pocos casos prácticos o ejemplos. Además, en algunos test de repaso e incluso en el examen final ponían como incorrectas respuestas que creo que si conteste correctamente (por lo que pude ver en los comentarios más gente se quejaba de lo mismo) lo que fue un tanto frustrante. Con todo, dejando de lado los puntos negativos, creo que he aprendido bastante sobre el análisis y gestión del riesgo y creo que me puede ser bastante útil en un futuro ya que cada vez cobra más importancia y es clave tener estos conocimientos.
+
+## OSINT para fuga de datos empresariales
+
+## 30 de Abril, 2024
+
+Este taller consiste en un único y extenso vídeo en el que se va a aprender el uso de herramientas Osint para la búsqueda de fugas de información que sufren las empresas. OSINT es un acrónimo de Open Source Intelligence (Inteligencia de fuentes abiertas). Utilizando herramientas de OSINT y nuestras habilidades realizamos un proceso de investigación sobre la información solicitada. Consiste en:
+  - Busqueda
+  - Selección
+  - Adquisición
+  - Procesado
+  - Análisis
+  - Presentación
+
+Lo más importante es que existen multitud de fuentes abiertas donde recabar información (Google, Twitter, Facebook...). Los usos más habituales son:
+  - Conocer la reputación online de la empresa
+  - Conocer tendencias de mercado y evaluarlas
+  - Estudios de todo tipo (Del lenguaje, psicologicos...)
+  - Medio para evaluar la privacidad de una empresa
+  - Identificar y evaluar posibles amenazas en el ámbito militar y policial
+  - Ayudar a localizar fuentes públicas para eliminarlas.
+
+Como resultado, podemos ser de gran ayuda para la empresa sobre todo si cuenta con los siguientes departamentos:
+  - Periodismo
+  - Recursos humanos
+  - Marketing
+  - Fuerzas y seguridad del estado
+  - Abogados y detectives
+  - Agentes encubiertos
+  - Rastreo de criptomonedas y transacciones
+  - Evitar robos y hackeos
+  - Información sobre la empresa
+  - Mejora de productos
+
+En conclusión, una empresa que no tiene datos para tomar sus decisiones va sin rumbo. Los datos se han convertido en la mejor manera de asegurar que los objetivos se cumplan. Además, tenemos que aprovechar la cantidad de información que Internet nos brinda.
+
+Las herramientas principales para temas empresariales son:
+  - Linkedln
+  - qdq media
+  - librebor
+  - Búsquedas de currículo con Google
+  - infobel
+  - twago
+  - indeed
+  - Páginas amarillas
+  - Invenes
+  - hunter
+  - Boletín del BOE
+  - GOB
+
+Redes sociales:
+  - Facebook
+  - Instagram
+  - Twitter
+  - Reddit
+
+Buscadores generales:
+  - Google
+  - Yahoo
+  - Bing
+  - Yandex
+
+En la dark web también se puede buscar información a cerca de la empresa.
