@@ -843,3 +843,16 @@ Buscadores generales:
   - Yandex
 
 En la dark web también se puede buscar información a cerca de la empresa.
+
+## 1 de Mayo, 2024
+
+En el video se usa la herramienta theharvester de Kali para buscar información. Como primer ejemplo se probó con telefonica usando el comando **$ theharvester -d telefonica.es -l 100 -b google** (-d telefonica.es es el dominio, -l 100 es el número de registros y -b google para que busque en google). Como resultado da tres emails relacionados y una serie de servidores que estan colgando de telefónica. Posteriormente, se buscó en linkedln (cambiando el -b google por -b linkedln) y apareció una serie de usuarios con su nombre y apellido y su puesto de trabajo relacionado con Telefonica (p.ej Alejandro Ramos Perez - Service Managment - Telefonica). Después volvió a hacer lo mismo con el dominio de Movistar (-d movistar.es). Cambiando de herramienta, utilizó hunter.io en el que se introduce un dominio y sale un listado de emails relacionados pero con elementos ocultos (es una herramienta de pago). A partir de estos datos se podría buscar información de las personas que trabajan en la empresa, buscando por ejemplo sus redes sociales y usando la ingenieria inversa. 
+
+Buscando en el navegador de Google **"filetype:pdf site:movistar.es"** podemos conseguir documentos como contratos para luego ver si contienen metadatos que nos den información. Con  **"filetype:pdf(emial | curriculum vitae)"** podemos filtrar la busqueda para ver si contiene emails o CV. También se puede buscar __**"telefono ***" "direccion *" "email" intitle:"curriculum vitae" site:ucm.es__ para ver los curriculums publicados por la Universidad de Madrid que igual pueden contener datos privados que no deberían estar ahí. A parte de información de empleados, podemos buscar si dispone de brechas de datos en cuanto a materia de ciberseguridad. Poniendo **intitle:index.of password** podemos tener acceso a un índice de contraseñas que alguna empresa dejó público.
+
+Con navegadores como **shodan.io** también se puede buscar el dominio y ver que es lo que tienen publicado o simplemente con **ingenieria social**, levantando el teléfono y llamando a la empresa, podemos ver que cantidad de información son capaces de facilitarnos. Utilizando la **Hidden wiki**, la wikipedia de la darkweb, también podremos navegar por diferentes brechas de datos y buscar información sobre ciertos dominios o ciertas empresas o personas.
+
+Finalmente, con distribuciones de Linux como **Osintux** o **Huron** tendremos una gran cantidad de herramientas OSINT con documentos pdf que explican como usarlas.
+
+### Conclusiones
+Me ha parecido un taller muy interesante, super ameno y muy bien explicado a través de la multitud de ejemplos que ha usado el profesor para mostrar el uso de herramientas Osint para la búsqueda de fugas de información. Es sorprendente la cantidad de infomación que se puede sacar de una empresa o persona simplemente haciendo determinadas busquedas o usando ciertas herramientas. Es muy importante controlar lo que se publica.
