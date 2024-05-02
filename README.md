@@ -856,3 +856,36 @@ Finalmente, con distribuciones de Linux como **Osintux** o **Huron** tendremos u
 
 ### Conclusiones
 Me ha parecido un taller muy interesante, super ameno y muy bien explicado a través de la multitud de ejemplos que ha usado el profesor para mostrar el uso de herramientas Osint para la búsqueda de fugas de información. Es sorprendente la cantidad de infomación que se puede sacar de una empresa o persona simplemente haciendo determinadas busquedas o usando ciertas herramientas. Es muy importante controlar lo que se publica.
+
+## Criptografía Simétrica y Asimétrica en la práctica
+
+## 2 de Mayo, 2025
+
+En este taller veremos como funciona la criptografía Asimétrica/Simétrica y cómo llevarla a la práctica.
+La **criptografía** son mensajes ininteligibles para receptores no autorizados. Para ello hay que aplicar un algoritmo. Dentro de los cuatro pilares de la seguridad informática, la criptografía se encarga de garantizar la **Confidencialidad** de la información.
+
+En cuanto a la historia de la criptografía, sus inicios se remontan a los **jeroglíficos** egipcios que se basaban en el sistema de **sustitución**. Si se avanza un poco en la historia, los espartanos usaban la **escítala**, que consistía en un tubo en el que se enrollaba un papel muy fino y se escribía para que al desenrollarlo el mensaje ya no fuese legible. Esto se conoce como la técnica de **transposición**, cambiar el orden de esos caracteres en el mensaje. Por último, el **cifrador César** lo utilizaban los romanos y usaban la **sustitución** desplazando el alfabéto x posiciones.
+
+En la criptografía actual tenemos dos métodos:
+  - **Criptografía Simética o de Clave Privada**: Receptor y emisor conocen la clave para cifrar/descifrar el mensaje.
+    - Ventajas:
+      - Eficiente en grupos reducidos
+      - Sencillos de utilizar
+      - Eficientes (poco tiempo cifrar/descifrar)
+    - Desventajas:
+      - Posible intercambio de claves por medios no seguros
+      - Gran cantidad de claves a memorizar/almacenar
+    En el video correspondiente se muestra como realizar el cifrado simétrico con Windows y con Kali Linux. Con Windows se usó la programa IZarc para cifrar. Para ello simplemente se le da clic derecho sobre el fichero, se escoge la opción de IZarc Añadir al archivo.. y aparecerá una pestaña con opciones para elegir el archivo de destino, si lo quieres encriptar o no y los tipos de encriptación y se le da una contraseña. De esta manera ya tendriamos nuestro fichero encriptado en formato zip. Con Kali se puede utilizar de forma opcional la herramienta **fortune**, que permite generar de forma automatizada ficheros con información. Con la herramienta **gpg** se puede cifrar de manera simétrica con el comando **# gpg symmetric archivo.txt**. Nos pedirá una frase que es la que tendrá que usar luego el destinatario y ya tendriamos nuestro fichero cifrado. Para desencriptarlo usaremos el comando **# gpg --decrypt archivo.txt.gpg** e introduciremos la frase que escribimos para cifrarlo.
+
+  - **Criptografía Asimética o de Clave Pública**: Receptor y emisor disponen de una clave pública y otra privada para cifrar/descifrar el mensaje.
+    - Clave matemáticamente relacionadas
+    - Lo que cifras con una solo lo puedes descifrar con la otra
+    - Imposible deducir la clave privada con la pública
+    - Ventajas:
+      - Menor número de claves
+      - Utilización medios no seguros
+      - Firma digital (no repudio)
+    - Desventajas:
+      - Poco eficientes
+      - Proteger clave privada (con criptografía simétrica)
+      - Importante backup de la clave privada
