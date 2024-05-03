@@ -875,6 +875,7 @@ En la criptografía actual tenemos dos métodos:
     - Desventajas:
       - Posible intercambio de claves por medios no seguros
       - Gran cantidad de claves a memorizar/almacenar
+
     En el video correspondiente se muestra como realizar el cifrado simétrico con Windows y con Kali Linux. Con Windows se usó la programa IZarc para cifrar. Para ello simplemente se le da clic derecho sobre el fichero, se escoge la opción de IZarc Añadir al archivo.. y aparecerá una pestaña con opciones para elegir el archivo de destino, si lo quieres encriptar o no y los tipos de encriptación y se le da una contraseña. De esta manera ya tendriamos nuestro fichero encriptado en formato zip. Con Kali se puede utilizar de forma opcional la herramienta **fortune**, que permite generar de forma automatizada ficheros con información. Con la herramienta **gpg** se puede cifrar de manera simétrica con el comando **# gpg symmetric archivo.txt**. Nos pedirá una frase que es la que tendrá que usar luego el destinatario y ya tendriamos nuestro fichero cifrado. Para desencriptarlo usaremos el comando **# gpg --decrypt archivo.txt.gpg** e introduciremos la frase que escribimos para cifrarlo.
 
   - **Criptografía Asimética o de Clave Pública**: Receptor y emisor disponen de una clave pública y otra privada para cifrar/descifrar el mensaje.
@@ -889,3 +890,42 @@ En la criptografía actual tenemos dos métodos:
       - Poco eficientes
       - Proteger clave privada (con criptografía simétrica)
       - Importante backup de la clave privada
+
+## 3 de Mayo, 2024
+
+En el video del taller para mostrar el ejemplo de criptografía asimétrica se usa otra vez Kali Linux. Para generar las claves pública y privada se usa el comando **#gpg --full-gen-key**. Nos preguntará el tipo de algoritmo, el tamaño de la clave, hasta cuando queremos que sean válidas las claves y los datos para identificar el conjunto de claves (nombre, dirección de correo y opcionalmente si queremos poner algún comentario). Al confirmar las opciones nos pide la frase o contraseña para proteger las claves y ya tendriamos la clave pública y privada. Si quisieramos ver nuestra lista de claves generadas usaremos el comando **# gpg --list-keys**. Para exportar la clave pública se utiliza el comando **# gpg -a --export -o (nombre de la clave)**, el -a es de asci. El usuario que queremos que reciba esta clave pública exportada tendrá que importarla con **# gpg --import (nombre de la clave)**. Ahora ya puede cifrar el fichero que quiera con **# gpg --encrypt --recipient (nombre del destinatario) (nombre del archivo)**, esto genera dicho fichero cifrado con nuestra clave pública, y enviarnoslo. Una vez recibido el fichero, con **# gpg --decypt (nombre del fichero)** y la frase o contraseña que creamos podemos leer el contenido del fichero cifrado que nos mandaron.
+
+- **Función Hash**
+  - Algoritmo (operaciones matemáticas, lógicas, ...)
+  - Transforma unos datos en una serie de caracteres con longitud fija
+    - Genera un valor a partir de una cadena de texto utilizando una función matemática
+    - Identifica de forma única a un fichero, disco duro, ...
+  - Protege la integridad de los datos evitando datos duplicados, faltantes, alterados o incorrectos
+  - Principales algoritmos:
+    - MD5 y SHA
+  - Reglas:
+    - Números generados con un mismo método tienen el mismo tamaño
+    - Imposible reconstruir texto base a partir del Hash
+    - Computacionalmente sencillo de calcular
+  - Ejemplo:
+    - Código ASCII
+    - Agrupar de 3 en 3
+    - Función matemática (1º - 2º) * 3
+  - Con software como **Hash Generator** o **WinMD5** podemos generar los hashes a partir de un fichero
+  - En Linux, podemos crear hash con el comando **md5sum**
+  - Reverse Hashing
+    - Password Hasheadas
+  - Reverse Hashing
+  - Son ataques de diccionario
+
+- **Firma Digital**
+  - Metodo criptográfico
+    - Asocia la identidad de una persona/equipo informático a un mensaje/documento
+    - Certificado digital
+  - Uso de función hash y clave pública y privada
+  - Si los códigos hash coinciden, la firma es válida
+  - En Linux, podemos firmar un fichero con el comando **# gpg -a -detach-sign (nombre del fichero)** (firma y fichero por separado) o **# gpg -sign (nombre del fichero)** (firma y fichero conjuntamente)
+  - En Windows, a traves del programa **Kleopatra** podemos tanto cifrar como firmar un documento.
+ 
+## Conclusiones
+Al igual que el anterior taller, me pareció muy ameno, bien explicado y con buenos ejemplos. Si que es verdad que, a diferencia del anterior, de este ya conocia gran parte de la teoría, pero siempre es bueno saber realizar bien la criptografía simétrica, y sobre todo la asimétrica, y como firmar digitalmente los ficheros. Ojala los cursos de OpenWebinars se impartieran al estilo de estos talleres porque la verdad es que se aprende igual o más y resulta más entretenido y fácil de seguir.
