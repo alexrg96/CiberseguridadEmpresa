@@ -929,3 +929,113 @@ En el video del taller para mostrar el ejemplo de criptografía asimétrica se u
  
 ## Conclusiones
 Al igual que el anterior taller, me pareció muy ameno, bien explicado y con buenos ejemplos. Si que es verdad que, a diferencia del anterior, de este ya conocia gran parte de la teoría, pero siempre es bueno saber realizar bien la criptografía simétrica, y sobre todo la asimétrica, y como firmar digitalmente los ficheros. Ojala los cursos de OpenWebinars se impartieran al estilo de estos talleres porque la verdad es que se aprende igual o más y resulta más entretenido y fácil de seguir.
+
+## 5 de Mayo, 2024
+
+## Seguridad de red en el ámbito corporativo: Capa 2 del modelo OSI
+
+### Introducción
+**Las redes y la seguridad hoy en día**
+  - **La importancia de las redes**:
+    - Comunicación instantánea
+    - Elimina los límites físicos
+    - Múltiples finalidades: sociales, comerciales, personales, ocio...
+    - Almacenamiento en la nube
+    - Confiabilidad y seguridad
+
+  - **Representaciones de red**
+    - Componentes principales:
+      - Dispositivos finales (ordenador, impresora, teléfono...)
+      - Dispositivos intermediarios (router, switch, firewall...)
+      - Medios de red (inalambricos o fibra óptica)
+    - Forma de conexión entre sí:
+      - Tarjeta de red (NIC)
+      - Puerto físico
+      - Interfaz
+
+  - **Intranet, extranet e internet**
+    - Intranet: Empresa únicamente
+    - Extranet: Proveedores, clientes, colaboradores
+    - Internet: Resto del mundo
+   
+  - **Arquitectura de red**
+    - Tolerancia a fallos
+    - Escalabilidad
+    - Calidad de servicio (QoS)
+    - Seguridad
+      - Confidencialidad
+      - Integridad
+      - Disponibilidad
+
+  - **Seguridad en la red: Amenazas**
+    - Virus, gusanos y caballos de Troya
+    - Spyware y adware
+    - Ataques de día cero
+    - Denegración de servicios
+    - Intercepción y robo de datos
+    - Suplantación de identidad
+   
+  - **Seguridad en la red: Soluciones**
+    - Red doméstica o de oficina pequeña:
+      - Antivirus y antispyware
+      - Filtrado de firewall
+    - Red corporativa o grande:
+      - Sistema de firewall dedicado
+      - Listas de control de acceso (ACL)
+      - Sistemas de prevención de intrusiones (IPS)
+      - Redes privadas virtuales (VPN)
+
+**Modelo OSI y modelo TCP/IP**
+- **Beneficios del modelo de capas**
+  - Ayuda en el diseño de protocolos
+  - Fomenta la competencia
+  - Evita que los cambios en una capa afecten a otras
+  - Proporciona un lenguaje común
+
+- **Modelo OSI**
+  - Capas del modelo OSI:
+    - Capa 7: Aplicación
+    - Capa 6: Presentación
+    - Capa 5: Sesión
+    - Capa 4: Transporte
+    - Capa 3: Red
+    - Capa 2: Enlace
+    - Capa 1: Física
+  - Unidad de datos (PDU):
+    - Capa 5-7: Dato
+    - Capa 4: Segmento
+    - Capa 3: Paquete
+    - Capa 2: Trama
+    - Capa 1: Bit
+
+- **Modelo TCP/IP**
+  - Capas del modelo TCP/IP:
+    - Capa 4: Aplicación
+    - Capa 3: Transporte
+    - Capa 2: Internet
+    - Capa 1: Interfaz de red
+  - Unidad de datos (PDU):
+     - Capa aplicación: Dato
+    - Capa transporte: Segmento
+    - Capa internet: Paquete
+    - Capa interfaz de red: Frame
+
+- **Capa de transporte: TCP vs UDP**
+  - TCP (Transmission Control Protocol)
+    - Orientado a conexión: Establece una sesión
+    - Confiable
+    - Garantiza la entrega en el mismo orden y control de flujo
+  - UDP (User Datagrama Protocol)
+    - No orientado a conexión: No establece una sesión
+    - No confiable
+    - Garantiza velocidad pero no la entrega (voz o vídeo)
+    - Soporta multicast y broadcast
+   
+- **Modelo OSI vs TCP/IP**
+  - Similitudes:
+    - Capa 3 (red) y Capa internet
+    - Capa 4 (transporte) y Capa transporte
+    - Encapsulación y desencapsulación
+  - Diferencias:
+    - Capas 1-2 y Capas de acceso a la red
+    - Capas 5-7 y Capa de aplicación
