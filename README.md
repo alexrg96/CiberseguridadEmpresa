@@ -1039,3 +1039,59 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
   - Diferencias:
     - Capas 1-2 y Capas de acceso a la red
     - Capas 5-7 y Capa de aplicación
+
+## 6 de Mayo, 2024
+
+**Formas de acceso a los dispositivos**
+  - **Acceso por consola**
+    - Conexión local
+    - Acceso fuera de banda
+    - Recomendable para configuraciones iniciales(no necesita servicios de red)
+    - Cable RJ45 a DB9
+
+  - **Conexión por consola**
+    1. Conectar el cable al dispositivo
+    2. Administrador de dispositivos
+    3. Puertos (COM y LPT)
+    4. Configurar desde PuTTY u otras herramientas
+
+  - **Acceso por telnet**
+    - Conexión remota no segura
+    - Utiliza el puerto 23 del protocolo TCP
+    - Necesita servicios de red
+    - Toda la información se envía en texto plano
+    - No hay esquema de autenticación
+
+  - **Acesso por secure shell (SSH)**
+    - Conexión remota segura y encriptada
+    - Utiliza el puerto 22 del protocolo TCP
+    - Necesita servicios de red
+    - Dos etapas para establecer una conexión:
+      - Negociación de cifrado de sesión
+      - Autenticación del usuario
+
+**Modos de acceso CLI**
+  - **Sistemas operativos**
+    - Hardware
+    - Kernel
+    - Shell
+    - Interfaz de usuario (CLI/GUI)
+   
+  - **Modos del IOS de Cisco**
+    - Modo de ejecución de usuario: Switch>
+    - Modo de ejecución privilegiado: Switch#
+    - Modo configuración global: Switch(config)#
+    - Modos subconfiguración:
+      - Modo configuración de líneas: Switch(config-line)#
+      - Modo configuración de interfaz: Switch(config-if)#
+     
+  - **Estructura básica de los comandos**
+    1. Indicador (Switch>)
+    2. Comando (ping/show)
+    3. Espacio ( )
+    4. Palabra clave o argumento (192.168.10.5/ip protocols)
+   
+  - **Sintaxis de los comandos**
+    - Switch (config-if)# **switchport port-security aging** { **static** | **time** *time* | **type** {**absolute** | **inactivity**}}
+    - Siendo la **negrita** comandos y palabras clave, la *cursiva* el valor proporcionado por el usuario, los corchetes (no es el caso) elementos opcionales, las llaves elementos obligatorios y los corchetes con barras verticales posibles opciones dentro de un elemento
+   
