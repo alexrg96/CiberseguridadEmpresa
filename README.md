@@ -1095,3 +1095,138 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
     - Switch (config-if)# **switchport port-security aging** { **static** | **time** *time* | **type** {**absolute** | **inactivity**}}
     - Siendo la **negrita** comandos y palabras clave, la *cursiva* el valor proporcionado por el usuario, los corchetes (no es el caso) elementos opcionales, las llaves elementos obligatorios y los corchetes con barras verticales posibles opciones dentro de un elemento
    
+## 7 de Mayo, 2024
+
+**CONFIGURACIÓN DEL DISPOSITIVO Y ASEGURAMIENTO DEL ACCESO LOCAL**
+  - **Nombre de los dispositivos**
+    - Nombre único y descriptivo
+    - Comenzar con una letra
+    - No contener espacios
+    - Finalizar con una letra o dígito
+    - Utilizar únicamente letras, dígitos y guiones
+    - Tener menos de 64 catacteres de longitud
+
+  - **Pautas para la contraseña**
+    - Al menos 8 caracteres, preferiblemente 10 o más caracteres
+    - Combinación de letras mayúsculas y minusculas, números, símbolos y espacios
+    - Evite contraseñas predecibles
+    - Contraseñas con errores de ortografía a propósito
+    - Cambio de contraseñas periódico
+    - No anote ni deje en lugares visibles las contraseñas
+    - Ejemplo de contraseñas débiles: secreto, perez, toyota, bob1967, rojo1234...
+    - Ejemplo de contraseñas seguras: b67n4d39f, 12^h u4@1p7...
+ 
+  - **Configuración de contraseñas**
+    - Modo ejecución de usuarios (password)
+    - Modo ejecución privilegiado (enable secret o enable password)
+ 
+  - **Encriptación contraseñas**
+    - Con el comando **# service password-encryption**
+
+  - **Mensajes de aviso**
+    - **# banner motd -Solo accesos autorizados-**
+    - **# banner login -Todo será monitoreado-**
+    - **# banner exec -Recuerda guardar la config-**
+ 
+  - **Archivos de configuración**
+    - Startup-config:
+      - Se almacena en la NVRAM
+      - Se usa al inicio o reinicio
+      - No pierde su contenido cuando se apaga el dispositivo
+    - Running-config:
+      - Se almacena en la RAM
+      - Refleja la config actual
+      - Es volátil, pierde el contenido cuando se apaga el dispositivo
+   
+  - **Copia de seguridad - uso de TFTP**
+    - Hacer copia de seguridad: **# copy running-config tftp:**
+    - Restaurar copia de seguridad: **# copy tftp: running-config**
+ 
+  - **Copia de seguridad - uso de USB**
+    - Hacer copia de seguridad: **# copy running-config usbflash0:**
+    - Restaurar copia de seguridad: **# copy usbflash0:/R1-Config running-config**
+ 
+**ASEGURAMIENTO DE LAS LÍNEAS DE ACCESO REMOTO**
+  - **Conexión de las líneas - Telnet**
+    - **# line vty 0 15**
+    - **# password cisco**
+    - **# login**
+   
+  - **Conexión de las líneas - SSH**
+    1. Verifique que el dispositivo soporta SSH: **# show version** -> **# show ip ssh** 
+    2. Configure IP domain: **# ip domain-name cisco.com**
+    3. Genere par de claves RSA: **# crypto key generate rsa**
+    4. Configure autenticación de usuarios: **# username admin secret cisco**
+    5. Configure las líneas vty: **# line vty 0 15** -> **# transport input ssh** -> **# login local**
+    6. Habilite SSH versión 2: **# ip ssh version 2**
+
+  - **Componentes AAA**
+    - **Auteticación**
+      1. Cliente establece conexión con router
+      2. Router solicita credenciales
+      3. Router autentica las credenciales contra servidor AAA remoto
+      4. Se acepta o se deniega el acceso
+    - **Autorización**
+      1. El usuario está autenticado, la sesión está establecida
+      2. Router pide autorización para la solicitud de servicio
+      3. El servidor responde PASS/FAIL a la solicitud
+    - **Registro**
+      1. Al autenticarse el usuario, se genera mensaje para comenzar el proceso de registro
+      2. Cuando el usuario termina, se registra mensaje de finalización del proceso de registro
+
+  - **Seguridad adicional en las líneas**
+    - Establecer longitud mínima de contraseñas aceptable: **# security password min-lenght 8**
+    - Disuación de ataques de fuerza bruta:  **# login block for 120 attemps 3 within 60**
+    - Deshabilitar acceso tras un tiempo de inactividad:  **# line vty 0 4** ->  **# exac-timeout 5 30**
+   
+**Introducción a la Capa 2**
+  - **Capa 2**
+    - **La capa de capa enlace de datos**
+      - Gestiona el acceso a los medios
+      - Encapsula los datos de la Capa 3 (Tx)
+      - Interpetra los bits de la Capa 1 (Rx)
+      - Controla el envió y la recepción de información en los medios
+      - Intercambia tramas entre puntos finales
+      - Detención de errores y tramas dañadas
+     
+  - **Subcapas según IEEE 802**
+    - **Control de enlace lógico (LLC)**
+      - Implementado en software
+      - Identifica el protocolo de Capa 3
+    - **Contol de acceso al medio (MAC)**
+      - Implementado en hardware
+      - Encapsulación de datos
+        - Delimitación de tramas
+        - Direccionamiento
+        - Detención de errores
+      - Control de acceso a medios
+     
+    - **Tipos de comunicación**
+      - Simplex
+      - Semi-dúplex
+      - Dúplex
+
+    - **Métodos de control de acceso**
+      - **Acceso por contienda**
+        - Acceso múltiple con detección de colisiones (CSMA/CD)
+        - Acceso múltiple con prevención de colisiones (CSMA/CA)
+      - **Acceso por controlado**
+
+    - **Campos de la trama Ethernet**
+      - **Tecnología Ethernet**
+        - Funciona en las Capas 1 y 2
+        - Se define en los estándares IEEE 802.2 y 802.3
+      - **Trama Ethernet**
+        - Tamaño mín: 64 bytes
+        - Tamaño máx: 1518 bytes
+       
+    - **Tipos de direcciones**
+      - **Dirección MAC unicast**
+        - Un único dispositivo de destino
+        - MAC Dest: MAC Dispositivo
+      - **Dirección MAC broadcast**
+        - Todos los dispositivos de la red local reciben y procesan la trama
+        - MAC Dest: FF-FF-FF-FF-FF-FF
+      - **Dirección MAC multicast**
+        - Grupo de dispositivos como destino
+        - MAC Dest: 01-00-5E-XX-XX-XX
