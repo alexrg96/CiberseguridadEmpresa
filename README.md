@@ -1179,15 +1179,15 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
     - Disuación de ataques de fuerza bruta:  **# login block for 120 attemps 3 within 60**
     - Deshabilitar acceso tras un tiempo de inactividad:  **# line vty 0 4** ->  **# exac-timeout 5 30**
    
-**Introducción a la Capa 2**
-  - **Capa 2**
-    - **La capa de capa enlace de datos**
-      - Gestiona el acceso a los medios
-      - Encapsula los datos de la Capa 3 (Tx)
-      - Interpetra los bits de la Capa 1 (Rx)
-      - Controla el envió y la recepción de información en los medios
-      - Intercambia tramas entre puntos finales
-      - Detención de errores y tramas dañadas
+### INTRODUCCIÓN A LA CAPA 2
+**CAPA 2**
+  - **La capa de capa enlace de datos**
+    - Gestiona el acceso a los medios
+    - Encapsula los datos de la Capa 3 (Tx)
+    - Interpetra los bits de la Capa 1 (Rx)
+    - Controla el envió y la recepción de información en los medios
+    - Intercambia tramas entre puntos finales
+    - Detención de errores y tramas dañadas
      
   - **Subcapas según IEEE 802**
     - **Control de enlace lógico (LLC)**
@@ -1196,37 +1196,96 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
     - **Contol de acceso al medio (MAC)**
       - Implementado en hardware
       - Encapsulación de datos
-        - Delimitación de tramas
-        - Direccionamiento
-        - Detención de errores
+      - Delimitación de tramas
+      - Direccionamiento
+      - Detención de errores
       - Control de acceso a medios
      
-    - **Tipos de comunicación**
-      - Simplex
+  - **Tipos de comunicación**
+    - Simplex
       - Semi-dúplex
       - Dúplex
 
-    - **Métodos de control de acceso**
-      - **Acceso por contienda**
-        - Acceso múltiple con detección de colisiones (CSMA/CD)
-        - Acceso múltiple con prevención de colisiones (CSMA/CA)
-      - **Acceso por controlado**
+  - **Métodos de control de acceso**
+    - **Acceso por contienda**
+      - Acceso múltiple con detección de colisiones (CSMA/CD)
+      - Acceso múltiple con prevención de colisiones (CSMA/CA)
+    - **Acceso por controlado**
 
-    - **Campos de la trama Ethernet**
-      - **Tecnología Ethernet**
-        - Funciona en las Capas 1 y 2
-        - Se define en los estándares IEEE 802.2 y 802.3
-      - **Trama Ethernet**
-        - Tamaño mín: 64 bytes
-        - Tamaño máx: 1518 bytes
+  - **Campos de la trama Ethernet**
+    - **Tecnología Ethernet**
+      - Funciona en las Capas 1 y 2
+      - Se define en los estándares IEEE 802.2 y 802.3
+    - **Trama Ethernet**
+      - Tamaño mín: 64 bytes
+      - Tamaño máx: 1518 bytes
        
-    - **Tipos de direcciones**
-      - **Dirección MAC unicast**
-        - Un único dispositivo de destino
-        - MAC Dest: MAC Dispositivo
-      - **Dirección MAC broadcast**
-        - Todos los dispositivos de la red local reciben y procesan la trama
-        - MAC Dest: FF-FF-FF-FF-FF-FF
-      - **Dirección MAC multicast**
-        - Grupo de dispositivos como destino
-        - MAC Dest: 01-00-5E-XX-XX-XX
+  - **Tipos de direcciones**
+    - **Dirección MAC unicast**
+      - Un único dispositivo de destino
+      - MAC Dest: MAC Dispositivo
+    - **Dirección MAC broadcast**
+      - Todos los dispositivos de la red local reciben y procesan la trama
+      - MAC Dest: FF-FF-FF-FF-FF-FF
+    - **Dirección MAC multicast**
+      - Grupo de dispositivos como destino
+      - MAC Dest: 01-00-5E-XX-XX-XX
+
+### ARP
+**FUNCIONAMIENTO DE ARP**
+  - **Descripción general**
+    - **Protocolo de la capa de enlace de datos** responsable de encontrar la dirección MAC asociada a una determinada dirección IP
+    - **Mantiene una tabla de asignaciones de direcciones IPv4 a MAC**
+    - **Esencial en la transmisión de datos en redes Ethernet**
+    - Existen dos tipos de paquetes: **ARP Request y ARP Reply**
+    - Se distinguen dos modos de almacenar las relaciones: **estática o dinámica**
+   
+  - **Tabla ARP**
+    - **ARP estático**
+      - Añadidas por el administrador (manual)
+      - Únicamente read-only
+      - Más seguro pero menos escalable
+    - **ARP dinámico**
+      - Se aprenden a través del protocolo ARP
+      - Tienen fecha de vencimiento
+      - Menos seguro pero más escalable
+     
+  - **Variaciones ARP**
+    - **Reverse ARP (RARP)**
+      - Encuentra la dirección IP asociada a una determinada dirección MAC
+      - Necesidad de un servidor RARP especializado
+      - A día de hoy no se utiliza casi, se ha reemplazado por BOOTP y DHCP
+    - **Proxy ARP**
+      - Un host responde a peticiones ARP destinadas a un host que se encuentra fuera de la red local. No es necesario enrutamiento o puerta de enlace
+      - **# ip proxy-arp**
+     
+  - **Demo packet tracer**
+    - Comprobar que inicialmente la tabla está vacia
+    - Ver como ser rellana la tabla tras hacer ping a otros PCs
+    - Borrar la información de la tabla
+    - Ver los paquetes que se envían de ARP (Request y Reply) desde el modo simulación
+   
+**FALLO DE SEGURIDAD ARP**
+  - **ARP Spoofing**
+    - **Denegación de Servicio (DoS)**
+      - Se asocia la MAC del atacante o una inexistente con la IP de la puerta de enlace
+      - Borrado parcial o total de los paquetes capturados
+    - **Man in the middle**
+      - Todos los paquetes enviados entre dos extremos son interceptados por el atacante
+      - Uso más común: session hijacking (secuestro de cookie)
+
+**CONFIGURACIÓN SEGURA DE ARP**
+  - **Mitigación ARP Spoofing**
+    - **Utilizar ARP estático**
+      - Configuración manual de tabla ARP
+      - Comando para PC Windows: **arp -s interface mac_add ip_add**
+      - Comando para dispositivos Cisco: **# arp ip-address mac-address encapsulation-type**
+    - **Software de detección y prevención de ARP Spoofing**
+      - Se limitan a escuchar y detectar patrones peligrosos (Arpwatch, ArpDefender,XArp...)
+    - **Configurar DAI (Dynamic ARP Inspection)**
+      - **Con DHCP Snooping**:
+        - Configuración DAI: **# ip arp inspection vlan _vlan_**
+        - Puertos con DAI: **# ip arp inspection trust**
+        - Puertos sin DAI: **# ip arp inspection limit rate _rate_**
+      - **Sin DHCP Snooping (No recomendable)**:
+        - **# ip source binding _mac_add_ vlan _vlan ip_add_ interface _interface_**
