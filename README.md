@@ -1397,3 +1397,210 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
     - **Desactivación de CDP**
       - Desactivación CDP por interfaz: **# no cdp enable**
       - Desactivación CDP globalmente: **# no cdp run**
+
+### ARP
+
+**CONCEPTO DE VLAN Y TIPOS**
+  - **Tipos de enlace**
+    - **Enlace de acceso**
+      - Tráfico de una única VLAN
+      - Conexión con dispositivos finales
+    - **Enlace troncal**
+      - Tráfico de múltiples VLAN
+      - Conexión entre switches o de un switch con la capa superior
+     
+  - **Ventajas de un diseño con VLAN**
+    - **Dominios de difusión más pequeños**
+    - **Seguridad mejorada**
+    - **Mejora la eficiencia del departamento de TI**
+    - **Reducción de costes**
+    - **Mejor rendimiento**
+    - **Administración más simple de proyectos y aplicaciones**
+   
+  - **Tipos de VLAN**
+    - **VLAN predeterminada**
+      - Por defecto, VLAN 1
+    - **VLAN de datos**
+    - **VLAN nativa**
+      - Por defecto, VLAN 1
+      -  Mismo en ambos extremos
+    - **VLAN de administración**
+      - Por defecto, VLAN 1
+    - **VLAN de voz**
+   
+**ETIQUETADO Y CONFIGURACIÓN DE VLAN**
+  - **Etiquetado 802.1Q VLAN nativa**
+    - **Marcos etiquetados en la VLAN nativa**
+      - Tráfico de la VLAN nativa no se debe etiquetar
+    - **Marcos sin etiquetas en la VLAN nativa**
+      -  Enlace troncal: Se asigna ID de la nativa al ID de la VLAN de puerto (PVID)
+      -  Todo el tráfico sin etiquetar del puerto 802.1Q se envía según el valor de PVID
+     
+  - **Etiquetado VLAN de voz**
+    - **Puerto 1**
+      - Conecta teléfono IP con el switch
+    - **Puerto 2**
+      - Puerto interno
+    - **Puerto 3**
+      - Conecta con el PC
+     
+  - **Rango de VLAN en switches**
+    - **Rango normal VLAN**
+      - Redes pequeñas y medianas
+      - VLAN ID: 1-1005
+      - 1002-1005 reservadas
+      - Se guardan en vlan.dat (memoria flash)
+    - **Rango extendido VLAN**
+      - Proveedores de servicio y empresas globales
+      - VLAN ID: 1006-4094
+      - Se guardan en el archivo de configuración
+
+  - **Creación y borrado de VLAN**
+    - **Creación VLAN en un rango normal**
+      - **# configure terminal**
+      - **# vlan _vlan-id_**
+      - **# name _vlan-name_**
+    - **Borrado de una VLAN de la memoria flash (permanente)**
+      - **# no vlan _vlan-id_**
+    - **Borrado de toda la configuración de VLAN de la memoria flash (permanente)**
+      - **# delete flash:vlan.dat**
+     
+  - **Puertos de acceso**
+    - **# configure terminal**
+    - **# interface _interface-id_**
+    - **# switchport mode access**
+    - **# switchport access vlan _vlan-id_**
+    - **# configure terminal**
+    - **# interface _interface-id_**
+    - **# no switchport access vlan**
+   
+  - **VLAN de voz y datos**
+    - **# configure terminal**
+    - **# interface _interface-id_**
+    - **# switchport mode access**
+    - **# switchport access vlan _vlan-id_**
+    - **# mls qos trust cos**
+    - **# switchport voice vlan _vlan-id_**
+   
+  - **Puertos troncales**
+    - **# configure terminal**
+    - **# interface _interface-id_**
+    - **# switchport mode trunk**
+    - **# switchport trunk native vlan _vlan-id_**
+    - **# switchport trunk allowed vlan _vlan-list_**
+   
+  - **Verificación de la configuración**
+    - **# show vlan brief**
+    - **# show vlan id _vlan-id_**
+    - **# show vlan name _vlan-name_**
+    - **# show vlan summary**
+   
+  - **VLAN de voz y datos**
+    - **# show interface _interface-id_ switchport**
+   
+**CONFIGURACIÓN SEGURA DE VLAN**
+  - **Mitigación de VLAN hopping y double-tagging**
+    - **No usar la VLAN por defecto como VLAN nativa**
+      - # switchport trunk native vlan _vlan-id_**
+    - **Deshabilitar la formación automática de enlaces troncales**
+      - **# switchport mode access**
+      - **# switchport nonegotiate**
+    - **Apagar los puertos no utilizados**
+      - **# shutdown**
+     
+### DTP
+
+**FUNCIONAMIENTO DE DTP**
+  - **Descripción general**
+    - **Protocolo de capa 2 exclusivo de Cisco que se habilita de manera automática en los switches**
+    - Maneja la **negociación de enlaces troncales**
+    - Una interfaz se puede establecer como **troncal, de acceso o para negociar troncal con la interfaz vecina**
+    - Ayuda al administrador a **acelerar el proceso de configuración de la red**
+
+  - **Modos de interfaz y configuración**
+    - **nonegotiate**
+      - Detiene la negociación DTP en la interfaz
+      - switchport mode { trunk | access } switchport nonegotiate
+    - **access**
+      - Modo acceso de forma permanente, convierte en enlace no troncal
+      - switchport mode access
+    - **dynamic auto**
+      - Puede convertir el enlace en troncal (troncal o desirable)
+      - switchport mode dynamic auto
+    - **dynamic desirable**
+      - Intenta convertir el enlace en troncal (troncal, desirable o dinámico)
+      - switchport mode dynamic desirable
+    - **trunk**
+      - Modo troncal de forma permanente, convierte en enlace troncal
+      - switchport mode trunk
+
+  - **Verificación de la configuración**
+    - **# show dtp interface fa0/1**
+   
+**CONFIGURACIÓN SEGURA DE DTP**
+  - **Mitigación de ataques**
+    - **Configurar manualmente los puertos utilizados**
+      - **# switchport mode access**
+      - **# switchport access vlan _vlan-id_**
+      - **# switchport mode trunk**
+      - **# switchport trunk allowed vlan _vlan-id_**
+    - **Deshabilitar los anuncios DTP**
+      - **# switchport nonegotiate**
+    - **Apagar los puertos no utilizados**
+      - **# shutdown**
+    - **Configurar los puertos no utilizados como acceso**
+      - Asignar una VLAN no utilizada por los usuarios o una VLAN no existente
+        - **# switchport mode access**
+        - **# switchport access vlan _vlan-id_**
+
+### VTP
+
+**FUNCIONAMIENTO DE VTP**
+  - **Descripción general**
+    - **Protocolo de capa 2 usado para administrar y configurar VLANs en los dispositivos Cisco**
+    - **Simplifica y centraliza la administración de las VLANs** de una red, reduciendo así el número de fallos de configuración
+    - Se distinguen **3 modos de operación VTP: servidor, cliente y transparente**
+    - **VTP sólo aprende VLAN de rango normal (1-1005)** almacenadas en el fichero vlan.dat
+
+  - **Modos de operación de VTP**
+    - **Servidor (modo por defecto)**
+      - Puede crear, borrar y modificar VLANs del dominio
+      -  Todas las VLANs configuradas en el servidor se anuncian
+    - **Cliente**
+      - No puede crear, borrar ni modificar VLANs del dominio
+      - Sincroniza su información con la que recibe de los anuncios del servidor
+    - **Transparente**
+      - No procesa anuncios VTP, simplemente los reenvía
+
+  - **Anuncios VTP**
+    - **Anuncios de resumen**
+      - Sincronización de la información de las VLAN dentro del dominio
+    - **Anuncios de subconjunto**
+      - Informa de cambios en alguna VLAN
+    - **Publicación de solicitud**
+      - Se envía cuando un cliente necesita actualizar la configuración
+     
+  - **Configuración**
+    - **Definir en el switch con rol de servidor las VLANs que se desea anunciar**
+    - **Definir como troncales los puertos que conectan los switches VTP**
+    - Versión de VTP deseada: **# vtp version {1 | 2 | 3}**
+    - Modo VTP del switch: **# vtp mode {server | client |transparent}**
+    - Dominio VTP: **# vtp domain _domain_name_**
+    - Contraseña VTP: **# vtp password _password_**
+   
+  - **Verificación de la configuración**
+    - **# do sh vtp status**
+   
+**CONFIGURACIÓN SEGURA DE VTP**
+  - **Mitigación de los ataques**
+    - **No usar VTP**
+      - Para deshabilitar VTP en el switch debe configurarse en modo transparente: **# vtp mode transparent**
+    - **Autenticación**
+      - Todos los switches del dominio deben usar la misma contraseña: **# vtp password password**
+    - **Apagar los puertos no utilizados**
+      - **# shutdown**
+    - **Usar versión 3**
+      - Añade el concepto de Primary Server: **# vtp version 3**
+     
+**CONCLUSIONES**
+  La verdad es que fue un curso con un temario bastante denso y con muchos comandos. Aunque ya tenía algunos conocimientos previos en redes gracias al ciclo que hice de ASIR, la mayoría de las cosas fueron nuevas para mi y me costó un poco entender todo a la primera. Dejando eso de lado, debo darle mis dieces a la profesora que lo explicó todo genial e hizo muy buenos ejemplos y esquemas.
