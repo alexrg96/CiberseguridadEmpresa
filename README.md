@@ -1398,7 +1398,7 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
       - Desactivación CDP por interfaz: **# no cdp enable**
       - Desactivación CDP globalmente: **# no cdp run**
 
-### ARP
+### VLAN
 
 **CONCEPTO DE VLAN Y TIPOS**
   - **Tipos de enlace**
@@ -1501,7 +1501,7 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
 **CONFIGURACIÓN SEGURA DE VLAN**
   - **Mitigación de VLAN hopping y double-tagging**
     - **No usar la VLAN por defecto como VLAN nativa**
-      - # switchport trunk native vlan _vlan-id_**
+      - **# switchport trunk native vlan _vlan-id_**
     - **Deshabilitar la formación automática de enlaces troncales**
       - **# switchport mode access**
       - **# switchport nonegotiate**
@@ -1601,6 +1601,8 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
       - **# shutdown**
     - **Usar versión 3**
       - Añade el concepto de Primary Server: **# vtp version 3**
-     
+
+
 **CONCLUSIONES**
-  La verdad es que fue un curso con un temario bastante denso y con muchos comandos. Aunque ya tenía algunos conocimientos previos en redes gracias al ciclo que hice de ASIR, la mayoría de las cosas fueron nuevas para mi y me costó un poco entender todo a la primera. Dejando eso de lado, debo darle mis dieces a la profesora que lo explicó todo genial e hizo muy buenos ejemplos y esquemas.
+
+La verdad es que fue un curso con un temario bastante denso y con muchos comandos. Aunque ya tenía algunos conocimientos previos en redes gracias al ciclo que hice de ASIR, la mayoría de las cosas fueron nuevas para mi y me costó un poco entender todo a la primera. Dejando eso de lado, debo darle mis dieces a la profesora que lo explicó todo genial e hizo muy buenos ejemplos y esquemas.
