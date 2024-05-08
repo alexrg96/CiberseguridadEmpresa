@@ -1289,3 +1289,111 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
         - Puertos sin DAI: **# ip arp inspection limit rate _rate_**
       - **Sin DHCP Snooping (No recomendable)**:
         - **# ip source binding _mac_add_ vlan _vlan ip_add_ interface _interface_**
+
+## 8 de Mayo, 2024
+
+### STP
+
+**FUNCIONAMIENTO DE SPT**
+  - **Explicación general**
+    - **Protocolo de la capa de enlace de datos** que gestiona la presencia de bucles en topologías de red debido a enlaces redundantes
+    - Permite a los switches **activar o desactivar automáticamente los enlaces según las necesidades de la topología**
+    - Para conseguir eliminar bucles **se determina un root** en función de la prioridad y **3 tipos de puerto: root, designado y alternativo**
+    - Para el intercambio de información **entre los switches de la topología se utilizan tramas BPDU**
+   
+  - **Bucles de capa 2**
+    - **Broadcast storm**
+   
+  - **Unidad de datos STP:BPDU**
+    - **Prioridad del puente**
+      - Valor personalizable que influye en la elección del root (de 0 a 61440)
+    - **ID del sistema extendido**
+      - Valor agregado al valor de la prioridad que identifica la VLAN para esta BPDU
+    - **Dirección MAC**
+   
+  - **Tipos de puerto**
+    - **Puerto root**
+    - **Puerto designado**
+    - **Puerto alternativo (bloqueado)**
+   
+  - **Temporizadores**
+    - **Hello Timer**
+      - Intervalo entre BPDU
+      - Valor predeterminado: 2 segundos
+    - **Forward Delay Timer**
+      - Tiempo que se pasa en el estado de escucha y aprendizaje
+      - Valor predeterminado: 15 segundos
+    - **Max Age Timer**
+      - Duración máxima de espera antes de cambiar la topología STP
+      - Valor predeterminado: 20 segundos
+
+  - **Estados del puerto**
+    - **Bloqueo**: Puerto alternativo que no participa en el reenvío de tramas. Recibe tramas BPDU para determinar la ubicación e ID del root
+    - **Escucha**: Recibe tramas BPDU. Envía tramas BPDU propias.Informa a los switches adyacentes que el puerto se está preparando para participaren la topología STP
+    - **Aprendizaje**: Recibe, procesa (aprende direcciones MAC) y envía tramas BPDU. Se prepara para participar en el reenvio de tráfico de usuario
+    - **Reenvio**: Envía y recibe tramas BPDU. Reenvía tráfico de usuario
+    - **Deshabilitado**: No participa en ninguna operación STP ni reenvía tráfico. Puerto administrativamente deshabilitado
+
+  - **Versiones STP**
+    - **PVST+**
+      - Proporciona una instancia de árbol diferente por cada VLAN
+    - **RSTP**
+      - Proporciona una convergencia más veloz que STP
+    - **PVST+ rapid**
+      - Mejora de RSTP con una instancia de árbol diferente por cada VLAN
+    - **MSTP**
+      - Asigna varias VLAN en la misma instancia de árbol
+     
+**EJEMPLO DE CONFIGURACIÓN EN PACKET TRACER**
+  - **Configuración packet tracer**
+    - Configurar prioridades para establecer un root
+    - Comprobar la asignación de root y de los puertos
+    - Con el modo simulación comprobar que todos los paquetes pasan por el root
+    - Inhabilitar un puerto activo y comprobar que se recalcula el árbol STP activando un puerto que estuviese bloquedado
+    - Repetir comprobación con modo simulación y la nueva topología STP
+   
+**CONFIGURACIÓN SEGURA DE STP**
+  - **Mitigación de los ataques**
+    - **Usar Portfast BPDUGuard**
+      - Configuración globlal: **# spanning-tree portfast bpduguard default**
+      - Configuración por interfaz: **# spanning-tree bpduguard enable**
+    - **Usar Root Guard**
+      - **# spanning-tree guard root**
+     
+### CDP
+
+**FUNCIONAMIENTO DE CDP**
+  - **Descripción general**
+    - **Protocolo de capa 2 patentado por Cisco que se utiliza para obtener información de los dispositivos Cisco que comparten enlace de datos**
+    - **Envía mensajes CDP (multicast) periódicos** a los dispositivos conectos
+    - Información que contienen los paquetes: **nombre del dispositivo, imagen de OS, tipo y modelo, dirección IP, VLAN nativa, etc**
+    - **Ayuda a tomar decisiones de diseño y solucionar problemas en la red**
+
+  - **Configuración**
+    - CPD global activo por defecto: **# show cpd**
+    - Desactivar CPD globalmente: **# no cpd run**
+    - Activar CPD globalmente: **# cpd run**
+    - Activar CPD por interfaz: **# cpd enable**
+    - Verificación de la configuración: **# show cpd interface**
+   
+  - **Detención de vecinos**
+    - **# show cpd neighbors**
+    - **# show cpd neighbors detail**
+   
+  - **LLDP: Descripción y configuración**
+    - **Identico a CPD** pero no es específico únicamente de dispositivos Cisco
+    - **LLDP no depende del proveedor**, por lo que es compatible con dispositivos Cisco
+    - **#lldp run**
+    - **#lldp transmit**
+    - **#lldp receive**
+    - **#show lldp**
+
+  - **LLDP: Detención de vecinos**
+    - **# show lldp neighbors**
+    - **# show lldp neighbors detail**
+   
+**CONFIGURACIÓN SEGURA DE CDP**
+  - **Mitigación de los ataques**
+    - **Desactivación de CDP**
+      - Desactivación CDP por interfaz: **# no cdp enable**
+      - Desactivación CDP globalmente: **# no cdp run**
