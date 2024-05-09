@@ -1606,3 +1606,292 @@ Al igual que el anterior taller, me pareció muy ameno, bien explicado y con bue
 **CONCLUSIONES**
 
 La verdad es que fue un curso con un temario bastante denso y con muchos comandos. Aunque ya tenía algunos conocimientos previos en redes gracias al ciclo que hice de ASIR, la mayoría de las cosas fueron nuevas para mi y me costó un poco entender todo a la primera. Dejando eso de lado, debo darle mis dieces a la profesora que lo explicó todo genial e hizo muy buenos ejemplos y esquemas.
+
+
+## 9 de Mayo, 2024
+
+## SEGURIDAD EN RED EN EL ÁMBITO CORPORATIVO: CAPAS 3 Y 7 DEL MODELO OSI
+
+### INTRODUCCIÓN
+
+**LAS REDES Y LA SEGURIDAD HOY EN DÍA**
+  - **La importancia de las redes**
+    - Comunicación instantánea.
+    - Elimina los límites físicos.
+    - Múltiples finalidades: sociales, comerciales, personales, ocio…
+    - Almacenamiento en la nube.
+    - Confiabilidad y seguridad
+   
+  - **Representaciones de red**
+    - **Componentes principales:**
+      - Dispositivos finales
+      - Dispositivos intermediarios
+      - Medios de red
+    - **Forma de conexión entre sí:**
+      - Tarjeta de red (NIC)
+      - Puerto físico
+      - Interfaz
+     
+  - **Intranet, extranet e internet**
+    - **Intranet:** Empresa únicamente.
+    - **Extranet:** Proveedores, clientes, colaboradores.
+    - **Internet:** Resto del mundo.
+   
+  - **Arquitectura de red**
+    - **Tolerancia a fallos**
+    - **Escalabilidad**
+    - **Calidad de servicio (QoS)**
+    - **Seguridad**
+      - Confidencialidad
+      - Integridad
+      - Disponibilidad
+     
+  - **Seguridad en la red: Amenazas**
+    - Virus, gusanos y caballos de Troya
+    - Spyware y adware
+    - Ataques de día cero
+    - Denegación de servicios
+    - Intercepción y robo de datos
+    - Suplantación de identidad
+   
+  - **Seguridad en la red: Soluciones**
+    - **Red doméstica o de oficina pequeña:**
+      - Antivirus y antispyware
+      - Filtrado de firewall
+    - **Red corporativa o grande:**
+      - Sistema de firewall dedicado
+      - Listas de control de acceso (ACL)
+      - Sistemas de prevención de intrusiones (IPS)
+      - Redes privadas virtuales (VPN)
+     
+**MODELO OSI Y MODELO TCP/IP**
+  - **Beneficios del modelo de capas**
+    - Ayuda en el diseño de protocolos
+    - Fomenta la competencia
+    - Evita que los cambios en una capa afecten a otras
+    - Proporciona un lenguaje común
+   
+  - **Modelo OSI**
+    - **Capas del modelo OSI:**
+      - Capa 7: Aplicación
+      - Capa 6: Presentación
+      - Capa 5: Sesión
+      - Capa 4: Transporte
+      - Capa 3: Red
+      - Capa 2: Enlace
+      - Capa 1: Física
+    - **Unidad de datos (PDU):**
+      - **Capa 5-7:** Dato
+      - **Capa 4:** Segmento
+      - **Capa 3:** Paquete
+      - **Capa 2:** Trama
+      - **Capa 1:** Bit
+
+  - **Modelo TCP/IP**
+    - **Capas del modelo TCP/IP:**
+      - **Capa 4:** Aplicación
+      - **Capa 3:** Transporte
+      - **Capa 2:** Internet
+      - **Capa 1:** Interfaz de red
+    - **Unidad de datos (PDU):**
+      - **Capa aplicación:** Dato
+      - **Capa transporte:** Segmento
+      - **Capa internet:** Paquete
+      - **Capa interfaz de red:** Frame
+  
+  - **Capa de transporte: TCP vs UDP**
+    - **TCP (Transmission Control Protocol)**
+      - Orientado a conexión: Establece una sesión
+      - Confiable
+      - Garantiza la entrega en el mismo orden y control de flujo
+    - **UDP (User Datagrama Protocol)**
+      - No orientado a conexión: No establece una sesión
+      - No confiable
+      - Garantiza velocidad pero no la entrega (voz o vídeo)
+      - Soporta multicast y broadcast
+   
+  - **Modelo OSI vs TCP/IP**
+    - **Similitudes:**
+      - Capa 3 (red) y Capa internet
+      - Capa 4 (transporte) y Capa transporte
+      - Encapsulación y desencapsulación
+    - **Diferencias:**
+      - Capas 1-2 y Capas de acceso a la red
+      - Capas 5-7 y Capa de aplicación
+
+ 
+### INTRODUCCIÓN A LA CAPA 3
+
+**CAPA 3 (MODELO OSI)**
+  - **La capa de red**
+    - **Operaciones básicas de la capa 3**
+      - Direccionamiento de dispositivos finales
+      - Encapsulación
+      - Enrutamiento
+      - Desencapsulación
+     
+  - **Caracteristicas de IP**
+    - Sin conexión
+    - Mejor esfuerzo o poco confiable
+    - Medios independientes
+
+  - **Limitaciones IPV4**
+    - **Agotamiento de las direcciones IPv4**
+      - Solución temporal: NAT
+    - **Falta de conectividad de extremo a extremo**
+    - **Mayor complejidad de la red**
+      - Solución óptima: Transición a IPv6
+     
+  - **NAT: Traducción de direcciones**
+    - **Rango de direcciones privadas**
+      - 10.0.0.0 - 10.255.255.255
+      - 172.16.0.0 - 172.31.255.255
+      - 192.168.0.0 - 192.168.255.255
+     
+  - **Coexistencia IPV4 e IPV6**
+    - Dual-stack
+    - Tunelización
+    - Traducción
+
+
+**TIPOS DE ENRUTAMIENTO**
+  - **Enrutamiento**
+    - **Elemento principal de capa 3: Router**
+      - Determina qué interfaz debe usar para el reenvío eligiendo la mejor ruta.
+     
+  - **¿Estático o dinámico**
+    - **Routing estático**
+      - **Complejidad de config:** Dependiente del tamaño
+      - **Cambios de topología:** Requiere intervención
+      - **Escalabilidad:** No
+      - **Seguridad:** Inherente
+      - **Uso de recursos:** Sin recursos adicionales
+      - **Predictibilidad de ruta:** Definido por administrador
+    - **Routing dinámico**
+      - **Complejidad de config:** Independiente del tamaño
+      - **Cambios de topología:** Adaptación automática
+      - **Escalabilidad:** Sí
+      - **Seguridad:** Debe configurarse
+      - **Uso de recursos:** CPU, memoria, BW enlaces
+      - **Predictibilidad de ruta:** Depende de la topología
+     
+  - **Conceptos de routing dinámico**
+    - **Estructura de datos**
+      - Tablas o bases de datos
+    - **Mensajes del protocolo de routing**
+      - Intercambia información con vecinos
+    - **Algoritmo**
+      - Determina el mejor camino
+     
+  - **Mejor camino**
+    - **RIP** (Routing Information Protocol)
+      - “Recuento de saltos” 
+      - Cada router un salto
+      - Límite de saltos: 15
+    - **OSPF** (Open Shortest Path First)
+      - “Coste”
+      - BW acumulado origen-destino
+      - A mayor velocidad, menor coste
+    - **EIGRP** (Enhanced Interior Gateway Routing Protocol)
+      - BW más lento y retardos anormales
+      - Podría incluir carga y fiabilidad
+
+    
+**TABLA DE ENRUTAMIENTO Y ELECCIÓN DE LA MEJOR RUTA**
+  - **Tabla de enrutamiento**
+    - **Comando “show ip route”**
+      - **S** - Ruta estática
+      - __*__ - Ruta predeterminada
+      - **O** - Ruta dinámica (OSPF)
+      - **C** - Red conectada directamente
+      - **L** - Interfaz del router
+     
+  - **Principios de la tabla de routing**
+    - Cada router toma su **decisión por sí solo**
+    - Las tablas de enrutamiento **no coinciden necesariamente**
+    - La información de enrutamiento **no proporciona enrutamiento de retorno** al secundario
+   
+  - **Tipos de ruta**
+    - **Redes conectadas directamente**
+      - La red se indica con una C seguido de la dirección IP y la máscara
+      - La interfaz se indica con una L y un prefijo /32 (IPv4) o /128 (IPv6)
+    - **Rutas estáticas**
+      - ip route 10.0.4.0 255.255.255.0 10.0.3.2
+      - ipv6 route 2001:db8:acad:4::/64 2001:db8:acad:3::2
+    - **Rutas dinámicas**
+      - Las redes no se configuran manualmente, se descubren a través de otros routers.
+    - **Ruta predeterminada**
+      - Se usa en ausencia de otra posible ruta que se ajuste mejor
+      - Reduce el número de rutas en la tabla
+      - Tienen una entrada de ruta 0.0.0.0/0 (IPV4) o ::/0 (IPV6)
+     
+  - **Mejor ruta**
+    - **La mejor ruta se conoce también como la de coincidencia más larga**
+
+   
+**REENVÍO DE PAQUETES**
+  - **Proceso de decisión de reenvió**
+    - **Reenvío a un dispositivo en una red conectada directamente**
+    - **Reenvío a un router de siguiente salto**
+      - Red Ethernet: Resolución de direcciones MAC
+      - Red P2P: No hay direcciones MAC en interfaces serial
+    - **No hay ninguna coincidencia en la tabla de routing**
+      - Descarta el paquete
+     
+  - **Mecanismos de reenvío**
+    - **Conmutación de procesos (Process Switching)**
+    - **Conmutación rápida (Fast Switching)**
+    - **CEF (Cisco Express Forwarding)**
+
+
+### RUTAS ESTÁTICAS
+
+**TIPOS DE RUTAS ESTÁTICAS**
+  - **Definición de la ruta estática**
+    - **Ruta del siguiente salto**
+      - Opción recomendada en interfaces que requieren capa 2 (Ethernet)
+    - **Ruta conectada directamente**
+    - **Ruta completamente especificada**
+      - **# ip route _network-address_ _subnet-mask_ { _ip-address_ | _exit-intf_ [_ip-address_]} [_distance_]**
+      - **# ipv6 route _ipv6-prefix_/_prefix-length_ {_ipv6-address_ | _exit-intf_ [_ip-address_]} [_distance_]**
+     
+  - **Ruta estática estándar**
+    - **# ip route 192.168.1.0 255.255.255.0 172.16.2.2**
+    - **# ip route 192.168.1.0 255.255.255.0 s0/1/0**
+    - **# ip route 192.168.1.0 255.255.255.0 s0/1/0 172.16.2.2**
+    - **# ipv6 route 2001:db8:cafe:1::/64 2001:db8:acad:2::2**
+    - **# ipv6 route 2001:db8:cafe:1::/64 s0/1/0**
+    - **# ipv6 route 2001:db8:cafe:1::/64 s0/1/0 fe80::2**
+   
+  - **Ruta estática predeterminada**
+    - **# ip route 0.0.0.0 0.0.0.0 172.16.2.2**
+    - **# ip route 0.0.0.0 0.0.0.0 s0/0/0**
+    - **# ip route 0.0.0.0 0.0.0.0 s0/0/0 172.16.2.2**
+    - **# ipv6 route ::/0 2001:db8:acad:2::2**
+    - **# ipv6 route ::/0 s0/0/0**
+    - **# ipv6 route ::/0 s0/0/0 fe80::2**
+   
+  - **Ruta estática flotante**
+    - **Distancia administrativa por defecto:**
+      - Conectado directamente: 0
+      - Estática: 1
+      - BGP (externo): 20
+      - EIGRP: 90
+      - OSPF: 110
+      - RIP: 120
+
+  - **Verificación de la rutas estáticas**
+    - **#show ip route static**
+    - **# show running-config | section ip route**
+
+  - **Ventajas y desventajas**
+    - **Ventajas:**
+      - Fácil de implementar en redes pequeñas
+      - Muy seguro
+      - La ruta hacia el destino siempre es la misma
+      - No se necesitan recursos adicionales
+    - **Incovenientes**
+      - Baja escalabilidad
+      - Mayor complejidad en redes grandes
+      - Requiere intervención manual, no recalcula
+
