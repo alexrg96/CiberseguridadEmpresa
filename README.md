@@ -2433,3 +2433,53 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
     - **Backdoor:** Puerta trasera. Sistema encargado de evadir las medidas de seguridad, dando acceso fácil a otro dispositivo
     - **FUD:** Full undetectable
 
+**PROCESOS, CONEXIONES, PUERTOS Y PROTOCOLOS**
+  - **Procesos**
+    - Toda actividad realizada en un ordenador genera uno o más procesos, para ofrecer al usuario el resultado deseado. Acceder a internet, guardar una imagen, crear un documento, procesar datos en general o cualquier actividad. Debe diferenciarse proceso y programa, para poder distinguir el comportamiento de nuestro computador en cada momento. Programa es el cúmulo de instrucciones ordenadas en un paquete, para la obtención de resultados determinados. Los procesos, son las ejecuciones individuales de cada una de esas instrucciones.
+
+  - **Puerto**
+    - Interfaz a través de la cual, se puede enviar y recibir diferentes tipos de datos en un ordenador. Estos pueden ser puertos lógicos (software) o puertos físicos (hardware).
+    - **Los puertos se dividen según su utilidad y función:**
+      - **Puertos de Red:** Ofrecen capacidad de interconexión con otros dispositivos a nivel de red (Internet / Ethernet)
+      - **Puertos inalámbricos:** Conectividad Bluetooth, Wireless, infrarrojo, Wi-Fi.
+      - **Puertos para unidades de almacenamiento** (IDE, SATA, SCSI, SAS, USB)
+      - **Puertos de alimentación de energía:** Conector IEC, Enchufe, USB…
+    - Además de esto, los puertos lógicos llevan una numeración aprobada internacionalmente por la “Internet Assigned Numbers Authority” (IANA), para determinar qué tipo de datos o protocolo de comunicación aplica a los puertos preestablecidos, según la tabla de asignación de puertos determinados, siendo los mas importantes:
+      - 20 y 21 FTP
+      - 22 SSH
+      - 23, 95 y 107 Telnet
+      - 25 SMTP (email)
+      - 66 Oracle SQLnet
+      - 67 y 68 DHCP
+      - 80 HTTP
+      - 110 POP3 (email)
+      - 143, 220, 993 IMAP (email)
+      - 443 HTTPS
+      - 465 SMTPS (email seguridad)
+      - 1433 SQL Server
+      - 1521 Oracle Listener
+      - 3306 MySQL
+      - 6881 y 6969 BitTorrent
+     
+**DIFERENCIAS ENTRE UN HACKER Y UN CRACKER**
+  - La diferencia principal entre un hacker y un cracker radica en sus intenciones y en cómo utilizan sus habilidades en el ámbito de la informática.
+    - **Hacker:** Persona con habilidades técnicas en informática que utiliza su conocimiento para mejorar tecnologías y resolver problemas creativamente. Puede trabajar en seguridad informática de manera ética.
+    - **Cracker:** Individuo que utiliza sus habilidades técnicas con intenciones maliciosas, como el robo de datos, el sabotaje de sistemas o el acceso no autorizado a sistemas informáticos. Su actividad se centra en violar la seguridad con fines personales, económicos o políticos.
+
+  - **Equipos de Ciberseguridad**
+    - **Blue Team:** Equipo de defensa cibernética que protege los sistemas de una organización.
+    - **Red Team:** Equipo que simula ataques para probar las defensas de seguridad.
+    - **Purple Team:** Actúa como intermediario, facilitando la colaboración entre los equipos azul y rojo para mejorar las defensas.
+   
+**C&C (COMAND & CONTROL) Y DIRECCIONAMIENTO**
+  - **C&C (Comand & Control)**
+    - El C&C, o Comand & Control, es un componente central en la operación de malware y redes botnet.
+    - **Definición**: Se refiere al sistema utilizado por un atacante para enviar instrucciones y recibir datos de sistemas comprometidos.
+    - **Función**: Permite a los atacantes controlar remotamente los dispositivos infectados, realizar acciones maliciosas y robar información.
+    - **Importancia**: Es crucial para mantener la persistencia del malware, coordinar ataques y exfiltrar datos sensibles.
+   
+  - **Direccionamiento**
+    - El direccionamiento es fundamental en redes de computadoras para garantizar la entrega de datos a los destinos correctos.
+    - **Definición**: Es el proceso de asignar identificadores únicos a dispositivos y sistemas en una red para facilitar la comunicación.
+    - **Protocolos**: Se utilizan diversos protocolos de direccionamiento, como IPv4 e IPv6 en Internet, para asignar direcciones IP a dispositivos conectados a una red.
+    - **Enrutamiento**: Implica el envío de datos a través de la red utilizando la información de direccionamiento para determinar la ruta óptima hacia el destino.
