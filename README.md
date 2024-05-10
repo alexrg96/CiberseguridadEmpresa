@@ -1895,3 +1895,517 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
       - Mayor complejidad en redes grandes
       - Requiere intervención manual, no recalcula
 
+
+## 10 de Mayo,2024
+
+### RIP
+
+**FUNCIONAMIENTO DE RIP**
+  - **Descripción general**
+    - Protocolo de **encaminamiento dinámico interior**
+    - **Puerto 520 de UDP**
+    - Usa el **número de saltos como métrica**
+    - Para determinar el camino más corto utiliza el **algoritmo de Bellman Ford**
+    - **Número máximo de saltos: 15**
+    - Emplea la regla de **horizonte dividido y el envenenamiento de rutas**
+    - **Actualmente existen 3 versiones:** RIPv1, RIPv2 y RIPng (RIP para IPv6)
+   
+  - **Compartiva RIPv1 y RIPv2**
+    - **RIPv1**
+      - Métrica: número de saltos
+      - Número límite de saltos: 15
+      - Distancia administrativa: 120
+      - Con clase
+      - No soporta VLSM y CIDR
+      - Transmisión broadcast (255.255.255.255)
+      - No soporta autenticación
+    - **RIPv2**
+      - Métrica: número de saltos
+      - Número límite de saltos: 15
+      - Distancia administrativa: 120
+      - Sin clase
+      - Soporta VLSM y CIDR
+      - Transmisión multicast (224.0.0.9)
+      - Soporta autenticación (MD5)
+     
+  - **Modos de funcionamiento y mensajes**
+    - **Modos de funcionamiento de las interfaces**
+      - **Activo:** Normalmente solo los router operan en este modo
+      - **Pasivo:** Normalmente conecta con usuarios finales
+    - **Tipos de mensaje (sólo en interfaces activas)**
+      - **Request:** Solicita parte o toda la tabla de rutas
+      - **Reply:**
+        - Respuesta a un request
+        - Actualización periódica
+        - Actualización por cambio en topología
+       
+  - **Tipos de temporizadores**
+    - **Temporizador periódico** (update timer): 30 segundos
+    - **Temporizador de caducidad** (invalid timer): 180 segundos
+    - **Temporizador de purga** (flush timer): 240 segundos
+    - **Temporizador de retención** (holddown timer): 180 segundos
+
+  - **Configuración**
+    - **Configuración RIPv2**
+      - **# router rip**
+      - **# version 2**
+      - **# no auto-summary**
+      - **# network _network-address_**
+    - **Redistribución de rutas predeterminadas**
+      - **# ip route 0.0.0.0 0.0.0.0 [_next-hop-address_ | _exit-intf_]**
+      - **# redistribute static**
+    - **Interfaz pasiva (usuario final)**
+      - **# passive-interface _interface-id_**
+
+  - **Verificación de la configuración**
+    - **Comprobar que soporta VLSM y CIDR**
+      - # show ip route**
+     
+  - **Ventajas y desventajas**
+    - **Ventajas**
+      - Fácil de entender y configurar
+      - No requiere actualizaciones manuales
+      - Soportado por la mayoría de fabricantes
+    - **Desventajas**
+      - Únicamente tiene en cuenta el número de saltos, descartando otros criterios
+      - Límite máximo en el número de saltos
+      - Tiempo de convergencia largo
+     
+**CONFIGURACIÓN SEGURA DE RIP**
+  - **Mitigación RIP poisoning**
+    - **Usar la versión 2 del protocolo**
+      - **# version 2**
+    - **Definir interfaces pasivas**
+      - **# passive-interface _interface-id_**
+    - **Usar redistribute connected**
+      - **# redistribute connected**
+    - **Usar autenticación**
+      - **# ip rip authentication mode md5**
+      - **# ip rip authentication key-chain _key-chain-name_**
+    - **Definir las rutas de formas estáticas**
+      - **# ip route** _network-address_ _subnet-mask_ { _ip-address_ | *exit-intf* [*ip-address*]} [*distance*]
+    - **Usar ACLs (por defecto: deny implícito)**
+      - **Standard:** Permite o deniega por origen.
+      - **Extendida:** Permite o deniega por origen y destino además de por aplicación.
+
+### OSPF
+
+**CONCEPTOS CLAVE DE OSPF**
+  - **Descripción general**
+    - Protocolo de **encaminamiento dinámico interior**
+    - Se encapsula sobre el **protocolo IP (campo protocolo: 89)**
+    - Se tiene en **cuenta el ancho de banda para calcular la métrica**
+    - **Protocolo de estado de enlace y el concepto de áreas**
+    - **Existen 2 versiones:** OSPFv2 (OSPF para IPv4) y OSPFv3 (OSPF para IPv6)
+    - **Componentes de OSPF:**
+      - Mensajes de protocolo de enrutamiento
+      - Estructura de datos
+      - Algoritmo: Dijkstra
+
+  - **Tipos de paquetes**
+    1. Hello: Descubre vecinos y construye adyacencias
+    2. Descriptores de bases de datos (DBD): Controla la sincronización de BBDD entre routers
+    3. Solicitud de estado de enlace (LSR): Solicita registros específicos del estado de enlace de router a router
+    4. Actualización de estado de enlace (LSU): Envía los registros de estado de enlace específicamente solicitados
+    5. Acuse de recibo de estado de enlace (LAck): Confirma la recepción de LSU
+   
+  - **Estructura de datos**
+    - **Base de datos de adyacencia** (Tabla de vecinos)
+      - Routers vecinos a los que se ha conectado un router
+      - Única para cada router
+    - **Base de datos de estado de enlace** (Tabla de topología)
+      - Muestra información sobre la topología de la red
+      - Idéntica para todos los routers del área
+    - **Base de datos de reenvío** (Tabla de enrutamiento)
+      - Lista de rutas generada cuando se ejecuta el algoritmo de estado de enlace
+      - Única para cada router
+     
+  - **Tipos de routers**
+    - **Designated Router (DR)**
+    - **Backup Designated Router (BDR)**
+    - **Internal Router (IR)**
+    - **Area Border Router (ABR)**
+    - **Backbone Router (BR)**
+    - **Autonomous System Boundary Router (ASBR)**
+   
+**ESTADOS DE FUNCIONAMIENTO DE OSPF**
+  - **Funcionamiento del estado de enlace**
+    1. Establecimiento de adyacencias de vecinos
+    2. Intercambio de anuncios de estado de enlace
+    3. Crear la base de datos de estados de vínculo
+    4. Ejecutar el algoritmo SPF (Dijkstra)
+    5. Elección de la mejor ruta
+   
+  - **Tipos de estados**
+    - **Down:** Ningún paquete Hello recibido. El router envía paquetes Hello
+    - **Init:** Se reciben paquetes Hello del vecino (contienen router ID)
+    - **Two-Way::** Comunicación bidireccional entre los dos routers. Elección de DR y BDR
+    - **ExStart:** Se decide quien inicia el intercambio de paquetes DBD y el nº de secuencia
+    - **Exchange:** Los routers intercambian paquetes DBD
+    - **Loading:** Se obtiene información adicional de la ruta. (Paso opcional)
+    - **Full:** Base de datos de estado de vínculo completamente sincronizada
+   
+  - **Establecimiento de adyacencia**
+    1. Estado Down a estado Init
+    2. Estado Init
+    3. Estado Two-Way
+    4. Elección DR y BDR
+   
+  - **Sincronización de bases de datos**
+    1. Decidir el router que envía primero
+    2. Intercambio DBD
+    3. Enviar un LSR
+
+  - **Importancia de elegir un DR y BDR**
+    - **¿Por qué se necesita elegir un DR y un BDR?**
+      - Creación de muchas adyacencias: n * ( n-1 ) / 2
+      - Saturación intensa con mensajes OSPF
+    - **¿Cómo se eligen el DR y el BDR?**
+      1. Prioridad más alta (0 a 255)
+      2. ID más alta
+        - Router ID más alto
+        - IPv4 de loopback más alta
+        - Dirección IPv4 activa más alta
+
+**FUNCIONAMIENTO DE OSPF (ÁREA ÚNICA)**
+  - **Prioridad y router ID**
+    - Configuración OSPFv2
+      - **# router ospf** *process-id*
+    - Configuración prioridad
+      - **# interface** *interface-id*
+      - **# ip ospf priority** *priority-value*
+    - Configuración router-ID
+      - **# router-id** rid
+    - Configuración interfaz loopback
+      - **# interface Loopback 1**
+      - **# ip address** *ip-address mask*
+     
+  - **Configuración de las redes**
+    - Comando network
+      - **# network** *network-address* *wildcard-mask* **area** *area-id*
+    - Comando ip ospf
+      - **# interface** *interface-id*
+      - **# ip ospf** *process-id* **area** *area-id*
+     
+  - **Tipos de redes OSPF**
+    - **Broadcast**
+      - **# show ip interface GigabitEthernet 0/0/0
+    - **Punto a punto**
+      - **# interface** *interface-id*
+      - **# ip ospf network point-to-point**
+     
+  - **Configuración adicional**
+    - Interfaz pasiva (usuario final)
+      - **# passive-interface** *interface-id*
+    - Redistribución de rutas predeterminadas
+      - **# ip route 0.0.0.0 0.0.0.0** *[next-hop-address | exit-intf]*
+      - **# default-information originate**
+
+  - **Verificación de la interfaz OSPF**
+    - **# show ip ospf interface** *interface-id*
+
+  - **Verifación de los vecinos OSPF**
+    - **# show ip ospf neighbor**
+    - **Posibles estados**
+      - FULL/DROTHER
+      - FULL/DR
+      - FULL/BDR
+      - 2-WAY/DROTHER
+     
+  - **Verificación de la configuración**
+    - **# show ip protocols**
+   
+**FALLO DE SEGURIDAD DE OSPF**
+  - **Posibles ataques**
+    - **Robo de identidad de DR**
+    - **Alteración de DR**
+    - **Denegación de servicio**
+      - Envío de una cantidad elevada de LSA fraudulentos hasta saturar la red
+      - Desviación del tráfico y generación de cuellos de botella
+    - **Remote False Adjacency**
+      - Se anuncia un router “fantasma”. Se genera un “black hole”
+    - **Disguised LSA**
+      - Suplantación de un LSA legítimo mediante la inundación de la red con LSA fraudulentos en nombre del router víctima
+     
+**CONFIGURACIÓN SEGURA DE OSPF**
+  - **Mitigación de los ataques**
+    - **Usar autenticación MD5**
+      - Configuración del protocolo OSPF
+        - **# area** *area-id* **authentication message-digest**
+      - Configuración en cada interfaz
+        - **# ip ospf message-digest-key** *key-number* **md5** *password*
+    - **Definir interfaces pasivas**
+      - **# passive-interface** *interface-id*
+    - **Números de secuencia aleatorios**
+      - Evita ataques de tipo LSA Disguised
+    - **Habilitar TTL Security**
+      - Evita ataques de tipo Remote False Adjacency
+        - **# ttl-security all-interfaces** [ **hops** *hop-count* ]
+
+### HSRP
+
+**PROTOCOLOS DE REDUNDANCIA DE PRIMER SALTO (FHRP)**
+  - **Opciones de FHRP para IPv4**
+    - **HSRP:** Propiedad de Cisco. Permite la conmutación por error de forma transparente de un dispositivo IPv4 de primer salto
+    - **VRRPv2:** Protocolo estándar abierto. Permite que varios routers en un enlace multiacceso utilicen la misma dirección IPv4 virtual
+    - **GLBP:** Propiedad de Cisco. Similar a HSRP y VRRPv2, mientras que también permite el balanceo de carga entre los routers
+   
+  - **Opciones de FHRP para IPv6**
+    - **HSRP para IPv6**
+      - Proporciona la misma funcionalidad que HSRP pero en un entorno IPv6
+      - Tiene una MAC virtual derivada del número de grupo HSRP y una dirección link-local IPv6 virtual derivada de la MAC virtual
+    - **VRRPv3**
+      - Proporciona la capacidad de admitir direcciones IPv4 e IPv6
+      - Más escalable que VRRPv2
+    - **GLBP para IPv6**
+      - Proporciona la misma funcionalidad que GLBP pero en un entorno IPv6
+      - Ofrece un único router IPv6 virtual de primer salto mientras reparte la carga entre los diferentes routers físicos
+
+**FUNCIONAMIENTO DE HSRP**
+  - **Descripción general**
+    - **Protocolo de capa 3 propiedad de Cisco**
+    - **Uso de puertas de enlace redundantes** (conmutación por fallo transparente)
+    - **Definición de MAC y dirección IP virtuales**
+    - Se forma un grupo HSRP compuesto por **un router activo y un router de respaldo (elimina SPOF)**
+    - Comunicación mediante la **dirección multicast 224.0.0.2 (versión 1) o 224.0.0.102 (versión 2) y el puerto UDP 1985**
+   
+  - **Prioridad y preferencia**
+    - **Prioridad**
+      - Valor entre 0 y 255. Por defecto: 100
+      - Se elige como router activo el que tenga mayor prioridad
+      - Si las prioridades iguales, se elige aquel con la dirección IPv4 más alta
+    - **Preferencia**
+      -  Fuerza un nuevo proceso de elección de HSRP
+      -  Si se habilita, el router con la prioridad más alta asume el rol de activo
+      -  Si la prioridad es igual en los routers, no se modifica el rol de activo
+
+  - **Estados**
+    - **Inicial:** El router comienza el proceso HSRP
+    - **Aprendizaje:** El router espera para escuchar al router activo. No hay IP virtual
+    - **Escucha:** El router no es ni activo ni de respaldo, pero escucha los mensajes de estos dos. Se conoce la IP virtual
+    - **Hablar:** El router participa en la elección del router activo y el de respaldo. Envía mensajes de saludo periódicos (cada 3 segundos)
+    - **Standby:** El router se convierte en el siguiente router activo (espera 10 segundos)
+    - **Activo:** El router gana la elección del rol de activo
+   
+  - **Configuración**
+    - **Configuración router activo**
+      - **# interface** *interface-id*
+      - **# standby version 2**
+      - **# standby 1 ip** *virtual-ip-address*
+      - **# standby 1 priority** *priority-value*
+      - **# standby 1 preempt**
+    - **Configuración router de respaldo**
+      - **# interface** *interface-id*
+      - **# standby version 2**
+      - **# standby 1 ip** *virtual-ip-address*
+    - **Prioridad activo siempre mayor que prioridad de respaldo**
+   
+  - **Verificación de la configuración**
+    - **Comprobar la configuración del grupo HSRP**
+      - **# show standby**
+     
+**FALLO DE SEGURIDAD DE HSRP**
+  - **Robo del rol de router activo**
+    - **Man in the middle**
+      - Los datos transmitidos por ambos extremos son interceptados por el atacante
+      -  La principal finalidad es leer , modificar o borrar la información enviada por los usuarios
+    - **Denegación de servicio (DoS)**
+      - Provoca que el acceso a un recurso o dispositivo no sea posible
+    - **Degradación de servicio**
+      - Envío intermitente de paquetes fraudulentos generando períodos de corte
+     
+**CONFIGURACIÓN SEGURA DE HSRP**
+  - **Mitigación de los ataques**
+    - **Usar autenticación MD5**
+      - **# standby 1 authentication md5 key-chain** *key-chain-name*
+    - **Poner la máxima prioridad al router activo**
+      - **# standby 1 priority 255**
+    - **Usar ACLs (por defecto: deny implícito)**
+      - **Standard:** Permite o deniega por origen
+      - **Extendida:** Permite o deniega por origen y destino, además de por aplicación
+    - **Implementar HSRP con IPSec**
+      - IPSec es un protocolo encargado de que las conexiones sobre IP se cifren y se autentiquen para una mayor seguridad
+      - Cumple los 3 criterios principales: confidencialidad, integridad y autenticación
+     
+### INTRODUCCIÓN A LA CAPA 7
+
+**CAPA 7 (MODELO OSI)**
+  - **La capa de aplicación**
+    - **Capa más cercana al usuario final**
+    - **Interfaz para la comunicación con el usuario**
+    - **Ejemplos de aplicaciones:**
+      - Terminal virtual
+      - Gestión de ficheros
+      - Servicio de correo
+      - Servicio de directorio
+     
+  - **La capa de aplicación en TCP/IP**
+    - **Aplicación**
+      -  Interfaz entre la aplicación del usuario y la red
+    - **Presentación**
+      - Tratamiento de los datos
+    - **Sesión**
+      - Crea y mantiene diálogos
+     
+  - **Modelo cliente/servidor**
+    - **Cliente:** Solicita información
+    - **Servidor:** Provee información
+    - **Puede requerir autenticación**
+    - **Red centralizada** (Servidor en el centro)
+    - **Problema SPOF** (Single Point Of Failure)
+   
+  - **Modelo P2P (Peer to peer)**
+    - **Consta de dos partes:**
+      - Red P2P y Aplicaciones P2P
+    - **Red P2P**
+      - Cada PC es servidor y cliente
+      - Compartir recursos (conexión a Internet, juegos…)
+    - **Aplicación P2P**
+      -  Permite que cada dispositivo actúe como cliente y servidor
+
+  - **Protocolos de la capa de aplicación**
+    - **Nombre de dominio**
+      - DNS
+    - **Configuración de dispositivos**
+      - DHCP
+    - **Email**
+      - SMTP, POP3, IMAP
+    - **Transferencia de ficheros**
+      - FTP, TFTP
+    - **Web**
+      - HTTP, HTTPS
+     
+### DHCP
+
+**FUNCIONAMIENTO DE DNS**
+  - **Descripción general**
+    - **Sistema de nombres de dominio** (DNS)
+    - **Traduce nombres de dominios web a la dirección IP del servidor** en el que se aloja la página web
+    - Se encapsula sobre el **puerto 53 tanto de UDP como TCP**
+    - Sigue una **arquitectura de cliente/servidor**
+    -  Utiliza una **base de datos distribuida y jerárquica**
+
+  - **Funcionamiento DNS**
+    - La primera consulta se hace al **servidor DNS local del sistema operativo.** Se comprueba la memoria caché
+    - En caso de no encontrarse, la consulta se envía al **servidor DNS del ISP**
+   
+**FUNCIONAMIENTO DE DHCP**
+  - **Descripción general**
+    - **Protocolo de red de tipo cliente/servidor**
+    - Se encarga de la **asignación dinámica de direcciones IP y otros parámetros de configuración de red**
+    - Se encapsula sobre el **puerto 67 (servidor) y 68 (cliente) de UDP**
+    - **Un servidor DHCP es escalable y relativamente fácil de administrar**
+    - Las direcciones IP se asignan un tiempo configurable (**período de concesión**)
+    - **DHCPv6 proporciona servicios similares pero sin compartir el gateway**
+   
+  - **Configuración**
+    - **Exclusión de direcciones IP**
+      - **# ip dhcp excluded-address** *ip-address*
+      - **Configuración pool DHCP:**
+        - **# ip dhcp pool** *pool-name*
+        - Red: **# network** *network-address mask*
+        - Puerta de enlace: **# default-router** *gateway-address*
+        - Servidor DNS: **dns-server** *dns-server-address*
+        - Nombre de dominio: **# domain-name** *domain*
+        - Duración de la concesión: **# lease** {*days* [*hours* [ *minutes*]] | **infinite**}
+      - **Desactivar y activar DHCP**
+        - **# no service dhcp**
+        - **# service dhcp**
+       
+  - **Verificación de la configuración**
+    - **# show running-config | section dhcp**
+    - **# show ip dhcp binding**
+   
+**FALLO DE SEGURIDAD DE DHCP**
+  - **Posibles ataques**
+    - **DHCP Starvation**
+      - Agota todas las direcciones de las que dispone el servidor DHCP
+    - **DHCP Spoofing**
+      - El atacante escucha las solicitudes DHCP de los clientes y responde antes que el servidor legítimo
+    - **DHCP Ack Injection**
+      - Mejora de DHCP Spoofing. Se deja que el servidor legítimo proporcione las direcciones antes de enviar el mensaje fraudulento
+
+**CONFIGURACIÓN SEGURA DE DHCP**
+  - **Mitigación ataques DHCP**
+    - **Usar ACLs (por defecto: deny implícito)**
+      - **Standard:** Permite o deniega por origen
+      - **Extendida:** Permite o deniega por origen y destino además de por aplicación
+    - **Implementar DHCP Snooping**
+      - **Configuración DHCP Snooping**
+        - **# ip dhcp snooping**
+        - **# ip dhcp snooping vlan** *vlan-number*
+      - **Puertos confiables**
+        - **# ip dhcp snooping trust**
+      - **Puertos no confiables**
+        - **# ip dhcp snooping limit rate** *rate*
+    - **Usar port-security**
+      - Es necesario que el puerto se configure como acceso o troncal.
+        - **# switchport port-security**
+        - **# switchport port-security** *number-max-MACs*
+        - **# switchport port-security violation** { protect | restrict | shutdown }
+        - **# switchport port-security mac-address** { mac-address | sticky }
+    - **Apagar los puertos no utilizados**
+      - **# shutdown**
+     
+### SNMP
+
+**FUNCIONAMIENTO DE SNMP**
+  - **Descripción general**
+    - Protocolo de la capa de aplicación que **facilita el intercambio de información de administración de los dispositivos de red**
+    - Se encapsula sobre el **puerto 161 y el 162 (traps) de UDP**
+    - **Se distinguen 4 componentes principales:** administrador SNMP (NMS), agente SNMP, dispositivos y recursos administrados por SNMP y MIB
+    - Arquitectura simple basada en el **modelo cliente/servidor**
+    - **Existen 3 versiones del protocolo:** SNMPv1, SNMPv2c y SNMPv3
+   
+  - **Tipos de mensajes SNMP**
+    - **get-request:** El agente obtiene el valor de la variable de MIB solicitada y responde al administrador de red con dicho valor
+    - **get-next-request:** Se realiza una búsqueda secuencial para encontrar la variable necesaria dentro de una tabla
+    - **get-bulk-request:** Recupera grandes bloques de datos, como varias filas en una tabla (SNMPv2)
+    - **get-response:** Respuesta del agente con los datos solicitados por el administrador de red
+    - **set-request:** El agente de SNMP cambia el valor de la variable de MIB al valor especificado por el administrador de red
+    - **trap:** Mensajes enviados por los agentes ante un evento previamente especificado.
+
+  - **Versiones**
+    - **SNMPv1 y v2c:** Usan coincidencia de cadena de comunidad para autenticación
+    - **SNMPv3**
+      - **noAuthNoPriv:** Sin autenticación (solo nombre de usuario sin contraseña) ni privacidad
+      - **authNoPriv:** Con autenticación (contraseña con MD5 o SHA) pero sin privacidad
+      - **authPriv:** Con autenticación (contraseña con MD5 o SHA) y privacidad (cifrado DES o AES)
+     
+  - **Configuración SNMPv2c**
+    - **Cadena de comunidad de sólo lectura**
+      - No permite cambiar la configuración del dispositivo
+        - **# snmp-server community** *password* **ro**
+    - **Cadena de comunidad de lectura y escritura**
+      - Permite modificar la configuración del dispositivo
+        - **# snmp-server community** *password* **rw**
+       
+**FALLO DE SEGURIDAD DE SNMP**
+  - **Obtención de acceso ilegítimo**
+    - **Formas de acceso a la información de gestión**
+      - Uso de comunidades por defecto
+      - Captura de paquetes con sniffer (man in the middle)
+
+  - **SNMP reconnaissance**
+    - **Obtención de información**
+      - Información de sistema (nombre de host, descripción, SO, dirección IP…)
+      - Información de red (modelo, fabricante, datos de ruteo, interfaces…)
+     
+**CONFIGURACIÓN SEGURA DE SNMP**
+  - **Mitigación de los ataques**
+    - **Desactivar de dispositivos que no lo precisen**
+      - **# no snmp-server community** *password* **ro**
+      - **# no snmp-server community** *password* **rw**
+    - **Elegir una comunidad segura**
+      - Cambiar las comunidades por defecto, usar pautas de contraseñas fuertes
+    - **Configurar la versión 3 de SNMP**
+      - Se introduce a partir de Cisco IOS Software version 12.0
+    - **Utilizar SNMP view**
+      - **# snmp-server view** *view-name oid* {included | excluded}
+    - **Establecer las comunidades con ACLs**
+      - **# access-list** *acl-id* **permit** *ip-address*
+      - **# snmp-server community** *password* {ro | rw} *acl-id*
+     
+
+
+
