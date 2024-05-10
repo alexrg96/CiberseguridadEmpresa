@@ -1959,7 +1959,7 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
 
   - **Verificación de la configuración**
     - **Comprobar que soporta VLSM y CIDR**
-      - # show ip route**
+      - **# show ip route**
      
   - **Ventajas y desventajas**
     - **Ventajas**
@@ -2407,5 +2407,29 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
       - **# snmp-server community** *password* {ro | rw} *acl-id*
      
 
+## CURSO DE TRIAGE INFORMÁTICO
 
+## INTRODUCCIÓN
+
+**TIPOS DE MALWARE Y CARACTERÍSTICAS**
+  - **Definición de Malware**
+    - En general, podemos definir Malware, como el código o programa informático que esta específicamente diseñado para provocar un daño, mal función, bloqueo, extracción de información o acceso no autorizado a una plataforma tecnológica.
+  - **Tipo de Malware**
+    - **Adware:** Genera publicidad
+    - **Clickers:** Encargado de generar tráfico hacia la publicidad y pulsar sobre esta
+    - **Ransomware/locker:** Restringe el acceso al sistema o parte de él mediante claves criptográficas
+    - **Troyano:** Virus que debe ser ejecutado por la victima
+    - **Malware:** Crea un daño específico para el usuario
+    - **Keylogger:** Troyano que roba la información, normalmente mediante keyloggers
+    - **Spyware:** Aplicación con el objetivo de extraer información
+    - **Gusano:** Malware con objetivo de extenderse por la red
+    - **Phishing:** Recolectan datos principalmente bancarios
+    - **RAT:** Herramientas de administración remotas, normalmente con disposición de Backdoors
+    - **Rootkits:** Conjunto de aplicaciones ocultas para el equipo, con el objetivo de disponer de un acceso externo para futuras acciones
+   
+  - **Caracteristicas del Malware**
+    - **Persistencia:** Capacidad para mantenerse en el sistema
+    - **Ofuscación:** Técnica de modificación del código fuente de una aplicación para evitar ingeniería inversa
+    - **Backdoor:** Puerta trasera. Sistema encargado de evadir las medidas de seguridad, dando acceso fácil a otro dispositivo
+    - **FUD:** Full undetectable
 
