@@ -2535,3 +2535,67 @@ Por eso es importante eliminar ciertas creencias erróneas y ser consciente de n
   - **Herramientas**
     - **Local**: Estas herramientas son software instalado en un ordenador para proporcionar protección. Los ejemplos comunes incluyen programas antivirus que monitorean y protegen contra amenazas locales.
     - **Online**: Se refiere a aplicaciones web que permiten examinar archivos sin ejecutarlos localmente en un ordenador. Un ejemplo es VirusTotal, que ofrece escaneo de archivos enviados a través de la web para detectar posibles amenazas.
+
+
+### ANÁLISIS DE ARCHIVOS EJECUTABLES
+
+**PAQUETES, RUTA DE INSTALACIÓN Y RUTA DE EJECUCIÓN**
+  - **Paquetes**
+    - Un paquete de software es una colección de programas distribuidos conjuntamente, diseñados para complementarse o depender unos de otros.
+    - Otra definición describe un paquete como una compilación de archivos binarios o de código fuente, junto con instrucciones sobre cómo manejar cada uno de ellos. Estos archivos suelen estar comprimidos en un formato específico dependiendo de la distribución.
+    - Es importante distinguir entre descomprimir y desempaquetar, ya que son procesos diferentes.
+   
+  - **Contenido de un Paquete:**
+    - **Datos:** Incluye archivos que serán instalados y/o manipulados, como los archivos del programa y las bibliotecas necesarias.
+    - **Cabecera:** Contiene instrucciones para la instalación y configuración, así como información técnica sobre el paquete, sus dependencias, incompatibilidades, descripción y datos del responsable del paquete. También puede incluir archivos con instrucciones para comprobar dependencias y preparar el sistema.
+
+  - **Ruta de Instalación:**
+    - Es la ubicación predeterminada por el sistema para instalar un software, aunque puede ser modificada por el usuario durante la instalación.
+   
+  - **Ruta de Ejecución:**
+    - Cada aplicación tiene un archivo .exe que es su ejecutable. Por defecto, en Windows 10, las aplicaciones se instalan en C:\Archivos de programa o C:\Archivos de programa (x86), dependiendo de la arquitectura del sistema. Esta ubicación está definida por el código y no puede ser modificada por el usuario.
+
+**USO DE RECURSOS**
+
+Un recurso del sistema es cualquier componente físico o virtual de disponibilidad limitada dentro de un sistema informático. Esto incluye cada dispositivo conectado al sistema, así como los componentes internos del propio sistema. Los recursos del sistema virtual abarcan archivos (en particular, manipulaciones de archivos), conexiones de red (específicamente, sockets de red) y áreas de memoria.
+
+La gestión de recursos implica dos aspectos principales:
+
+- **Prevención de Fugas de Recursos:** Garantizar que los recursos se liberen adecuadamente cuando un proceso ha terminado de utilizarlos.
+  
+- **Tratamiento de la Contención de Recursos:** Resolver situaciones donde varios procesos compiten por acceder a un recurso limitado.
+
+Por ejemplo, los recursos informáticos pueden ser la memoria, el almacenamiento y la capacidad de procesamiento de un ordenador  .
+
+Un recurso libre se refiere a la cantidad de capacidad disponible en un recurso en un momento dado. Por ejemplo, la memoria RAM libre en un momento dado podría ser 450 MB de un total de 1 GB.
+
+Además, un recurso también puede ser un dispositivo físico, como una impresora, que un ordenador tiene a su disposición.
+
+
+**ESTABLECIMIENTO DE CONEXIONES**
+
+En informática, el término "conexión" puede referirse a varios aspectos:
+
+1. **Punto de Enlace:** El lugar específico donde se establece un vínculo entre dispositivos o sistemas.
+
+   1.1. **Conexión Completa:** También puede referirse al enlace completo establecido, no solo al punto específico. En algunos contextos, "conexión" puede ser sinónimo de acceso. Puede tratarse de una conexión digital o analógica.
+
+2. **Conexión Cableada**
+
+3. **Conexión Inalámbrica**
+
+4. **Conexión a una Red:** Se realiza con el objetivo de transferir datos, usualmente en ambos sentidos.
+
+   - 4.1. **Conexión a Internet**
+   - 4.2. **Conexión Punto a Punto**
+   - 4.3. **Conexión Dial-up**
+
+5. **Conexión a una Base de Datos**
+
+6. **Conexión Virtual o VPN**
+
+7. **Conectar un Dispositivo a un Ordenador**
+
+8. **Conexión a un Servicio Online:** Como una red social, un programa de mensajería, etc. En este caso, es sinónimo de "iniciar sesión".
+
+9. **Conexión por Acceso Remoto**
