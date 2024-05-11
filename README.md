@@ -2550,11 +2550,17 @@ Por eso es importante eliminar ciertas creencias erróneas y ser consciente de n
     - **Cabecera:** Contiene instrucciones para la instalación y configuración, así como información técnica sobre el paquete, sus dependencias, incompatibilidades, descripción y datos del responsable del paquete. También puede incluir archivos con instrucciones para comprobar dependencias y preparar el sistema.
 
   - **Ruta de Instalación:**
-    - Es la ubicación predeterminada por el sistema para instalar un software, aunque puede ser modificada por el usuario durante la instalación.
+    - Es la ubicación predeterminada por el sistema para instalar un software, aunque puede ser modificada por el usuario durante la instalación. El archivo de instalación para windows es **.MSI**
    
   - **Ruta de Ejecución:**
     - Cada aplicación tiene un archivo .exe que es su ejecutable. Por defecto, en Windows 10, las aplicaciones se instalan en C:\Archivos de programa o C:\Archivos de programa (x86), dependiendo de la arquitectura del sistema. Esta ubicación está definida por el código y no puede ser modificada por el usuario.
 
+  - Para **verificar un archivo o fichero** recibido, se pueden seguir varios pasos de seguridad:
+    - Seleccionar el fichero sin abrirlo y escanearlo con el antivirus.
+    - Abrirlo en una máquina virtual aislada y verificar su comportamiento utilizando herramientas como Process Hacker.
+    - Subirlo a una web especializada en análisis de archivos, como VirusTotal.
+
+   
 **USO DE RECURSOS**
 
 Un recurso del sistema es cualquier componente físico o virtual de disponibilidad limitada dentro de un sistema informático. Esto incluye cada dispositivo conectado al sistema, así como los componentes internos del propio sistema. Los recursos del sistema virtual abarcan archivos (en particular, manipulaciones de archivos), conexiones de red (específicamente, sockets de red) y áreas de memoria.
