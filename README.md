@@ -2483,3 +2483,55 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
     - **Definición**: Es el proceso de asignar identificadores únicos a dispositivos y sistemas en una red para facilitar la comunicación.
     - **Protocolos**: Se utilizan diversos protocolos de direccionamiento, como IPv4 e IPv6 en Internet, para asignar direcciones IP a dispositivos conectados a una red.
     - **Enrutamiento**: Implica el envío de datos a través de la red utilizando la información de direccionamiento para determinar la ruta óptima hacia el destino.
+
+## 11 de Mayo, 2024
+
+### BÚSQUEDA DE MALWARE
+
+**MITO Y REALIDAD SOBRE EL MALWARE**
+
+  Lo principal es reconocer que hay muchas fantasías entorno al malware, y que, dentro de la realidad actual, existe una gran variedad de riesgos que exponen cada vez más a los usuarios de medios informáticos a estos actos delictivos.
+
+Por eso es importante eliminar ciertas creencias erróneas y ser consciente de nuestra vulnerabilidad y para ello se exponen estos siete MITOS:
+
+  1. **Los firewalls protegen de los virus**
+  - **Realidad:** Aunque los firewalls representan una barrera aceptable entre tu equipo y este software, no es infalible. Ahora, cualquier virus competente puede desactivar el firewall. Aunque este alerte y prevenga algunos ataques, no puede limpiar, ni proteger a los equipos.
+
+  2. **Los virus afectan el hardware de tu computadora**
+  - **Realidad:** No existe malware que pueda dañar las partes físicas de un equipo. Por más “peligroso” que un virus sea, ninguno puede hacer que un ordenador sufra daño a nivel material, lo que si existe es un hardware (Killer USB) que puede causar daño físico por sobrecarga de voltaje al puerto del ordenador y un archivo de datos malicioso que puede saturar tu disco duro con 4.5 petabytes, llamado “Bomba ZIP”.
+
+  3. **No existen virus para Mac, solo para Windows**
+  - **Realidad:** Las amenazas que existen para Windows, existen para Mac, aunque no sean tan comunes. Mac tiene un nivel de seguridad integrado que protege a sus equipos en un nivel básico-medio, así, el infectar estas computadoras no es tan sencillo. Incluso existe malware para IOS y Android, lo que no existe, es un único virus multiplataforma, que ataque a todos por igual.
+
+  4. **Puedes darte cuenta si tu computadora ha sido infectada por un virus**
+  - **Realidad:** La mayoría de estos programas malignos pueden dar pistas del daño. Hoy en día, muchos pueden vivir dentro de un equipo sin que el usuario tenga la más mínima idea de que algo sucede.
+
+  5. **Las compañías de antivirus son las que crean el Malware**
+  - **Realidad:** Esta teoría salió en 1988 y nunca ha podido ser probada. Aunque sonaría lógico por algunas razones, a estas compañías no les conviene invertir tiempo y dinero en crear algo que, después, tendrán que esforzarse en destruir.
+
+  6. **Los archivos de personas conocidas siempre son seguros**
+  - **Realidad:** El hecho de que sea un contacto conocido, no significa que ellos no hayan sido atacados. Muchos usuarios, sin darse cuenta, cargan con equipos y cuentas infectadas. Así, el malware pasa desapercibido y logra llegar a otros usuarios. Es recomendable hacer una verificación de todo lo que llega a nuestras bandejas de entrada. (La “Ingeniería Social” es técnica de hacking muy utilizada, que se aprovecha de este mito)
+
+  7. **Un antivirus es capaz de proteger al usuario de cualquier tipo de Malware**
+  - **Realidad:** Es imposible que un antivirus esté al corriente con los virus que salen a diario. Aunque tener un antivirus marca una gran diferencia, nunca se puede tener un margen de protección del 100%
+
+
+**METADATOS, FIRMA Y DESCRIPCIÓN**
+
+  - **Metadatos**
+    - Conjunto estructurado de datos que describen a otros datos, a su estructura interna y a sus servicios, cuyo propósito es incrementar la identificación y la individualidad de cada archivo o paquete de datos
+    - Si una persona puede crear un documento en Word, y copiarlo varias veces, clonarlo o duplicarlo. Aunque en su forma y contenido este sea idéntico, sus metadatos proporcionaran información como fecha de modificación, ubicación, equipo o dispositivo donde se manipulo, y otros… que harán que cada uno de ellos sea un elemento único y diferente.
+   
+  - **Firma y Descripción**
+    - Al momento de verificar un software o un proceso en nuestro ordenador, observaremos que existen nombres de fabricantes en cada uno de ellos o al menos en su mayoría, así como una descripción del producto o el software asociado a cada proceso. También se denomina firma, a la traza o secuencia que se obtiene al ejecutar un código. Casi siempre identificado por un HASH.
+    - **HASH**: Es un algoritmo matemático que transforma cualquier bloque arbitrario de datos en una nueva serie de caracteres con una longitud fija. Independientemente de la longitud de los datos de entrada, el valor hash de salida tendrá siempre la misma longitud.
+
+**ANÁLISIS HEURISTICO Y HERRAMIENTAS**
+
+  - **Análisis Heurístico**
+    - El análisis heurístico se refiere a un conjunto de técnicas y procedimientos utilizados para evaluar la condición o características de un software o proceso, basándose en una evaluación de los puntos a favor y en contra.
+    - En este enfoque, se examina el propósito y la función de un ejecutable, y se determina si hay indicadores de actividad maliciosa. Si se detecta algún comportamiento sospechoso, el sistema puede bloquear la acción de manera inmediata.
+   
+  - **Herramientas**
+    - **Local**: Estas herramientas son software instalado en un ordenador para proporcionar protección. Los ejemplos comunes incluyen programas antivirus que monitorean y protegen contra amenazas locales.
+    - **Online**: Se refiere a aplicaciones web que permiten examinar archivos sin ejecutarlos localmente en un ordenador. Un ejemplo es VirusTotal, que ofrece escaneo de archivos enviados a través de la web para detectar posibles amenazas.
