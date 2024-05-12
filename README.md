@@ -2409,7 +2409,7 @@ La verdad es que fue un curso con un temario bastante denso y con muchos comando
 
 ## CURSO DE TRIAGE INFORMÁTICO
 
-## INTRODUCCIÓN
+### INTRODUCCIÓN
 
 **TIPOS DE MALWARE Y CARACTERÍSTICAS**
   - **Definición de Malware**
