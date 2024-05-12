@@ -2605,3 +2605,46 @@ En informática, el término "conexión" puede referirse a varios aspectos:
 8. **Conexión a un Servicio Online:** Como una red social, un programa de mensajería, etc. En este caso, es sinónimo de "iniciar sesión".
 
 9. **Conexión por Acceso Remoto**
+
+
+## 12 de Mayo, 2024
+
+### EMAILS Y PHISING
+
+**EMAILS SOSPECHOSOS Y ARCHIVOS INFECTADOS**
+
+Existen diversas formas de detectar un correo electrónico falso y evitar caer en cualquier estafa cibernética. Estas son 5 maneras que permiten identificarlo:
+
+  - El dominio de la dirección de email no coincide con el de la empresa.
+  - Faltas de ortografía o de concordancia.
+  - El correo solicita información personal
+  - El asunto del correo es de máxima alerta
+  - Generalmente se incluyen archivos adjuntos.
+
+**Cómo comprobar el auténtico remitente de un correo**
+Cuando sospechamos que un mensaje podría ser falso, es importante verificar el remitente. Para ello, recomendamos seguir estos pasos:
+
+  1. **Hablar directamente con la persona:** Si el correo parece provenir de alguien conocido pero contiene información inesperada o inusual, es mejor confirmar la autenticidad del mensaje hablando directamente con la persona.
+  2. **Identificar la dirección IP del servidor o equipo:** En caso de duda, es útil identificar la dirección IP del servidor o equipo que envió el mensaje.
+
+**Cómo verificar el origen del correo desde diferentes servicios de correo:**
+  - **Desde Gmail:**
+    - Al abrir el correo, clicamos en la flecha junto al asunto y seleccionamos "Mostrar original".
+    - Revisamos el contenido para identificar la IP del servidor y el dominio del remitente.
+   
+  - **Desde Hotmail:**
+    - Hacemos clic derecho en el asunto del correo y seleccionamos "Ver código fuente del mensaje".
+    - Revisamos el código fuente para identificar el servidor de origen y comprobamos que los datos coincidan con el remitente.
+
+  - **Desde Microsoft Outlook:**
+    - Abrimos el correo y hacemos clic derecho para seleccionar "Ver código fuente".
+    - Revisamos el código fuente para verificar la autenticidad del remitente.
+   
+**Archivos infectados:**
+
+La mayoría de los incidentes de seguridad se inician al hacer clic en enlaces o archivos no verificados. Para evitar riesgos, se recomienda escanear los archivos sospechosos con un antivirus o utilizar herramientas en línea como VirusTotal o la herramienta web de Kaspersky.
+
+
+### Conclusiones
+
+El curso de Triage informático ha estado bien y ha sido fácil de seguir, pero creo que no ha aportado la suficiente información sobre el triage informático en sí. Muchas veces se hablaba de otras cosas, como por ejemplo, al final del curso, en el apartado de "Email y phishing", hay un video de "Emails sospechosos y archivos infectados", pero luego el siguiente es sobre cómo crear máquinas virtuales con VMware, lo cual no le veo mucho sentido y pienso que era mejor dedicar ese video a hablar más sobre el phishing. Además, el profesor, aunque explicaba razonablemente bien, las diapositivas dejaban mucho que desear y los ejemplos eran simples capturas de pantalla. Por el resto, me ha parecido uno de los cursos más interesantes en cuanto a lo que trata.
