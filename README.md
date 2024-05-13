@@ -2648,3 +2648,302 @@ La mayoría de los incidentes de seguridad se inician al hacer clic en enlaces o
 ### Conclusiones
 
 El curso de Triage informático ha estado bien y ha sido fácil de seguir, pero creo que no ha aportado la suficiente información sobre el triage informático en sí. Muchas veces se hablaba de otras cosas, como por ejemplo, al final del curso, en el apartado de "Email y phishing", hay un video de "Emails sospechosos y archivos infectados", pero luego el siguiente es sobre cómo crear máquinas virtuales con VMware, lo cual no le veo mucho sentido y pienso que era mejor dedicar ese video a hablar más sobre el phishing. Además, el profesor, aunque explicaba razonablemente bien, las diapositivas dejaban mucho que desear y los ejemplos eran simples capturas de pantalla. Por el resto, me ha parecido uno de los cursos más interesantes en cuanto a lo que trata.
+
+
+## 13 de Mayo, 2024
+
+## INTRODUCCIÓN AL ESQUEMA NACIONAL DE SEGURIDAD (ENS)
+
+### INTRODUCCIÓN AL ENS
+
+**¿QUÉ ES EL ESQUEMA NACIONAL DE SEGURIDAD?**
+  - Es un marco normativo que establece los **principios y requisitos mínimos** de seguridad
+  - Su objetivo es **garantizar la seguridad de la información** y de los servicios electrónicos, así como proteger los derechos y libertades de los ciudadanos en el ámbito digital
+  - Marco jurídico aplicable:
+    - Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad
+    - Reglamento (UE) 910/2014, conocido como "Reglamento elDAS"
+    - Ley 6/2020, de 11 de noviembre, reguladora de determinados aspectos de los servicios electrónicos de confianza
+    - Directiva (UE) 2016/1148, conocida como "Directiva NIS".
+    - Real Decreto-ley 12/2018, de 7 de septiembre, de seguridad de las redes y sistemas de información (transposición de la Directiva NIS)
+    - Real Decreto 43/2021, de 26 de enero, desarrollo de la transposición de la Directiva NIS)
+    - Reglamento (UE) 2016/679, del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD)
+    - Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD)
+    - Estrategia Nacional de Ciberseguridad, publicada en 2019
+ 
+**OBJETIVOS, ALCANCE Y UTILIDAD**
+  - **Sistema de información:** Conjunto organizado de recursos para que la información se pueda recoger,
+almacenar, procesar o tratar, mantener, usar, compartir, distribuir, poner a disposición, presentar o transmitir
+  - Garantizar la seguridad de la información
+  - Establecer requisitos mínimos de seguridad
+  - Proteger los servicios electrónicos
+  - Promover la confianza digital
+  - Adaptarse a las necesidades de seguridad
+  - Proteger los derechos y libertades de los ciudadanos
+  - Fomentar la colaboración y coordinación
+
+**SUJETOS OBLIGADOS E INTERVINIENTES**
+  - Sistema de información
+  - SGSI >> SI
+  - **Sujetos Obligados:** Principalmente, se refiere a las administraciones públicas y a aquellas entidades privadas que presten servicios esenciales o que gestionen información de carácter público o sensible
+  - **Intervinientes:** Actores que participan de manera directa o indirecta en la implementación, mantenimiento o supervisión de las medidas de seguridad establecidas por el ENS. Esto puede incluir proveedores de servicios tecnológicos, consultores de seguridad, auditores, entidades certificadoras, entre otros
+
+**PRINCIPIOS BÁSICOS Y REQUISITOS MÍNIMOS**
+  - Este marco normativo tiene como objetivo principal garantizar la protección adecuada de la información sensible y los sistemas de información de las entidades públicas y privadas
+  - Protección adecuada de la información y servicios prestados
+  - Asegurar el acceso, confidencialidad, integridad, trazabilidad, autenticidad, disponibilidad y conservación de datos
+  - **Principios básicos:**
+    - Seguridad como proceso integral
+    - Gestión de la seguridad basada en los riesgos
+    - Prevención, detección, respuesta y conservación
+    - Existencia de líneas de defensa
+    - Vigilancia continua
+    - Reevaluación periódica
+    - Diferenciación de responsabilidades
+   
+**ACTIVOS**
+  - Los activos de información son aquellos elementos o recursos que tienen un valor para la organización y que necesitan ser protegidos adecuadamente
+  - Los activos se pueden **clasificar** en:
+    - Activos de información
+    - Sistemas de información
+    - Infraestructura tecnológica
+    - Recursos humanos
+    - Activos físicos
+  - **Importante:** identificar y clasificar adecuadamente todos los activos de información para poder gestionar y proteger la seguridad de la información de manera efectiva según lo establecido por el ENS. Esto implica evaluar el valor, la criticidad y el nivel de riesgo asociado a cada activo, así como establecer medidas de seguridad adecuadas para protegerlos de posibles amenazas y vulnerabilidades
+
+**MADUREZ DE LOS ACTIVOS**
+  - La evaluación de la madurez de los activos de información se lleva a cabo mediante un proceso sistemático que implica varias etapas:
+  - Identificación de los activos
+  - Valoración del impacto
+  - Análisis de riesgos:
+    - Definición de controles de seguridad
+    - Monitoreo y revisión continua
+    - Mejora continua
+  - La **evaluación de la madurez** de los activos de información es un proceso dinámico y continuo que requiere la participación y colaboración de diferentes partes interesadas dentro de la organización
+
+
+### MARCO ORGANIZATIVO
+
+**ROLES Y RESPONSABILIDADES**
+  - Establecer una Organización de la seguridad
+  - Diferentes actores, funciones y responsabilidades
+  - Diferenciación de responsabilidades
+  - **Nivel de gobierno:**
+    - Dirección de la entidad
+    - Responsable de la información
+    - Responsable del servicio
+  - **Nivel de supervisión:**
+    - Responsable de la seguridad
+    - Delegado de protección de datos
+  - **Nivel operativo:**
+    - Administrador del sistema
+    - Administrador de red
+    - Operadores del sistema
+  - **Otros roles generales de la organización:**
+    - Responsable de la seguridad física
+    - Responsable de la gestión del personal
+    - Responsable de contratación y adquisición
+
+**COMITÉ DE SEGURIDAD**
+  - El Comité de seguridad es una instancia **clave** en la estructura de gobierno de la seguridad de la información en una organización
+  - Coordina la seguridad de la información a nivel de organización para evitar disfunciones que permitan fallas de seguridad
+  - El Comité de Seguridad de la Información estará formado por el Responsable de Seguridad de la Información y por representantes de las áreas de la Organización afectadas
+  - **Funciones:**
+    - Atender las inquietudes de la Alta Dirección y de los diferentes departamentos
+    - Informar regularmente del estado de la seguridad de la información a la Alta Dirección
+    - Promover la mejora continua del sistema de gestión de la seguridad de la información
+    - Elaborar la estrategia de evolución de la Organización en lo que respecta a seguridad de la información
+    - Coordinar los esfuerzos de las diferentes áreas en materia de seguridad de la información
+    - Monitorizar el desempeño de los procesos de gestión de incidentes de seguridad
+    - Promover la realización de las auditorías periódicas que permitan verificar el cumplimiento de las obligaciones del organismo en materia de seguridad
+
+**COMITÉ DE SEGURIDAD CORPORATIVA**
+  - En grandes Organizaciones aparece un Comité de Seguridad Corporativa con su propio Secretario, el responsable de seguridad corporativa (CSO)
+  - El Responsable de Seguridad de la Información (CSO) queda como miembro del Comité de Seguridad Corporativa junto con otros responsables de otras áreas
+  - **Funciones típicas:**
+    - Velar por el cumplimiento de la normativa de aplicación legal, regulatoria y sectorial
+    - Velar por el alineamiento de las actividades de seguridad y los objetivos de la Organización
+    - Coordinar los planes de continuidad de las diferentes áreas
+    - Coordinar y da respuesta a las inquietudes transmitidas a través de los Responsables de Seguridad
+  - **El administrador de seguridad reporta:**
+    - Incidentes relativos a la seguridad del sistema
+    - Acciones de configuración, actualización o corrección
+   
+**POLÍTICA DE SEGURIDAD**
+  - Se establecerá de acuerdo con los principios básicos y requisitos mínimos
+  - La política de seguridad es un documento formal que establece los **principios, objetivos y directrices generales** en materia de seguridad de la información dentro de una organización
+  - Esta política debe ser aprobada por la **alta dirección** y comunicada a todos los empleados y partes interesadas pertinentes
+  - **Contenido habitual:**
+    - Objetivos o misión de la organización
+    - Estructura y composición de Comités de seguridad
+    - Marco regulatorio
+    - Directrices sobre documentación de seguridad
+    - Roles o funciones de seguridad
+    - Riesgos derivados tratamiento de datos personales
+  - Aprobación de la PS:
+    - Órgano superior o
+    - Dirección General
+  - Status del documento
+  - **Requisitos mínimos:**
+    - Se exigirán en proporción a los riesgos identificados, pudiendo algunos no requerirse en sistemas sin riesgos significativos
+    - Son estándares y controles que las organizaciones deben implementar para garantizar un nivel adecuado de seguridad de la información
+    - Estos requisitos abarcan diferentes áreas y aspectos de la seguridad de la información, incluyendo la gestión de accesos, la protección de datos personales, la gestión de incidentes de seguridad, entre otros
+  - **Medidas compensatorias:** Las medidas del Anexo II podrán ser reemplazadas por otras siempre que se justifique que protegen igual o mejor
+
+### MARCO OPERACIONAL
+
+**PLANIFICACIÓN DE LA SEGURIDAD**
+  - Proceso mediante el cual las organizaciones **identifican, analizan y gestionan los riesgos de seguridad** de la información con el objetivo de establecer estrategias y medidas efectivas para proteger sus activos
+  - **La planificación de la seguridad implica la satisfacción de determinados elementos:**
+    - Identificación de activos y evaluación de riesgos
+    - Definición de objetivos y requisitos de seguridad
+    - Desarrollo de estrategias y medidas de seguridad
+    - Asignación de recursos y responsabilidades
+    - Implementación y seguimiento
+    - Revisión y mejora continua
+
+**ACCESO A LA INFORMACIÓN**
+  - Aspecto fundamental en la **protección de los activos** de información de una organización
+  - **El acceso a la información implica:**
+    - Gestión de Accesos
+    - Identificación y Autenticación
+    - Control de Acceso Lógico y Físico
+    - Registro de Acceso y Auditoría
+    - Protección de la Privacidad y los Derechos de los Usuarios
+
+**EXPLOTACIÓN DE SERVICIOS INTERNOS Y EXTERNOS**
+  - Implica asegurar que los servicios y sistemas utilizados tanto dentro como fuera de la organización cumplan con los estándares de seguridad establecidos por el ENS
+  - **Servicios Internos:**
+    - Desarrollo y Mantenimiento
+    - Auditoría y Supervisión
+    - Gestión de Accesos
+  - **Servicios externos:**
+    - Contratación Segura
+    - Monitorización y Supervisión
+    - Gestión de riesgos
+
+**CONTINUIDAD DEL SERVICIO Y MONITORIZACIÓN**
+  - La continuidad del servicio y la monitorización son aspectos críticos en el marco del ENS, ya que contribuyen a garantizar la disponibilidad y la integridad de los servicios y sistemas de información en todo momento
+  - **Continuidad del Servicio:**
+    - Planificación de la Continuidad del Negocio (BCP)
+    - Respaldo y Recuperación de Datos (DRP)
+    - Pruebas y Ejercicios de Continuidad
+  - **Monitorización:**
+    - Monitorización de Seguridad
+    - Registro y Auditoría de Eventos
+    - Alertas y Notificaciones
+
+### MARCO DE SEGURIDAD Y CONTROLES
+
+**MEDIDAS DE SEGURIDAD**
+  - **Controles y salvaguardas**
+  - Conjunto de medidas encaminadas a protegerse de los riesgos posibles
+  - Mecanismos idóneos: **Prevención, Disuasión, Protección, Detección y reacción y recuperación**
+  - Se clasifican en tres grupos:
+    - Marco organizativo
+    - Marco operacional
+    - Medidas de protección
+  - Se aplicarán medidas de seguridad, las cuales serán proporcionales a:
+    - Las **dimensiones** de seguridad relevantes en el sistema a proteger
+    - La **categoría** de seguridad del sistema de información a proteger
+  - A la relación de medidas seleccionadas se le denomina: **Declaración de Aplicabilidad**
+  - **Auditoría**
+  - Existencia de evidencias:
+    - Documentación de los procedimientos
+    - Registro de incidentes
+    - Examen del personal afectado
+    - Productos certificados
+
+**MEDIDAS DE PROTECCIÓN**
+  - Las medidas de protección abarcan una amplia **gama de controles** y prácticas diseñadas para salvaguardar la confidencialidad, integridad y disponibilidad de la información y los sistemas de información
+  - Como medidas de protección encontramos:
+    - Protección de **instalaciones**
+    - Protección del **personal**
+    - Protección de **equipos**
+    - Protección de las **comunicaciones**
+    - Protección de los **soportes**
+   
+**DESARROLLO SEGURO**
+  - Se refiere a la integración de prácticas y procesos de seguridad en todas las etapas del ciclo de vida del desarrollo de software
+  - El objetivo es garantizar que los sistemas y aplicaciones desarrollados cumplan con los requisitos de seguridad establecidos por el ENS desde su concepción hasta su implementación y mantenimiento
+  - El desarrollo seguro implica:
+    - Análisis de requisitos de seguridad
+    - Diseño seguro
+    - Implementación segura
+    - Pruebas de seguridad
+    - Gestión de configuraciones seguras
+    - Revisión y mejora continua
+   
+**PROTECCIÓN DE LA INFORMACIÓN**
+  - **Implica:**
+    - La implementación de controles de seguridad física y lógica
+    - El uso de técnicas de cifrado
+    - La gestión de accesos adecuada
+    - La detección y respuesta a incidentes
+    - El cumplimiento de regulaciones y normativas relacionadas con la seguridad de la información
+   
+**PROTECCIÓN DE LOS SERVICIOS**
+  - La protección de los servicios también abarca la **detección y respuesta a posibles amenazas**, así como la implementación de medidas de recuperación ante desastres para minimizar el impacto de incidentes y garantizar la continuidad operativa
+
+### PROYECTO: ANÁLISIS DE RIESGOS
+
+**GESTIÓN DEL RIESGO**
+  - La gestión de riesgos consisten en un proceso de **identificación, análisis, evaluación y tratamiento de los mismos**
+  - Es una gestión esencial del proceso de seguridad
+  - La gestión va a implicar:
+    - **Actividad continua** permanentemente actualizada
+    - Mantenimiento de entorno controlado, **minimizando los riesgos** a niveles aceptables
+    - Aplicación de medidas de seguridad, de manera equilibrada y proporcionada
+
+**ANÁLISIS DEL RIESGO**
+  - El análisis de riesgos informáticos implica un proceso integral que consiste en identificar los activos informáticos, así como las vulnerabilidades y amenazas a las que están expuestos
+  - Además, evalúa la probabilidad de ocurrencia de dichas amenazas y el impacto potencial que podrían tener. El objetivo es determinar los controles necesarios para aceptar, reducir, transferir o evitar la materialización del riesgo
+  - El **análisis de riesgos** permite determinar cómo es, cuánto vale y cómo de protegido se encuentra el sistema e implantar sus salvaguardas (o contramedidas)
+  - Después de analizar la seguridad, sigue la Evaluación de Riesgos, la Declaración de Aplicabilidad (con las medidas a considerar) y el Perfil de Cumplimiento (que especifica la configuración de seguridad)
+
+### ADECUACIÓN Y MANTENIMIENTO
+
+**PROCESO DE ADECUACIÓN**
+  - Un Plan de Adecuación incluye las siguientes fases previas: **Política de Seguridad, Categorización de sistemas, Análisis de Riesgos y Declaración de Aplicabilidad/Perfil de Cumplimiento**
+  - El proceso de adecuación incluye la siguientes fases:
+    1. Plan de adecuación
+    2. Implantación de la seguridad
+    3. Declaración / Certificación de Conformidad
+    4. Informar sobre el Estado de Seguridad
+    5. Vigilancia y Mejora Continua
+    6. Catálogo de Productos Cualificados
+   
+**IMPLEMENTACIÓN DE MEDIDAS TÉCNICAS**
+  - **Revisar y comprender** los requisitos técnicos establecidos en el ENS
+  - **Identificar las medidas técnicas** específicas necesarias para cumplir con estos requisitos
+  - **Identificación de requisitos técnicos del ENS:**
+    - Selección de medidas técnicas apropiadas
+    - Evaluación de la infraestructura existente:
+      - Selección e instalación de medidas técnicas apropiadas
+      - Pruebas y validación
+      - Monitoreo y mantenimiento
+     
+### PROCEDIMIENTO DE CERTIFICACIÓN DEL ENS
+
+**CERTIFICACIÓN**
+  - La Certificación y Conformidad con el ENS conlleva la elaboración previa de un Plan de Adecuación que incluya las cuatro fases previas siguientes:
+    - **Política de Seguridad**
+    - **Categorización de sistemas**
+    - **Análisis de Riesgos**
+    - **Declaración de Aplicabilidad/Perfil de Cumplimiento**
+   
+**AUDITORÍA EN SEGURIDAD Y RESPUESTA A INCIDENTES**
+  - Preparación para la Auditoría
+  - Planificación y ejecución
+  - Informe
+  - Seguimiento y mejora continua
+  - Fases de un plan de respuestas a incidentes:
+    - Preparación
+    - Detección y análisis
+    - Contención y erradicación
+    - Recuperación
+
+### CONCLUSIONES
+
+Para mi sorpresa, el curso resulto ser bastante interesante y se llevó muy bien a pesar de que el temario es muy teórico y denso. La profesora lo explicó muy bien, aunque iba un poco más rápido de lo que me gustaría, resumiendo lo más importante y relacionandolo perfectamente con lo anteriormente dado en la carrera.
+
+
